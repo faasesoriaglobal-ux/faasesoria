@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>FA Asesoría Global</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#c2185b">
+    
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- CSS base -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- CSS por secciones -->
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/empresa.css">
+    <link rel="stylesheet" href="css/servicios.css">
+    <link rel="stylesheet" href="css/formulario.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/idiomas.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<!-- ================= HEADER MODERNO ================= -->
+<header class="topbar">
+    <div class="logo">
+        <a href="#inicio">
+            <!-- Asegúrate de que esta imagen tenga fondo transparente si es posible -->
+            <img src="img/fa.jpg" alt="FA Asesoría Global">
+        </a>
+    </div>
+
+    <nav>
+        <a href="#inicio" data-lang="nav_inicio">Inicio</a>
+        <a href="#servicios" data-lang="nav_servicios">Servicios</a>
+        <a href="#empresa" data-lang="nav_empresa">Empresa</a>
+        <a href="#formulario" data-lang="nav_contacto">Contacto</a>
+    </nav>
+
+    <div class="header-actions">
+        <button class="consult-btn" data-lang="consulta_online" onclick="document.getElementById('formulario').scrollIntoView({behavior: 'smooth'})">
+            Consulta Online
+        </button>
+
+        <!-- Selector de Idiomas -->
+        <div class="lang-dropdown">
+            <button class="lang-trigger" id="langTrigger" aria-label="Seleccionar idioma">
+                <span class="current-flag" id="mainFlag">
+                    <!-- Bandera España por defecto -->
+                    <svg viewBox="0 0 640 480" width="20" height="20"><path fill="#AA151B" d="M0 0h640v480H0z"/><path fill="#F1BF00" d="M0 120h640v240H0z"/></svg>
+                </span>
+                <span class="lang-text">ES</span>
+                <i class="fas fa-chevron-down"></i>
+            </button>
+
+            <div class="lang-menu" id="langMenu">
+                <button class="lang-option" data-idioma="es">
+                    <svg viewBox="0 0 640 480" width="18" height="18"><path fill="#AA151B" d="M0 0h640v480H0z"/><path fill="#F1BF00" d="M0 120h640v240H0z"/></svg>
+                    <span>Español</span>
+                </button>
+                <button class="lang-option" data-idioma="en">
+                    <svg viewBox="0 0 640 480" width="18" height="18"><path fill="#012169" d="M0 0h640v480H0z"/><path stroke="#FFF" stroke-width="60" d="M0 0l640 480M640 0L0 480"/><path stroke="#C8102E" stroke-width="40" d="M0 0l640 480M640 0L0 480"/><path fill="#FFF" d="M0 180h640v120H0zM240 0h160v480H240z"/><path fill="#C8102E" d="M0 220h640v40H0zM280 0h80v480h-80z"/></svg>
+                    <span>English</span>
+                </button>
+                <button class="lang-option" data-idioma="fr">
+                    <svg viewBox="0 0 640 480" width="18" height="18"><path fill="#002395" d="M0 0h213.33v480H0z"/><path fill="#FFF" d="M213.33 0h213.34v480H213.33z"/><path fill="#ED2939" d="M426.67 0H640v480H426.67z"/></svg>
+                    <span>Français</span>
+                </button>
+                <button class="lang-option" data-idioma="ca">
+                    <svg viewBox="0 0 640 480" width="18" height="18"><path fill="#FCDD09" d="M0 0h640v480H0z"/><path stroke="#DA121A" stroke-width="24" d="M0 30h640M0 90h640M0 150h640M0 210h640M0 270h640M0 330h640M0 390h640M0 450h640"/></svg>
+                    <span>Català</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Icono Menú Móvil (Visible solo en móvil con JS) -->
+    <button class="mobile-toggle" aria-label="Menú">
+        <i class="fas fa-bars"></i>
+    </button>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="inicio">
+    <div class="hero-carousel">
+        <div class="slide active" data-slide="0" style="background-image:url('img/1.jpg')"></div>
+        <div class="slide" data-slide="1" style="background-image:url('img/2.jpg')"></div>
+        <div class="slide" data-slide="2" style="background-image:url('img/3.jpg')"></div>
+    </div>
+
+    <div class="hero-content">
+        <h1>FA ASESORÍA GLOBAL</h1>
+        <div class="hero-texts">
+            <p class="hero-text active" data-slide="0" data-lang="hero_text_0">Siempre contigo en tu proceso legal y migratorio</p>
+            <p class="hero-text" data-slide="1" data-lang="hero_text_1">Acompañamiento humano, ético y profesional</p>
+            <p class="hero-text" data-slide="2" data-lang="hero_text_2">Soluciones legales, fiscales y administrativas integrales</p>
+        </div>
+    </div>
+</section>
+
+<!-- ================= HISTORIA / EMPRESA ================= -->
+<!-- ================= HISTORIA / EMPRESA (DISEÑO ACTUALIZADO) ================= -->
+<section class="section-color about" id="empresa">
+    <div class="container-empresa">
+        
+        <!-- FILA 1: QUIÉNES SOMOS -->
+        <div class="empresa-header reveal">
+            <div class="empresa-text-block">
+                <span class="badge-small" data-lang="quienes_somos_badge">Nuestra Esencia</span>
+                <h2 data-lang="quienes_somos_title">Más que una asesoría, <br>tu aliado estratégico en Barcelona</h2>
+                <p class="lead-modern" data-lang="empresa_lead_new">
+                    FA Asesoría Global es una firma legal y de gestión integral especializada en acompañar a la comunidad migrante y emprendedora. Transformamos la burocracia en soluciones claras, seguras y personalizadas.
+                </p>
+                <p data-lang="empresa_text_new">
+                    Con un enfoque humano y ético, no solo gestionamos trámites; coordinamos una red de expertos para garantizar tu tranquilidad jurídica. Tu éxito es nuestro compromiso.
+                </p>
+            </div>
+            <div class="empresa-stats">
+                <div class="stat-item">
+                    <i class="fas fa-users" style="color: var(--accent-orange);"></i>
+                    <span class="stat-number" style="color: var(--accent-yellow);">+15</span>
+                    <span class="stat-label" data-lang="stat_anios">Años de experiencia</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-globe" style="color: var(--accent-orange);"></i>
+                    <span class="stat-number" style="color: var(--accent-yellow);">Global</span>
+                    <span class="stat-label" data-lang="stat_clientes">Clientes internacionales</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- FILA 2: ORIGEN Y VALORES -->
+        <div class="empresa-grid reveal">
+            
+            <!-- Tarjeta 1: La Fundadora -->
+            <div class="card-fundador">
+                <div class="card-image-wrapper">
+                    <img src="img/fundador.jpg" alt="Flor Andino" class="img-fundador">
+                </div>
+                <div class="card-content">
+                    <h3 data-lang="nuestro_origen">El Origen</h3>
+                    <p data-lang="fundador_text_new_1">
+                        Nacido de la visión de <strong>Flor Andino</strong>. Tras vivir en primera persona los desafíos migratorios en 2004, transformó esa experiencia en un puente de ayuda real, consolidando en 2016 una firma estructurada y multidisciplinaria.
+                    </p>
+                    <p data-lang="fundador_text_new_2" class="highlight-text">
+                        "Nuestro compromiso es brindar soluciones reales, escuchando cada necesidad para convertir la asesoría en un verdadero apoyo."
+                    </p>
+                </div>
+            </div>
+
+            <!-- Tarjeta 2: Valores -->
+            <div class="card-valores">
+                <h3 data-lang="valores_title">Nuestros Pilares</h3>
+                <ul class="valores-list">
+                    <li>
+                        <div class="icon-box"><i class="fas fa-heart"></i></div>
+                        <div>
+                            <strong data-lang="val_1_t">Acompañamiento Humano</strong>
+                            <span data-lang="val_1_d">Cercanía y empatía en cada trámite.</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon-box"><i class="fas fa-shield-alt"></i></div>
+                        <div>
+                            <strong data-lang="val_2_t">Integridad Ética</strong>
+                            <span data-lang="val_2_d">Transparencia total y seguridad jurídica.</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon-box"><i class="fas fa-lightbulb"></i></div>
+                        <div>
+                            <strong data-lang="val_3_t">Innovación</strong>
+                            <span data-lang="val_3_d">Soluciones ágiles adaptadas a ti.</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon-box"><i class="fas fa-hands-helping"></i></div>
+                        <div>
+                            <strong data-lang="val_4_t">Respeto a la Diversidad</strong>
+                            <span data-lang="val_4_d">Un espacio inclusivo para todos.</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- TIMELINE -->
+    <div class="timeline-container reveal">
+        <div class="timeline-header">
+            <h2 data-lang="timeline_title">Nuestra Evolución</h2>
+        </div>
+        <div class="timeline">
+            <div class="timeline-item fade-left">
+                <div class="timeline-content">
+                    <span class="year-badge" data-lang="time_1_year">2004-2008</span>
+                    <h4 data-lang="hist_t1">Inicios y Vocación</h4>
+                    <p data-lang="historia_1_new">Comenzamos asesorando a familias migrantes con un enfoque cercano y humano, identificando la necesidad de información clara.</p>
+                </div>
+                <div class="timeline-img">
+                    <img src="img/historia1.png" alt="Inicios">
+                </div>
+            </div>
+            <div class="timeline-item fade-right">
+                <div class="timeline-content">
+                    <span class="year-badge" data-lang="time_2_year">2016</span>
+                    <h4 data-lang="hist_t2">Expansión Integral</h4>
+                    <p data-lang="historia_2_new">Ampliamos servicios al área legal y fiscal, creando una red de colaboradores especializados para garantías totales.</p>
+                </div>
+                <div class="timeline-img">
+                    <img src="img/historia2.png" alt="Expansión">
+                </div>
+            </div>
+            <div class="timeline-item fade-left">
+                <div class="timeline-content">
+                    <span class="year-badge" data-lang="time_3_year">Actualidad</span>
+                    <h4 data-lang="hist_t3">Referente Global</h4>
+                    <p data-lang="historia_3_new">Hoy somos líderes en Barcelona por nuestra ética, innovación y compromiso social con clientes nacionales e internacionales.</p>
+                </div>
+                <div class="timeline-img">
+                    <img src="img/historia3.png" alt="Actualidad">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ================= SERVICIOS ================= -->
+<section class="content section-light" id="servicios">
+    <h2 data-lang="servicios">Servicios</h2>
+
+    <section class="services-container">
+        <!-- EXTRANJERÍA -->
+        <div class="service-box">
+            <div class="service-badge extranjeria">
+                <span class="badge-icon">🌍</span> <span data-lang="badge_extranjeria">Extranjería</span>
+            </div>
+            <img src="img/extranjeria.png" alt="Extranjería">
+            <div class="service-overlay"></div>
+            <div class="service-text">
+                <span class="service-label" data-lang="label_extranjeria">Departamento Extranjería</span>
+                <h3 data-lang="servicio_1_title">Extranjería y trámites migratorios</h3>
+                <p data-lang="servicio_1_subtitle">Residencia · Nacionalidad · Arraigo · Visados</p>
+            </div>
+            <div class="service-more">
+                <ul>
+                    <li data-lang="servicio_1_item_1" data-service="Permisos de residencia" data-phone="+34692488666">Permisos de residencia</li>
+                    <li data-lang="servicio_1_item_2" data-service="Renovación de NIE" data-phone="+34692488666">Renovación de NIE</li>
+                    <li data-lang="servicio_1_item_3" data-service="Reagrupación familiar" data-phone="+34692488666">Reagrupación familiar</li>
+                    <li data-lang="servicio_1_item_4" data-service="Nacionalidad española" data-phone="+34692488666">Nacionalidad española</li>
+                </ul>
+                <button class="form-btn" onclick="window.open('https://wa.me/34692488666?text=Hola%2C%20quiero%20solicitar%20asesor%C3%ADa%20sobre%20Extranjer%C3%ADa', '_blank', 'noopener,noreferrer')">
+    <span data-lang="btn_solicitar_asesoria">Solicitar asesoría</span>
+</button>
+            </div>
+        </div>
+
+        <!-- LEGAL -->
+        <div class="service-box">
+            <div class="service-badge legal">
+                <span class="badge-icon">⚖️</span> <span data-lang="badge_legal">Legal</span>
+            </div>
+            <img src="img/legal.png" alt="Área legal">
+            <div class="service-overlay"></div>
+            <div class="service-text">
+                <span class="service-label" data-lang="label_legal">Departamento Legal</span>
+                <h3 data-lang="servicio_2_title">Área Legal Integral</h3>
+                <p data-lang="servicio_2_subtitle">Penal · Civil · Familia · Laboral</p>
+            </div>
+            <div class="service-more">
+                <ul>
+                    <li data-lang="servicio_2_item_1" data-service="Divorcios y custodia" data-phone="+34605842185">Divorcios y custodia</li>
+                    <li data-lang="servicio_2_item_2" data-service="Contratos y reclamaciones" data-phone="+34605842185">Contratos y reclamaciones</li>
+                    <li data-lang="servicio_2_item_3" data-service="Despidos y sanciones" data-phone="+34605842185">Despidos y sanciones</li>
+                    <li data-lang="servicio_2_item_4" data-service="Antecedentes penales" data-phone="+34605842185">Antecedentes penales</li>
+                </ul>
+                         <button class="form-btn" onclick="window.open('https://wa.me/34605842185?text=Hola%2C%20quiero%20solicitar%20asesor%C3%ADa%20sobre%20el%20%C3%81rea%20Legal', '_blank', 'noopener,noreferrer')">
+    <span data-lang="btn_solicitar_asesoria">Solicitar asesoría</span>
+</button>
+            </div>
+        </div>
+
+        <!-- FISCAL -->
+        <div class="service-box">
+            <div class="service-badge fiscal">
+                <span class="badge-icon">📊</span> <span data-lang="badge_fiscal">Fiscal</span>
+            </div>
+            <img src="img/fiscal.png" alt="Área fiscal">
+            <div class="service-overlay"></div>
+            <div class="service-text">
+                <span class="service-label" data-lang="label_fiscal">Departamento Fiscal</span>
+                <h3 data-lang="servicio_3_title">Fiscal y Contable</h3>
+                <p data-lang="servicio_3_subtitle">Autónomos · Empresas · IRPF</p>
+            </div>
+            <div class="service-more">
+                <ul>
+                    <li data-lang="servicio_3_item_1" data-service="Alta de autónomos" data-phone="+34605842185">Alta de autónomos</li>
+                    <li data-lang="servicio_3_item_2" data-service="Declaraciones de impuestos" data-phone="+34605842185">Declaraciones de impuestos</li>
+                    <li data-lang="servicio_3_item_3" data-service="Contabilidad empresarial" data-phone="+34605842185">Contabilidad empresarial</li>
+                    <li data-lang="servicio_3_item_4" data-service="Creación de empresas" data-phone="+34605842185">Creación de empresas</li>
+                </ul>
+                         <button class="form-btn" onclick="window.open('https://wa.me/34605842185?text=Hola%2C%20quiero%20solicitar%20asesor%C3%ADa%20sobre%20Fiscal%20y%20Contable', '_blank', 'noopener,noreferrer')">
+    <span data-lang="btn_solicitar_asesoria">Solicitar asesoría</span>
+</button>
+            </div>
+        </div>
+
+        <!-- AUTÓNOMOS -->
+        <div class="service-box">
+            <div class="service-badge autonomo">
+                <span class="badge-icon">💼</span> <span data-lang="badge_autonomo">Autónomos</span>
+            </div>
+            <img src="img/autonomo.jpg" alt="Departamento Autónomo">
+            <div class="service-overlay"></div>
+            <div class="service-text">
+                <span class="service-label" data-lang="label_autonomo">Departamento Autónomos</span>
+                <h3 data-lang="servicio_4_title">Departamento Autónomo</h3>
+                <p data-lang="servicio_4_subtitle">Autónomos · Empresas · Trámites</p>
+            </div>
+            <div class="service-more">
+                <ul class="service-list">
+                    <li data-lang="servicio_4_item_1" data-service="Atención y asesoramiento presencial y telefónico" data-phone="+34672727920">Atención y asesoramiento presencial y telefónico</li>
+                    <li data-lang="servicio_4_item_2" data-service="Revisión de notificaciones diarias" data-phone="+34672727920">Revisión de notificaciones diarias</li>
+                    <li data-lang="servicio_4_item_3" data-service="Certificados digitales" data-phone="+34672727920">Certificados digitales</li>
+                    <li data-lang="servicio_4_item_4" data-service="Alta y baja de autónomos" data-phone="+34672727920">Alta y baja de autónomos</li>
+                    <li data-lang="servicio_4_item_5" data-service="Creación de empresas" data-phone="+34672727920">Creación de empresas</li>
+                    <li data-lang="servicio_4_item_6" data-service="Número de Seguridad Social" data-phone="+34672727920">Número de Seguridad Social</li>
+                    <li data-lang="servicio_4_item_7" data-service="Prestaciones y ayudas" data-phone="+34672727920">Prestaciones y ayudas</li>
+                    <li data-lang="servicio_4_item_8" data-service="Registro de marcas" data-phone="+34672727920">Registro de marcas</li>
+                    <li data-lang="servicio_4_item_9" data-service="Certificados Hacienda y Seguridad Social" data-phone="+34672727920">Certificados Hacienda y Seguridad Social</li>
+                    <li data-lang="servicio_4_item_10" data-service="Solicitud de paro" data-phone="+34672727920">Solicitud de paro</li>
+                    <li data-lang="servicio_4_item_11" data-service="Patentes" data-phone="+34672727920">Patentes</li>
+                    <li data-lang="servicio_4_item_12" data-service="Cambio de nombre de vehículos" data-phone="+34672727920">Cambio de nombre de vehículos</li>
+                    <li data-lang="servicio_4_item_13" data-service="Licencia de locales" data-phone="+34672727920">Licencia de locales</li>
+                </ul>
+                         <button class="form-btn" onclick="window.open('https://wa.me/34672727920?text=Hola%2C%20quiero%20solicitar%20asesor%C3%ADa%20sobre%20Aut%C3%B3nomos', '_blank', 'noopener,noreferrer')">
+    <span data-lang="btn_solicitar_asesoria">Solicitar asesoría</span>
+</button>
+            </div>
+        </div>
+    </section>
+</section>
+
+<!-- OTROS SERVICIOS -->
+<div class="otros-services-wrapper">
+    <section class="otros-servicios-section">
+        <div class="otros-header">
+            <div class="otros-badge">
+                <span class="badge-icon">✨</span>
+                <span class="badge-text" data-lang="otros_badge">Servicios Complementarios</span>
+            </div>
+            <h3 class="otros-title" data-lang="otros_title">Otros Servicios</h3>
+            <p class="otros-subtitle" data-lang="otros_subtitle">Descubre nuestra gama de servicios adicionales diseñados para cubrir todas tus necesidades</p>
+        </div>
+
+        <div class="otros-grid">
+            <!-- Card 1: SEGUROS -->
+            <div class="otro-card" data-service="Seguros" data-phone="+34657878642">
+                <div class="card-icon">
+                    <span class="icon-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    </span>
+                </div>
+                <h4 class="card-title" data-lang="otros_card_1_title">Seguros</h4>
+                <p class="card-desc" data-lang="otros_card_1_desc">Protección completa para ti y tu familia</p>
+                <div class="card-overlay">
+                    <span class="overlay-text" data-lang="overlay_text">Solicitar información</span>
+                    <span class="overlay-icon">→</span>
+                </div>
+            </div>
+
+            <!-- Card 2: PERITOS -->
+            <div class="otro-card" data-service="Peritos Judiciales" data-phone="+34657878642">
+                <div class="card-icon">
+                    <span class="icon-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                    </span>
+                </div>
+                <h4 class="card-title" data-lang="otros_card_2_title">Peritos Judiciales</h4>
+                <p class="card-desc" data-lang="otros_card_2_desc">Expertos certificados para tus casos legales</p>
+                <div class="card-overlay">
+                    <span class="overlay-text" data-lang="overlay_text">Solicitar información</span>
+                    <span class="overlay-icon">→</span>
+                </div>
+            </div>
+
+            <!-- Card 3: INMOBILIARIO -->
+            <div class="otro-card" data-service="Servicios Inmobiliarios" data-phone="+34657878642">
+                <div class="card-icon">
+                    <span class="icon-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    </span>
+                </div>
+                <h4 class="card-title" data-lang="otros_card_3_title">Servicios Inmobiliarios</h4>
+                <p class="card-desc" data-lang="otros_card_3_desc">Gestión integral de propiedades</p>
+                <div class="card-overlay">
+                    <span class="overlay-text" data-lang="overlay_text">Solicitar información</span>
+                    <span class="overlay-icon">→</span>
+                </div>
+            </div>
+
+            <!-- Card 4: EVENTOS -->
+            <div class="otro-card" data-service="Eventos" data-phone="+34657878642">
+                <div class="card-icon">
+                    <span class="icon-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                    </span>
+                </div>
+                <h4 class="card-title" data-lang="otros_card_4_title">Eventos</h4>
+                <p class="card-desc" data-lang="otros_card_4_desc">Organización profesional de eventos</p>
+                <div class="card-overlay">
+                    <span class="overlay-text" data-lang="overlay_text">Solicitar información</span>
+                    <span class="overlay-icon">→</span>
+                </div>
+            </div>
+
+            <!-- Card 5: ARTISTAS -->
+            <div class="otro-card" data-service="Promoción de Artistas" data-phone="+34657878642">
+                <div class="card-icon">
+                    <span class="icon-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20s-6-3-6-9c0-3.3 2.7-6 6-6s6 2.7 6 6c0 6-6 9-6 9z"></path><circle cx="12" cy="12" r="2"></circle></svg>
+                    </span>
+                </div>
+                <h4 class="card-title" data-lang="otros_card_5_title">Promoción de Artistas</h4>
+                <p class="card-desc" data-lang="otros_card_5_desc">Derecho de autor y gestión artística</p>
+                <div class="card-overlay">
+                    <span class="overlay-text" data-lang="overlay_text">Solicitar información</span>
+                    <span class="overlay-icon">→</span>
+                </div>
+            </div>
+
+            <!-- Card 6: TRADUCCIONES -->
+            <div class="otro-card" data-service="Traducciones" data-phone="+34657878642">
+                <div class="card-icon">
+                    <span class="icon-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s-6-4-6-10V6l6-4 6 4v6c0 6-6 10-6 10z"></path><path d="M8 12h8"></path><path d="M8 16h8"></path></svg>
+                    </span>
+                </div>
+                <h4 class="card-title" data-lang="otros_card_6_title">Traducciones</h4>
+                <p class="card-desc" data-lang="otros_card_6_desc">Traducciones oficiales y juradas</p>
+                <div class="card-overlay">
+                    <span class="overlay-text" data-lang="overlay_text">Solicitar información</span>
+                    <span class="overlay-icon">→</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="otros-footer">
+            <!-- BOTÓN CORREGIDO: Scroll suave al formulario -->
+            <button class="otros-btn" onclick="document.getElementById('formulario').scrollIntoView({behavior: 'smooth'})">
+                <span data-lang="otros_btn">Solicitar asesoría completa</span>
+                <span class="btn-icon">→</span>
+            </button>
+            <p class="otros-note" data-lang="otros_note">¿No encuentras lo que buscas? <a href="contacto.html">Contáctanos</a> para una solución personalizada</p>
+        </div>
+    </section>
+</div>
+
+<!-- ================= FORMULARIO (ÚNICO Y CORREGIDO) ================= -->
+<section class="consulta-section" id="formulario">
+    <h2 class="consulta-title" data-lang="formulario_title">HAZ TU CONSULTA</h2>
+    
+    <form class="consulta-form" id="form-whatsapp" aria-label="Formulario de contacto">
+        <div class="form-row">
+            <div class="form-group">
+                <label for="nombre" data-lang="form_nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" data-lang-placeholder="ph_nombre" required maxlength="50">
+            </div>
+            <div class="form-group">
+                <label for="apellidos" data-lang="form_apellidos">Apellidos</label>
+                <input type="text" id="apellidos" name="apellidos" placeholder="Tus apellidos" data-lang-placeholder="ph_apellidos" required maxlength="100">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="correo" data-lang="form_correo">Correo electrónico</label>
+                <input type="email" id="correo" name="correo" placeholder="tu@email.com" data-lang-placeholder="ph_correo" required>
+            </div>
+            <div class="form-group">
+                <label for="telefono" data-lang="form_telefono">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="+34 657 87 86 42" data-lang-placeholder="ph_telefono" required maxlength="20">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="idioma" data-lang="form_idioma">Idioma de atención</label>
+                <select id="idioma" name="idioma" required>
+                    <option value="" data-lang="form_idioma_placeholder">Selecciona un idioma</option>
+                    <option value="Español" data-lang="form_idioma_es">Español</option>
+                    <option value="Inglés" data-lang="form_idioma_en">Inglés</option>
+                    <option value="Francés" data-lang="form_idioma_fr">Francés</option>
+                    <option value="Catalán" data-lang="form_idioma_ca">Catalán</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group full-width">
+            <label for="descripcion" data-lang="form_descripcion">Describe brevemente tu consulta</label>
+            <textarea id="descripcion" name="descripcion" rows="6" data-lang-placeholder="form_placeholder_descripcion" placeholder="Cuéntanos tu situación..." required></textarea>
+        </div>
+
+        <div class="consent-container">
+            <input type="checkbox" id="consent" name="consent" required>
+            <label for="consent" data-lang="form_consent">
+                Acepto la <a href="politica-privacidad.html" target="_blank" rel="noopener">política de privacidad</a> y autorizo el tratamiento de mis datos para recibir asesoramiento
+            </label>
+        </div>
+
+        <!-- BOTÓN ACTUALIZADO -->
+        <button type="submit" class="form-btn" data-lang="form_btn">Enviar consulta</button>
+    </form>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer reveal-footer" id="contacto">
+    <div class="footer-columns">
+        <!-- LOGO + EMPRESA -->
+        <div class="footer-col footer-brand">
+            <img src="img/fa.jpg" alt="FA Asesoría Global" class="footer-logo">
+            <h4 data-lang="footer_empresa">FA Asesoría Global</h4>
+            <p data-lang="footer_servicios">Legal · Fiscal · Extranjería</p>
+            <div class="footer-social">
+                <a href="https://www.instagram.com/faasesoriaglobal" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+
+        <!-- AVISOS -->
+        <div class="footer-col">
+            <h4 data-lang="avisos_legales">Avisos legales</h4>
+            <p data-lang="aviso_legal">Aviso legal</p>
+            <p data-lang="privacidad">Privacidad</p>
+            <p data-lang="cookies">Cookies</p>
+        </div>
+
+        <!-- CONTACTO -->
+        <div class="footer-col footer-contact">
+            <h4 data-lang="footer_contacto">Contacto</h4>
+            <p><i class="fas fa-map-marker-alt"></i> Av. de Josep Tarradellas, 134</p>
+            <p><i class="fas fa-phone"></i> +34935140604</p>
+            <p><i class="fas fa-envelope"></i> faasesoriaglobal@gmail.com</p>
+        </div>
+    </div>
+
+    <!-- MAPA -->
+    <div class="footer-map">
+        <iframe src="https://www.google.com/maps?q=Av.%20de%20Josep%20Tarradellas,%20134,%20Barcelona&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <!-- COPYRIGHT -->
+    <p class="footer-bottom" data-lang="footer_copy">© 2026 FA Asesoría Global · Todos los derechos reservados</p>
+</footer>
+
+<!-- VENTANA MODAL (CORREGIDA: Cierre añadido correctamente) -->
+<div class="service-modal" id="serviceModal">
+    <div class="modal-content">
+        <button class="modal-close" id="modalClose">&times;</button>
+        <div class="modal-icon" id="modalIcon"></div>
+        <h3 id="modalTitle"></h3>
+        <p id="modalDesc"></p>
+        <ul id="modalFeatures"></ul>
+        <a href="#" class="modal-btn" id="modalWhatsapp" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-whatsapp"></i> <span>SOLICITA INFORMACIÓN</span>
+        </a>
+    </div>
+</div>
+<!-- FIN DEL MODAL -->
+
+<!-- JS -->
+<script src="js/main.js"></script>
+<script src="js/hero.js"></script>
+<script src="js/servicios.js"></script>
+<script src="js/idiomas.js"></script>
+<script src="js/wa.js"></script>
+</body>
+</html>
