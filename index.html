@@ -40,7 +40,7 @@
     </nav>
 
     <div class="header-actions">
-        <button class="consult-btn" data-lang="consulta_online" onclick="document.getElementById('formulario').scrollIntoView({behavior: 'smooth'})">
+        <button class="consult-btn" data-lang="consulta_online" data-scroll-target="#formulario">
             Consulta Online
         </button>
 
@@ -253,7 +253,7 @@
                     <li data-lang="servicio_1_item_3" data-service="Reagrupación familiar" data-phone="+34692488666">Reagrupación familiar</li>
                     <li data-lang="servicio_1_item_4" data-service="Nacionalidad española" data-phone="+34692488666">Nacionalidad española</li>
                 </ul>
-                <button class="form-btn" onclick="window.open('https://wa.me/34692488666?text=Hola%2C%20quiero%20solicitar%20asesor%C3%ADa%20sobre%20Extranjer%C3%ADa', '_blank', 'noopener,noreferrer')">
+                <button class="form-btn js-wa-quick" data-wa-phone="+34692488666" data-wa-service="Extranjería">
     <span data-lang="btn_solicitar_asesoria">Solicitar asesoría</span>
 </button>
             </div>
@@ -278,7 +278,7 @@
                     <li data-lang="servicio_2_item_3" data-service="Despidos y sanciones" data-phone="+34605842185">Despidos y sanciones</li>
                     <li data-lang="servicio_2_item_4" data-service="Antecedentes penales" data-phone="+34605842185">Antecedentes penales</li>
                 </ul>
-                         <button class="form-btn" onclick="window.open('https://wa.me/34605842185?text=Hola%2C%20quiero%20solicitar%20asesor%C3%ADa%20sobre%20el%20%C3%81rea%20Legal', '_blank', 'noopener,noreferrer')">
+                         <button class="form-btn js-wa-quick" data-wa-phone="+34605842185" data-wa-service="Área Legal">
     <span data-lang="btn_solicitar_asesoria">Solicitar asesoría</span>
 </button>
             </div>
@@ -303,7 +303,7 @@
                     <li data-lang="servicio_3_item_3" data-service="Contabilidad empresarial" data-phone="+34605842185">Contabilidad empresarial</li>
                     <li data-lang="servicio_3_item_4" data-service="Creación de empresas" data-phone="+34605842185">Creación de empresas</li>
                 </ul>
-                         <button class="form-btn" onclick="window.open('https://wa.me/34605842185?text=Hola%2C%20quiero%20solicitar%20asesor%C3%ADa%20sobre%20Fiscal%20y%20Contable', '_blank', 'noopener,noreferrer')">
+                         <button class="form-btn js-wa-quick" data-wa-phone="+34605842185" data-wa-service="Fiscal y Contable">
     <span data-lang="btn_solicitar_asesoria">Solicitar asesoría</span>
 </button>
             </div>
@@ -337,7 +337,7 @@
                     <li data-lang="servicio_4_item_12" data-service="Cambio de nombre de vehículos" data-phone="+34672727920">Cambio de nombre de vehículos</li>
                     <li data-lang="servicio_4_item_13" data-service="Licencia de locales" data-phone="+34672727920">Licencia de locales</li>
                 </ul>
-                         <button class="form-btn" onclick="window.open('https://wa.me/34672727920?text=Hola%2C%20quiero%20solicitar%20asesor%C3%ADa%20sobre%20Aut%C3%B3nomos', '_blank', 'noopener,noreferrer')">
+                         <button class="form-btn js-wa-quick" data-wa-phone="+34672727920" data-wa-service="Autónomos">
     <span data-lang="btn_solicitar_asesoria">Solicitar asesoría</span>
 </button>
             </div>
@@ -451,7 +451,7 @@
 
         <div class="otros-footer">
             <!-- BOTÓN CORREGIDO: Scroll suave al formulario -->
-            <button class="otros-btn" onclick="document.getElementById('formulario').scrollIntoView({behavior: 'smooth'})">
+            <button class="otros-btn" data-scroll-target="#formulario">
                 <span data-lang="otros_btn">Solicitar asesoría completa</span>
                 <span class="btn-icon">→</span>
             </button>
@@ -526,10 +526,10 @@
             <h4 data-lang="footer_empresa">FA Asesoría Global</h4>
             <p data-lang="footer_servicios">Legal · Fiscal · Extranjería</p>
             <div class="footer-social">
-                <a href="https://www.instagram.com/faasesoriaglobal" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/faasesoriaglobal" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.linkedin.com/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://wa.me/34657878642" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
             </div>
         </div>
 
@@ -567,7 +567,7 @@
         <h3 id="modalTitle"></h3>
         <p id="modalDesc"></p>
         <ul id="modalFeatures"></ul>
-        <a href="#" class="modal-btn" id="modalWhatsapp" target="_blank" rel="noopener noreferrer">
+        <a href="https://wa.me/34657878642" class="modal-btn" id="modalWhatsapp" target="_blank" rel="noopener noreferrer">
             <i class="fab fa-whatsapp"></i> <span>SOLICITA INFORMACIÓN</span>
         </a>
     </div>

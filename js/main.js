@@ -4,6 +4,33 @@ document.addEventListener("DOMContentLoaded", function() {
     const mobileToggle = document.querySelector('.mobile-toggle');
     const nav = document.querySelector('header.topbar nav');
 
+    function scrollToTarget(targetSelector) {
+        if (!targetSelector) return;
+        const target = document.querySelector(targetSelector);
+        if (!target) return;
+
+        target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }
+
+    function sanitizePhone(phone) {
+        return (phone || '').replace(/[\s\-().]/g, '');
+    }
+
+    function openWhatsApp(phone, message) {
+        const numeroLimpio = sanitizePhone(phone);
+        if (!numeroLimpio) return;
+
+        const url = `https://wa.me/${numeroLimpio}?text=${encodeURIComponent(message)}`;
+
+        const whatsappWindow = window.open(url, '_blank', 'noopener,noreferrer');
+        if (!whatsappWindow || whatsappWindow.closed || typeof whatsappWindow.closed === 'undefined') {
+            window.location.href = url;
+        }
+    }
+
     // ================= SCROLL SUAVE EN MENÚ =================
     document.querySelectorAll('nav a[href^="#"]').forEach(enlace => {
         enlace.addEventListener('click', e => {
@@ -42,21 +69,26 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // ================= BOTÓN "CONSULTA ONLINE" =================
-    // Solo funciona al HACER CLIC, nunca al cargar la página
-    const consultBtn = document.querySelector('.consult-btn');
-    if (consultBtn) {
-        consultBtn.addEventListener('click', function(e) {
+    // ================= BOTONES CON SCROLL GENÉRICO =================
+    document.querySelectorAll('[data-scroll-target]').forEach(button => {
+        button.addEventListener('click', function(e) {
             e.preventDefault();
-            const formSection = document.getElementById('formulario');
-            if (formSection) {
-                formSection.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
+            scrollToTarget(this.getAttribute('data-scroll-target'));
         });
-    }
+    });
+
+    // ================= BOTONES RÁPIDOS DE WHATSAPP =================
+    document.querySelectorAll('.js-wa-quick').forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            const phone = this.getAttribute('data-wa-phone') || '+34657878642';
+            const service = this.getAttribute('data-wa-service') || 'Asesoría';
+            const message = `Hola, quiero solicitar asesoría sobre ${service}`;
+
+            openWhatsApp(phone, message);
+        });
+    });
 
     // ================= TIMELINE: OBSERVADOR DE SCROLL =================
     const timelineItems = document.querySelectorAll('.timeline-item');
