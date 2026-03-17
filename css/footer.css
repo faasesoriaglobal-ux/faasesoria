@@ -1,8 +1,39 @@
+/* 1. Forzar blanco en TODOS los elementos de texto dentro del footer */
+.footer, 
+.footer h4, 
+.footer h3, 
+.footer p, 
+.footer a, 
+.footer span, 
+.footer-bottom, 
+.footer-col {
+    color: #ffffff !important; /* Blanco puro obligatorio */
+}
+
+/* 2. Asegurar que los enlaces (avisos legales) no tengan subrayado y sean blancos */
+.footer-col a {
+    color: #ffffff !important;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px;
+    transition: color 0.3s ease, padding-left 0.3s ease;
+}
+
+.footer-col a:hover {
+    color: #f57c00 !important; /* Naranja corporativo al pasar el ratón */
+    padding-left: 5px; /* Pequeño movimiento elegante */
+}
+
+/* ================= ESTILOS GENERALES DEL FOOTER ================= */
+
 .footer {
     background: linear-gradient(180deg, #0b1c2d, #081421);
-    color: #e5e5e5;
+    /* El color ya lo forzamos arriba, pero lo dejamos por si acaso */
+    color: #ffffff; 
     padding: 4rem 2rem 1.5rem;
     font-family: 'Segoe UI', sans-serif;
+    position: relative;
+    z-index: 2;
 }
 
 .footer-columns {
@@ -13,76 +44,96 @@
     gap: 3rem;
 }
 
+/* Títulos y Logo */
 .footer-brand h4 {
     margin-top: 1rem;
     font-size: 1.2rem;
     letter-spacing: 1px;
+    font-weight: 700;
+    color: #ffffff !important; /* Refuerzo */
 }
 
 .footer-logo {
     max-width: 160px;
+    /* Si el logo tiene fondo blanco, esto ayuda a integrarlo, aunque lo ideal es PNG transparente */
+    mix-blend-mode: normal; 
 }
 
+/* Textos generales de columnas */
 .footer-col p {
     font-size: 0.95rem;
     margin: 0.6rem 0;
     line-height: 1.6;
+    color: #e0e0e0 !important; /* Un blanco ligeramente suave para lectura cómoda */
 }
 
+/* Iconos de contacto (teléfono, mapa, email) */
 .footer-col i {
     margin-right: 10px;
-    color: #1b9aaa;
+    color: #f57c00 !important; /* Cambiamos el azul raro (#1b9aaa) por tu NARANJA corporativo */
+    width: 20px;
+    text-align: center;
 }
 
+/* Redes Sociales */
 .footer-social {
     margin-top: 1.2rem;
     display: flex;
     gap: 14px;
+    flex-wrap: wrap;
 }
 
 .footer-social a {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    border: 1px solid rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.2);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
+    color: #ffffff !important;
     transition: all 0.3s ease;
+    background: rgba(255,255,255,0.05); /* Fondo muy sutil */
 }
 
 .footer-social a:hover {
-    background: #1b9aaa;
-    border-color: #1b9aaa;
+    background: #f57c00; /* Naranja corporativo */
+    border-color: #f57c00;
     transform: translateY(-4px);
+    color: #ffffff !important;
 }
 
+/* Parte inferior (Copyright) */
 .footer-bottom {
     margin-top: 3rem;
     padding-top: 1.5rem;
-    border-top: 1px solid rgba(255,255,255,0.08);
+    border-top: 1px solid rgba(255,255,255,0.1);
     text-align: center;
     font-size: 0.85rem;
-    opacity: 0.7;
+    color: #cccccc !important; /* Blanco un poco más apagado para no destacar tanto */
+    opacity: 1; /* Quitamos la opacidad baja que tenías (0.7) que lo hacía gris */
 }
 
-/* RESPONSIVE */
-@media (max-width: 900px) {
-    .footer-columns {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .footer-social {
-        justify-content: center;
-    }
-
-    .footer-logo {
-        margin: 0 auto;
-    }
+/* ================= MAPA ================= */
+.footer-map {
+    margin: 3rem auto 0;
+    max-width: 1200px;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+    border: 1px solid rgba(255,255,255,0.1);
 }
-/* revel footer */
+
+.footer-map iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    display: block;
+    /* Filtro opcional para hacer el mapa más legible sobre fondo oscuro */
+    filter: grayscale(20%) contrast(1.1); 
+}
+
+/* ================= ANIMACIÓN DE APARICIÓN ================= */
 .reveal-footer {
     opacity: 0;
     transform: translateY(60px);
@@ -94,18 +145,29 @@
     transform: translateY(0);
 }
 
-/* css maps */
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+    .footer-columns {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
 
-.footer-map {
-    margin: 3rem auto 0;
-    max-width: 1200px;
-    border-radius: 14px;
-    overflow: hidden;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.35);
-}
+    .footer-brand {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-.footer-map iframe {
-    width: 100%;
-    height: 300px;
-    border: none;
+    .footer-social {
+        justify-content: center;
+    }
+
+    .footer-logo {
+        margin: 0 auto;
+    }
+    
+    .footer-col i {
+        margin: 0 5px 5px 0; /* Ajuste de iconos en móvil centrado */
+    }
 }
