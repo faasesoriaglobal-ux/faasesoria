@@ -106,10 +106,17 @@ document.addEventListener('DOMContentLoaded', function() {
         en: {
             // Header & Nav
             nav_inicio: "Home", nav_servicios: "Services", nav_empresa: "Company", nav_contacto: "Contact", consulta_online: "Online Consultation",
-            // Hero
-            hero_text_0: "Always with you in your legal and migration process",
-            hero_text_1: "Human, ethical and professional support",
-            hero_text_2: "Comprehensive legal, tax and administrative solutions",
+         
+            // Hero (Updated with 8 phrases)
+hero_text_0: "Always with you in your legal and migration process",
+hero_text_1: "Human, ethical and professional support",
+hero_text_2: "Comprehensive legal, tax and administrative solutions",
+hero_text_3: "Financial peace of mind and business growth",
+hero_text_4: "Empathy, protection and human solutions for your family",
+hero_text_5: "Tax savings, regulatory compliance and efficiency",
+hero_text_6: "Family reunification and success in immigration procedures",
+hero_text_7: "Protect your creativity, innovation and intellectual property",
+       
             // Empresa
             quienes_somos_badge: "Our Essence",
             quienes_somos_title: "More than an advisory, <br>your strategic ally in Barcelona",
@@ -202,9 +209,15 @@ document.addEventListener('DOMContentLoaded', function() {
             // Header & Nav
             nav_inicio: "Accueil", nav_servicios: "Services", nav_empresa: "Entreprise", nav_contacto: "Contact", consulta_online: "Consultation en ligne",
             // Hero
-            hero_text_0: "Toujours à vos côtés dans votre processus juridique",
-            hero_text_1: "Accompagnement humain, éthique et professionnel",
-            hero_text_2: "Solutions juridiques, fiscales et administratives complètes",
+          // Hero (Mis à jour avec 8 phrases)
+hero_text_0: "Toujours à vos côtés dans votre processus juridique et migratoire",
+hero_text_1: "Accompagnement humain, éthique et professionnel",
+hero_text_2: "Solutions juridiques, fiscales et administratives complètes",
+hero_text_3: "Sérénité financière et croissance de votre entreprise",
+hero_text_4: "Empathie, protection et solutions humaines pour votre famille",
+hero_text_5: "Économie d'impôts, conformité et efficacité",
+hero_text_6: "Retrouvailles familiales et réussite dans vos démarches d'immigration",
+hero_text_7: "Protégez votre créativité, innovation et propriété intellectuelle",
             // Empresa
             quienes_somos_badge: "Notre Essence",
             quienes_somos_title: "Plus qu'un cabinet, <br>votre allié stratégique à Barcelone",
@@ -297,9 +310,15 @@ document.addEventListener('DOMContentLoaded', function() {
             // Header & Nav
             nav_inicio: "Inici", nav_servicios: "Serveis", nav_empresa: "Empresa", nav_contacto: "Contacte", consulta_online: "Consulta en línia",
             // Hero
-            hero_text_0: "Sempre amb tu en el teu procés legal i migratori",
-            hero_text_1: "Acompanyament humà, ètic i professional",
-            hero_text_2: "Solucions legals, fiscals i administratives integrals",
+            // Hero (Actualitzat amb 8 frases)
+hero_text_0: "Sempre amb tu en el teu procés legal i migratori",
+hero_text_1: "Acompanyament humà, ètic i professional",
+hero_text_2: "Solucions legals, fiscals i administratives integrals",
+hero_text_3: "Tranquil·litat financera i creixement empresarial",
+hero_text_4: "Empatia, protecció i solucions humanes per a la teva família",
+hero_text_5: "Estalvi fiscal, compliment normatiu i eficiència",
+hero_text_6: "Retrobament familiar i èxit en els teus tràmits d'estrangeria",
+hero_text_7: "Protegeix la teva creativitat, innovació i propietat intel·lectual",
             // Empresa
             quienes_somos_badge: "La Nostra Essència",
             quienes_somos_title: "Més que una assessoria, <br>el teu aliat estratègic a Barcelona",
