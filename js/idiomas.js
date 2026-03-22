@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
             hero_text_0: "Siempre contigo en tu proceso legal y migratorio",
             hero_text_1: "Acompañamiento humano, ético y profesional",
             hero_text_2: "Soluciones legales, fiscales y administrativas integrales",
-            // Empresa (NUEVOS TEXTOS INTEGRADOS)
+            // Empresa
             quienes_somos_badge: "Nuestra Esencia",
             quienes_somos_title: "Más que una asesoría, <br>tu aliado estratégico en Barcelona",
             empresa_lead_new: "FA Asesoría Global es una firma legal y de gestión integral especializada en acompañar a la comunidad migrante y emprendedora. Transformamos la burocracia en soluciones claras, seguras y personalizadas.",
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
             stat_anios: "Años de experiencia",
             stat_clientes: "Clientes internacionales",
             nuestro_origen: "El Origen",
-            fundador_text_new_1: "Nacido de la visión de <strong> Flor Andino </strong>. Tras vivir en primera persona los desafíos migratorios en 2004, transformó esa experiencia en un puente de ayuda real, consolidando en 2016 una firma estructurada y multidisciplinaria.",
+            fundador_text_new_1: "Nacido de la visión de <strong>Flor Andino</strong>. Tras vivir en primera persona los desafíos migratorios en 2004, transformó esa experiencia en un puente de ayuda real, consolidando en 2016 una firma estructurada y multidisciplinaria.",
             fundador_text_new_2: "\"Nuestro compromiso es brindar soluciones reales, escuchando cada necesidad para convertir la asesoría en un verdadero apoyo.\"",
             valores_title: "Nuestros Pilares",
             val_1_t: "Acompañamiento Humano", val_1_d: "Cercanía y empatía en cada trámite.",
@@ -28,23 +28,50 @@ document.addEventListener('DOMContentLoaded', function() {
             time_1_year: "2004-2008", hist_t1: "Inicios y Vocación", historia_1_new: "Comenzamos asesorando a familias migrantes con un enfoque cercano y humano, identificando la necesidad de información clara.",
             time_2_year: "2016", hist_t2: "Expansión Integral", historia_2_new: "Ampliamos servicios al área legal y fiscal, creando una red de colaboradores especializados para garantías totales.",
             time_3_year: "Actualidad", hist_t3: "Referente Global", historia_3_new: "Hoy somos líderes en Barcelona por nuestra ética, innovación y compromiso social con clientes nacionales e internacionales.",
-            
+
             // Servicios Principales
             servicios: "Servicios",
             badge_extranjeria: "Extranjería", badge_legal: "Legal", badge_fiscal: "Fiscal", badge_autonomo: "Autónomos",
             label_extranjeria: "Departamento Extranjería", label_legal: "Departamento Legal", label_fiscal: "Departamento Fiscal", label_autonomo: "Departamento Autónomos",
+            
             servicio_1_title: "Extranjería y trámites migratorios", servicio_1_subtitle: "Residencia · Nacionalidad · Arraigo · Visados",
             servicio_2_title: "Área Legal Integral", servicio_2_subtitle: "Penal · Civil · Familia · Laboral",
             servicio_3_title: "Fiscal y Contable", servicio_3_subtitle: "Autónomos · Empresas · IRPF",
             servicio_4_title: "Departamento Autónomo", servicio_4_subtitle: "Autónomos · Empresas · Trámites",
-            servicio_1_item_1: "Permisos de residencia", servicio_1_item_2: "Renovación de NIE", servicio_1_item_3: "Reagrupación familiar", servicio_1_item_4: "Nacionalidad española",
-            servicio_2_item_1: "Divorcios y custodia", servicio_2_item_2: "Contratos y reclamaciones", servicio_2_item_3: "Despidos y sanciones", servicio_2_item_4: "Antecedentes penales",
-            servicio_3_item_1: "Alta de autónomos", servicio_3_item_2: "Declaraciones de impuestos", servicio_3_item_3: "Contabilidad empresarial", servicio_3_item_4: "Creación de empresas",
-            servicio_4_item_1: "Atención y asesoramiento presencial y telefónico", servicio_4_item_2: "Revisión de notificaciones diarias", servicio_4_item_3: "Certificados digitales", servicio_4_item_4: "Alta y baja de autónomos",
-            servicio_4_item_5: "Creación de empresas", servicio_4_item_6: "Número de Seguridad Social", servicio_4_item_7: "Prestaciones y ayudas", servicio_4_item_8: "Registro de marcas",
-            servicio_4_item_9: "Certificados Hacienda y Seguridad Social", servicio_4_item_10: "Solicitud de paro", servicio_4_item_11: "Patentes", servicio_4_item_12: "Cambio de nombre de vehículos", servicio_4_item_13: "Licencia de locales",
-            btn_solicitar_asesoria: "Solicitar asesoría",
             
+            // Extranjería
+            servicio_1_item_1: "Permisos de residencia", 
+            servicio_1_item_2: "Renovación de NIE", 
+            servicio_1_item_3: "Reagrupación familiar", 
+            servicio_1_item_4: "Nacionalidad española",
+            
+            // Legal
+            servicio_2_item_1: "Divorcios y custodia", 
+            servicio_2_item_2: "Contratos y reclamaciones", 
+            servicio_2_item_3: "Despidos y sanciones", 
+            servicio_2_item_4: "Antecedentes penales",
+            
+            // Fiscal (7 ÍTEMS)
+            servicio_3_item_1: "Declaraciones anuales e IRPF", 
+            servicio_3_item_2: "Contabilidad para autónomos y empresas", 
+            servicio_3_item_3: "Gestión de impuestos", 
+            servicio_3_item_4: "Asesoría financiera y previsión fiscal",
+            servicio_3_item_5: "Atención y asesoramiento presencial y telefónica",
+            servicio_3_item_6: "Constitución de empresas (Mercantil)",
+            servicio_3_item_7: "Patentes",
+            
+            // Autónomos (8 ÍTEMS)
+            servicio_4_item_1: "Atención y asesoramiento presencial y telefónico", 
+            servicio_4_item_2: "Revisión de notificaciones diarias", 
+            servicio_4_item_3: "Certificados digitales", 
+            servicio_4_item_4: "Alta y baja de autónomos",
+            servicio_4_item_5: "Creación de empresas", 
+            servicio_4_item_6: "Número de Seguridad Social", 
+            servicio_4_item_7: "Prestaciones y ayudas", 
+            servicio_4_item_8: "Registro de marcas",
+            
+            btn_solicitar_asesoria: "Solicitar asesoría",
+
             // Otros Servicios
             otros_badge: "Servicios Complementarios", otros_title: "Otros Servicios", otros_subtitle: "Descubre nuestra gama de servicios adicionales diseñados para cubrir todas tus necesidades",
             otros_card_1_title: "Seguros", otros_card_1_desc: "Protección completa para ti y tu familia",
@@ -56,14 +83,14 @@ document.addEventListener('DOMContentLoaded', function() {
             overlay_text: "Solicitar información",
             otros_btn: "Solicitar asesoría completa",
             otros_note: "¿No encuentras lo que buscas? <a href='contacto.html'>Contáctanos</a> para una solución personalizada",
-            
+
             // Formulario
             formulario_title: "HAZ TU CONSULTA", form_nombre: "Nombre", form_apellidos: "Apellidos", form_correo: "Correo electrónico", form_telefono: "Teléfono",
             form_idioma: "Idioma de atención", form_idioma_placeholder: "Selecciona un idioma", form_idioma_es: "Español", form_idioma_en: "Inglés", form_idioma_fr: "Francés", form_idioma_ca: "Catalán",
             form_descripcion: "Describe brevemente tu consulta", form_placeholder_descripcion: "Cuéntanos tu situación...",
             form_consent: "Acepto la <a href='politica-privacidad.html' target='_blank' rel='noopener'>política de privacidad</a> y autorizo el tratamiento de mis datos",
             form_btn: "Enviar consulta por WhatsApp",
-            
+
             // Footer
             footer_empresa: "FA Asesoría Global", footer_servicios: "Legal · Fiscal · Extranjería",
             avisos_legales: "Avisos legales", aviso_legal: "Aviso legal", privacidad: "Privacidad", cookies: "Cookies",
@@ -77,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function() {
             hero_text_0: "Always with you in your legal and migration process",
             hero_text_1: "Human, ethical and professional support",
             hero_text_2: "Comprehensive legal, tax and administrative solutions",
-            // Empresa (NEW CONTENT)
+            // Empresa
             quienes_somos_badge: "Our Essence",
             quienes_somos_title: "More than an advisory, <br>your strategic ally in Barcelona",
             empresa_lead_new: "FA Asesoría Global is a legal and management firm specialized in supporting the migrant and entrepreneurial community. We turn bureaucracy into clear, safe, and personalized solutions.",
@@ -96,23 +123,50 @@ document.addEventListener('DOMContentLoaded', function() {
             time_1_year: "2004-2008", hist_t1: "Beginnings & Vocation", historia_1_new: "We began by advising migrant families with a close, human approach, identifying the need for clear information.",
             time_2_year: "2016", hist_t2: "Integral Expansion", historia_2_new: "We expanded services to legal and tax areas, creating a network of specialized collaborators for total guarantees.",
             time_3_year: "Present", hist_t3: "Global Reference", historia_3_new: "Today we are leaders in Barcelona for our ethics, innovation, and social commitment to national and international clients.",
-            
+
             // Services
             servicios: "Services",
             badge_extranjeria: "Immigration", badge_legal: "Legal", badge_fiscal: "Tax", badge_autonomo: "Self-Employed",
             label_extranjeria: "Immigration Dept.", label_legal: "Legal Dept.", label_fiscal: "Tax Dept.", label_autonomo: "Self-Employed Dept.",
+            
             servicio_1_title: "Immigration Procedures", servicio_1_subtitle: "Residence · Nationality · Visas",
             servicio_2_title: "Legal Area", servicio_2_subtitle: "Criminal · Civil · Family",
             servicio_3_title: "Tax & Accounting", servicio_3_subtitle: "Self-employed · Companies",
             servicio_4_title: "Self-Employed Dept", servicio_4_subtitle: "Procedures & Management",
-            servicio_1_item_1: "Residence permits", servicio_1_item_2: "NIE Renewal", servicio_1_item_3: "Family reunification", servicio_1_item_4: "Spanish nationality",
-            servicio_2_item_1: "Divorces and custody", servicio_2_item_2: "Contracts and claims", servicio_2_item_3: "Dismissals", servicio_2_item_4: "Criminal records",
-            servicio_3_item_1: "Self-employed registration", servicio_3_item_2: "Tax declarations", servicio_3_item_3: "Business accounting", servicio_3_item_4: "Company formation",
-            servicio_4_item_1: "In-person and phone advice", servicio_4_item_2: "Daily notifications review", servicio_4_item_3: "Digital certificates", servicio_4_item_4: "Self-employed registration/deregistration",
-            servicio_4_item_5: "Company formation", servicio_4_item_6: "Social Security Number", servicio_4_item_7: "Benefits and grants", servicio_4_item_8: "Trademark registration",
-            servicio_4_item_9: "Treasury certificates", servicio_4_item_10: "Unemployment application", servicio_4_item_11: "Patents", servicio_4_item_12: "Vehicle name change", servicio_4_item_13: "Local licenses",
-            btn_solicitar_asesoria: "Request Consultation",
             
+            // Immigration
+            servicio_1_item_1: "Residence permits", 
+            servicio_1_item_2: "NIE Renewal", 
+            servicio_1_item_3: "Family reunification", 
+            servicio_1_item_4: "Spanish nationality",
+            
+            // Legal
+            servicio_2_item_1: "Divorces and custody", 
+            servicio_2_item_2: "Contracts and claims", 
+            servicio_2_item_3: "Dismissals and sanctions", 
+            servicio_2_item_4: "Criminal records",
+            
+            // Tax (7 ITEMS)
+            servicio_3_item_1: "Annual tax returns & IRPF", 
+            servicio_3_item_2: "Accounting for self-employed and companies", 
+            servicio_3_item_3: "Tax management", 
+            servicio_3_item_4: "Financial advice and tax planning",
+            servicio_3_item_5: "In-person and phone support",
+            servicio_3_item_6: "Company incorporation (Commercial)",
+            servicio_3_item_7: "Patents",
+            
+            // Self-Employed (8 ITEMS)
+            servicio_4_item_1: "In-person and phone advice", 
+            servicio_4_item_2: "Daily notifications review", 
+            servicio_4_item_3: "Digital certificates", 
+            servicio_4_item_4: "Self-employed registration/deregistration",
+            servicio_4_item_5: "Company formation", 
+            servicio_4_item_6: "Social Security Number", 
+            servicio_4_item_7: "Benefits and grants", 
+            servicio_4_item_8: "Trademark registration",
+            
+            btn_solicitar_asesoria: "Request Consultation",
+
             // Other Services
             otros_badge: "Complementary Services", otros_title: "Other Services", otros_subtitle: "Discover our additional services",
             otros_card_1_title: "Insurance", otros_card_1_desc: "Complete protection for you and your family",
@@ -124,14 +178,14 @@ document.addEventListener('DOMContentLoaded', function() {
             overlay_text: "Request Info",
             otros_btn: "Request Full Consultation",
             otros_note: "Can't find what you're looking for? <a href='contacto.html'>Contact us</a>",
-            
+
             // Form
             formulario_title: "MAKE YOUR QUERY", form_nombre: "Name", form_apellidos: "Surname", form_correo: "Email", form_telefono: "Phone",
             form_idioma: "Language", form_idioma_placeholder: "Select language", form_idioma_es: "Spanish", form_idioma_en: "English", form_idioma_fr: "French", form_idioma_ca: "Catalan",
             form_descripcion: "Describe your query", form_placeholder_descripcion: "Tell us about your situation...",
             form_consent: "I accept the <a href='politica-privacidad.html' target='_blank' rel='noopener'>privacy policy</a>",
             form_btn: "Send via WhatsApp",
-            
+
             // Footer
             footer_empresa: "FA Asesoría Global", footer_servicios: "Legal · Tax · Immigration",
             avisos_legales: "Legal Notices", aviso_legal: "Legal Notice", privacidad: "Privacy", cookies: "Cookies",
@@ -145,7 +199,7 @@ document.addEventListener('DOMContentLoaded', function() {
             hero_text_0: "Toujours à vos côtés dans votre processus juridique",
             hero_text_1: "Accompagnement humain, éthique et professionnel",
             hero_text_2: "Solutions juridiques, fiscales et administratives complètes",
-            // Empresa (NOUVEAU CONTENU)
+            // Empresa
             quienes_somos_badge: "Notre Essence",
             quienes_somos_title: "Plus qu'un cabinet, <br>votre allié stratégique à Barcelone",
             empresa_lead_new: "FA Asesoría Global est un cabinet juridique et de gestion spécialisé dans l'accompagnement de la communauté migrante et entrepreneuriale. Nous transformons la bureaucratie en solutions claires et personnalisées.",
@@ -164,23 +218,50 @@ document.addEventListener('DOMContentLoaded', function() {
             time_1_year: "2004-2008", hist_t1: "Débuts & Vocation", historia_1_new: "Nous avons commencé par conseiller les familles migrantes avec une approche humaine, identifiant le besoin d'informations claires.",
             time_2_year: "2016", hist_t2: "Expansion Intégrale", historia_2_new: "Nous avons étendu nos services aux domaines juridique et fiscal, créant un réseau de collaborateurs spécialisés.",
             time_3_year: "Actuel", hist_t3: "Référence Mondiale", historia_3_new: "Aujourd'hui, nous sommes leaders à Barcelone pour notre éthique, notre innovation et notre engagement social.",
-            
+
             // Services
             servicios: "Services",
             badge_extranjeria: "Étranger", badge_legal: "Juridique", badge_fiscal: "Fiscal", badge_autonomo: "Indépendants",
             label_extranjeria: "Dépt. Étranger", label_legal: "Dépt. Juridique", label_fiscal: "Dépt. Fiscal", label_autonomo: "Dépt. Indépendants",
+            
             servicio_1_title: "Procédures d'immigration", servicio_1_subtitle: "Résidence · Nationalité · Visas",
             servicio_2_title: "Domaine Juridique", servicio_2_subtitle: "Pénal · Civil · Famille",
             servicio_3_title: "Fiscal et Comptable", servicio_3_subtitle: "Indépendants · Entreprises",
             servicio_4_title: "Dépt. Indépendants", servicio_4_subtitle: "Gestion et Démarches",
-            servicio_1_item_1: "Permis de résidence", servicio_1_item_2: "Renouvellement de NIE", servicio_1_item_3: "Regroupement familial", servicio_1_item_4: "Nationalité espagnole",
-            servicio_2_item_1: "Divorces et garde", servicio_2_item_2: "Contrats et réclamations", servicio_2_item_3: "Licenciements", servicio_2_item_4: "Casiers judiciaires",
-            servicio_3_item_1: "Inscription des indépendants", servicio_3_item_2: "Déclarations d'impôts", servicio_3_item_3: "Comptabilité d'entreprise", servicio_3_item_4: "Création d'entreprises",
-            servicio_4_item_1: "Conseils en personne et par téléphone", servicio_4_item_2: "Révision des notifications quotidiennes", servicio_4_item_3: "Certificats numériques", servicio_4_item_4: "Inscription et radiation des indépendants",
-            servicio_4_item_5: "Création d'entreprises", servicio_4_item_6: "Numéro de sécurité sociale", servicio_4_item_7: "Prestations et aides", servicio_4_item_8: "Enregistrement de marques",
-            servicio_4_item_9: "Certificats Trésor et Sécurité sociale", servicio_4_item_10: "Demande de chômage", servicio_4_item_11: "Brevets", servicio_4_item_12: "Changement de nom de véhicules", servicio_4_item_13: "Licences locales",
-            btn_solicitar_asesoria: "Demander une consultation",
             
+            // Immigration
+            servicio_1_item_1: "Permis de résidence", 
+            servicio_1_item_2: "Renouvellement de NIE", 
+            servicio_1_item_3: "Regroupement familial", 
+            servicio_1_item_4: "Nationalité espagnole",
+            
+            // Legal
+            servicio_2_item_1: "Divorces et garde", 
+            servicio_2_item_2: "Contrats et réclamations", 
+            servicio_2_item_3: "Licenciements et sanctions", 
+            servicio_2_item_4: "Casiers judiciaires",
+            
+            // Fiscal (7 ITEMS)
+            servicio_3_item_1: "Déclarations annuelles et IRPF", 
+            servicio_3_item_2: "Comptabilité pour indépendants et entreprises", 
+            servicio_3_item_3: "Gestion fiscale", 
+            servicio_3_item_4: "Conseil financier et prévision fiscale",
+            servicio_3_item_5: "Assistance en personne et par téléphone",
+            servicio_3_item_6: "Création d'entreprises (Commercial)",
+            servicio_3_item_7: "Brevets",
+            
+            // Indépendants (8 ITEMS)
+            servicio_4_item_1: "Conseils en personne et par téléphone", 
+            servicio_4_item_2: "Révision des notifications quotidiennes", 
+            servicio_4_item_3: "Certificats numériques", 
+            servicio_4_item_4: "Inscription et radiation des indépendants",
+            servicio_4_item_5: "Création d'entreprises", 
+            servicio_4_item_6: "Numéro de sécurité sociale", 
+            servicio_4_item_7: "Prestations et aides", 
+            servicio_4_item_8: "Enregistrement de marques",
+            
+            btn_solicitar_asesoria: "Demander une consultation",
+
             // Other Services
             otros_badge: "Services Complémentaires", otros_title: "Autres Services", otros_subtitle: "Découvrez nos services supplémentaires",
             otros_card_1_title: "Assurances", otros_card_1_desc: "Protection complète pour vous et votre famille",
@@ -192,14 +273,14 @@ document.addEventListener('DOMContentLoaded', function() {
             overlay_text: "Demander Infos",
             otros_btn: "Demander une consultation complète",
             otros_note: "Vous ne trouvez pas ce que vous cherchez ? <a href='contacto.html'>Contactez-nous</a>",
-            
+
             // Form
             formulario_title: "POSEZ VOTRE QUESTION", form_nombre: "Nom", form_apellidos: "Prénom", form_correo: "Email", form_telefono: "Téléphone",
             form_idioma: "Langue", form_idioma_placeholder: "Sélectionnez une langue", form_idioma_es: "Espagnol", form_idioma_en: "Anglais", form_idioma_fr: "Français", form_idioma_ca: "Catalan",
             form_descripcion: "Décrivez brièvement votre question", form_placeholder_descripcion: "Racontez-nous votre situation...",
             form_consent: "J'accepte la <a href='politica-privacidad.html' target='_blank' rel='noopener'>politique de confidentialité</a>",
             form_btn: "Envoyer par WhatsApp",
-            
+
             // Footer
             footer_empresa: "FA Asesoría Global", footer_servicios: "Juridique · Fiscal · Étranger",
             avisos_legales: "Avis légaux", aviso_legal: "Avis juridique", privacidad: "Confidentialité", cookies: "Cookies",
@@ -213,7 +294,7 @@ document.addEventListener('DOMContentLoaded', function() {
             hero_text_0: "Sempre amb tu en el teu procés legal i migratori",
             hero_text_1: "Acompanyament humà, ètic i professional",
             hero_text_2: "Solucions legals, fiscals i administratives integrals",
-            // Empresa (NOU CONTINGUT)
+            // Empresa
             quienes_somos_badge: "La Nostra Essència",
             quienes_somos_title: "Més que una assessoria, <br>el teu aliat estratègic a Barcelona",
             empresa_lead_new: "FA Asesoría Global és una firma legal i de gestió integral especialitzada en acompanyar la comunitat migrant i emprenedora. Transformem la burocràcia en solucions clares i personalitzades.",
@@ -232,23 +313,50 @@ document.addEventListener('DOMContentLoaded', function() {
             time_1_year: "2004-2008", hist_t1: "Inicis i Vocació", historia_1_new: "Vam començar assessorant famílies migrants amb un enfocament proper i humà, identificant la necessitat d'informació clara.",
             time_2_year: "2016", hist_t2: "Expansió Integral", historia_2_new: "Vam ampliar serveis a l'àrea legal i fiscal, creant una xarxa de col·laboradors especialitzats per a garanties totals.",
             time_3_year: "Actualitat", hist_t3: "Referent Global", historia_3_new: "Avui som líders a Barcelona per la nostra ètica, innovació i compromís social amb clients nacionals i internacionals.",
-            
+
             // Serveis
             servicios: "Serveis",
             badge_extranjeria: "Estrangeria", badge_legal: "Legal", badge_fiscal: "Fiscal", badge_autonomo: "Autònoms",
             label_extranjeria: "Departament d'Estrangeria", label_legal: "Departament Legal", label_fiscal: "Departament Fiscal", label_autonomo: "Departament d'Autònoms",
+            
             servicio_1_title: "Estrangeria i tràmits migratoris", servicio_1_subtitle: "Residència · Nacionalitat · Arrelament · Visats",
             servicio_2_title: "Àrea Legal Integral", servicio_2_subtitle: "Penal · Civil · Família · Laboral",
             servicio_3_title: "Fiscal i Comptable", servicio_3_subtitle: "Autònoms · Empreses · IRPF",
             servicio_4_title: "Departament d'Autònoms", servicio_4_subtitle: "Autònoms · Empreses · Tràmits",
-            servicio_1_item_1: "Permisos de residència", servicio_1_item_2: "Renovació de NIE", servicio_1_item_3: "Reagrupament familiar", servicio_1_item_4: "Nacionalitat espanyola",
-            servicio_2_item_1: "Divorcis i custòdia", servicio_2_item_2: "Contractes i reclamacions", servicio_2_item_3: "Acomiadaments i sancions", servicio_2_item_4: "Antecedents penals",
-            servicio_3_item_1: "Alta d'autònoms", servicio_3_item_2: "Declaracions d'impostos", servicio_3_item_3: "Comptabilitat empresarial", servicio_3_item_4: "Creació d'empreses",
-            servicio_4_item_1: "Atenció i assessorament presencial i telefònic", servicio_4_item_2: "Revisió de notificacions diàries", servicio_4_item_3: "Certificats digitals", servicio_4_item_4: "Alta i baixa d'autònoms",
-            servicio_4_item_5: "Creació d'empreses", servicio_4_item_6: "Número de Seguretat Social", servicio_4_item_7: "Prestacions i ajudes", servicio_4_item_8: "Registre de marques",
-            servicio_4_item_9: "Certificats Hisenda i Seguretat Social", servicio_4_item_10: "Sol·licitud d'atur", servicio_4_item_11: "Patents", servicio_4_item_12: "Canvi de nom de vehicles", servicio_4_item_13: "Llicència de locals",
-            btn_solicitar_asesoria: "Sol·licitar assessoria",
             
+            // Estrangeria
+            servicio_1_item_1: "Permisos de residència", 
+            servicio_1_item_2: "Renovació de NIE", 
+            servicio_1_item_3: "Reagrupament familiar", 
+            servicio_1_item_4: "Nacionalitat espanyola",
+            
+            // Legal
+            servicio_2_item_1: "Divorcis i custòdia", 
+            servicio_2_item_2: "Contractes i reclamacions", 
+            servicio_2_item_3: "Acomiadaments i sancions", 
+            servicio_2_item_4: "Antecedents penals",
+            
+            // Fiscal (7 ITEMS)
+            servicio_3_item_1: "Declaracions anuals i IRPF", 
+            servicio_3_item_2: "Comptabilitat per a autònoms i empreses", 
+            servicio_3_item_3: "Gestió d'impostos", 
+            servicio_3_item_4: "Assessoria financera i prevenció fiscal",
+            servicio_3_item_5: "Atenció presencial i telefònica",
+            servicio_3_item_6: "Constitució d'empreses (Mercantil)",
+            servicio_3_item_7: "Patents",
+            
+            // Autònoms (8 ITEMS)
+            servicio_4_item_1: "Atenció i assessorament presencial i telefònic", 
+            servicio_4_item_2: "Revisió de notificacions diàries", 
+            servicio_4_item_3: "Certificats digitals", 
+            servicio_4_item_4: "Alta i baixa d'autònoms",
+            servicio_4_item_5: "Creació d'empreses", 
+            servicio_4_item_6: "Número de Seguretat Social", 
+            servicio_4_item_7: "Prestacions i ajudes", 
+            servicio_4_item_8: "Registre de marques",
+            
+            btn_solicitar_asesoria: "Sol·licitar assessoria",
+
             // Altres Serveis
             otros_badge: "Serveis Complementaris", otros_title: "Altres Serveis", otros_subtitle: "Descobreix la nostra gamma de serveis addicionals dissenyats per cobrir totes les teves necessitats",
             otros_card_1_title: "Assegurances", otros_card_1_desc: "Protecció completa per a tu i la teva família",
@@ -260,14 +368,14 @@ document.addEventListener('DOMContentLoaded', function() {
             overlay_text: "Sol·licitar informació",
             otros_btn: "Sol·licitar assessoria completa",
             otros_note: "No trobes el que busques? <a href='contacto.html'>Contacta'ns</a> per a una solució personalitzada",
-            
+
             // Formulari
             formulario_title: "FES LA TEVA CONSULTA", form_nombre: "Nom", form_apellidos: "Cognoms", form_correo: "Correu electrònic", form_telefono: "Telèfon",
             form_idioma: "Idioma d'atenció", form_idioma_placeholder: "Selecciona un idioma", form_idioma_es: "Espanyol", form_idioma_en: "Anglès", form_idioma_fr: "Francès", form_idioma_ca: "Català",
             form_descripcion: "Descriu breument la teva consulta", form_placeholder_descripcion: "Explica'ns la teva situació...",
             form_consent: "Accepto la <a href='politica-privacidad.html' target='_blank' rel='noopener'>política de privadesa</a> i autoritzo el tractament de les meves dades",
             form_btn: "Enviar consulta per WhatsApp",
-            
+
             // Footer
             footer_empresa: "FA Asesoría Global", footer_servicios: "Legal · Fiscal · Estrangeria",
             avisos_legales: "Avisos legals", aviso_legal: "Avís legal", privacidad: "Privadesa", cookies: "Cookies",
@@ -318,7 +426,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // FUNCIÓN PRINCIPAL DE TRADUCCIÓN AUTOMÁTICA
-        // FUNCIÓN PRINCIPAL DE TRADUCCIÓN AUTOMÁTICA
     function applyTranslations(lang) {
         currentLang = lang;
         const t = translations[lang];
