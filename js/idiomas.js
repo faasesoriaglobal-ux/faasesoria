@@ -9,6 +9,12 @@ document.addEventListener('DOMContentLoaded', function() {
             hero_text_0: "Siempre contigo en tu proceso legal y migratorio",
             hero_text_1: "Acompañamiento humano, ético y profesional",
             hero_text_2: "Soluciones legales, fiscales y administrativas integrales",
+             hero_text_3:"Tranquilidad financiera y crecimiento",
+              hero_text_4:"Empatía, protección y soluciones humanas",
+               hero_text_5:"Ahorro, cumplimiento y eficiencia",
+                hero_text_6:"Reencuentro, unidad familiar y éxito en trámites",
+                 hero_text_7:"Protege tu Creatividad e Innovación",
+
             // Empresa
             quienes_somos_badge: "Nuestra Esencia",
             quienes_somos_title: "Más que una asesoría, <br>tu aliado estratégico en Barcelona",
