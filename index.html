@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#c2185b">
     
     <!-- Iconos -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+   <script src="https://code.iconify.design/iconify-icon/2.0.0/iconify-icon.min.js"></script>
     
     <!-- CSS base -->
     <link rel="stylesheet" href="css/styles.css">
@@ -516,6 +516,7 @@
     </form>
 </section>
 
+
 <!-- ================= FOOTER ================= -->
 <footer class="footer reveal-footer" id="contacto">
     <div class="footer-columns">
@@ -525,27 +526,39 @@
             <h4 data-lang="footer_empresa">FA Asesoría Global</h4>
             <p data-lang="footer_servicios">Legal · Fiscal · Extranjería</p>
             <div class="footer-social">
-                <a href="https://www.instagram.com/faasesoriaglobal" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.facebook.com/" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://linktr.ee/faasesoriaglobal?utm_source=linktree_profile_share&ltsid=909ef9a7-a69a-42a9-8bc4-2e764c14f65f" aria-label="Linktree" target="_blank" rel="noopener noreferrer"> <i class="fas fa-tree"></i> </a>
-                <a href="https://wa.me/34657878642" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/faasesoriaglobal" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                    <iconify-icon icon="mdi:instagram"></iconify-icon>
+                </a>
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/faasesoriaglobal/?locale=es_ES" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                    <iconify-icon icon="mdi:facebook"></iconify-icon>
+                </a>
+                <!-- Linktree (Logo Oficial) -->
+                <a href="https://linktr.ee/faasesoriaglobal?utm_source=linktree_profile_share&ltsid=909ef9a7-a69a-42a9-8bc4-2e764c14f65f" aria-label="Linktree" target="_blank" rel="noopener noreferrer">
+                    <iconify-icon icon="simple-icons:linktree"></iconify-icon>
+                </a>
+                <!-- WhatsApp -->
+                <a href="https://wa.me/34657878642" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
+                    <iconify-icon icon="mdi:whatsapp"></iconify-icon>
+                </a>
             </div>
         </div>
 
-        <!-- AVISOS -->
+        <!-- AVISOS LEGALES (Convertidos a enlaces) -->
         <div class="footer-col">
             <h4 data-lang="avisos_legales">Avisos legales</h4>
-            <p data-lang="aviso_legal">Aviso legal</p>
-            <p data-lang="privacidad">Privacidad</p>
-            <p data-lang="cookies">Cookies</p>
+            <a href="politica-privacidad.html" target="_blank" rel="noopener" data-lang="aviso_legal">Aviso legal</a>
+            <a href="politica-privacidad.html" target="_blank" rel="noopener" data-lang="privacidad">Privacidad</a>
+            <a href="politica-privacidad.html#cookies" target="_blank" rel="noopener" data-lang="cookies">Cookies</a>
         </div>
 
         <!-- CONTACTO -->
         <div class="footer-col footer-contact">
             <h4 data-lang="footer_contacto">Contacto</h4>
-            <p><i class="fas fa-map-marker-alt"></i> Av. de Josep Tarradellas, 134</p>
-            <p><i class="fas fa-phone"></i> +34935140604</p>
-            <p><i class="fas fa-envelope"></i> faasesoriaglobal@gmail.com</p>
+            <p><iconify-icon icon="mdi:map-marker"></iconify-icon> Av. de Josep Tarradellas, 134</p>
+            <p><iconify-icon icon="mdi:phone"></iconify-icon> +34935140604</p>
+            <p><iconify-icon icon="mdi:email"></iconify-icon> faasesoriaglobal@gmail.com</p>
         </div>
     </div>
 
@@ -557,7 +570,6 @@
     <!-- COPYRIGHT -->
     <p class="footer-bottom" data-lang="footer_copy">© 2026 FA Asesoría Global · Todos los derechos reservados</p>
 </footer>
-
 <!-- VENTANA MODAL (CORREGIDA: Cierre añadido correctamente) -->
 <div class="service-modal" id="serviceModal">
     <div class="modal-content">

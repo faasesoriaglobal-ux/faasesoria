@@ -1,3 +1,5 @@
+/* ================= ESTILOS GENERALES DEL FOOTER ================= */
+
 /* 1. Forzar blanco en TODOS los elementos de texto dentro del footer */
 .footer, 
 .footer h4, 
@@ -7,10 +9,10 @@
 .footer span, 
 .footer-bottom, 
 .footer-col {
-    color: #ffffff !important; /* Blanco puro obligatorio */
+    color: #ffffff !important;
 }
 
-/* 2. Asegurar que los enlaces (avisos legales) no tengan subrayado y sean blancos */
+/* Enlaces legales */
 .footer-col a {
     color: #ffffff !important;
     text-decoration: none;
@@ -20,15 +22,12 @@
 }
 
 .footer-col a:hover {
-    color: #f57c00 !important; /* Naranja corporativo al pasar el ratón */
-    padding-left: 5px; /* Pequeño movimiento elegante */
+    color: #f57c00 !important;
+    padding-left: 5px;
 }
-
-/* ================= ESTILOS GENERALES DEL FOOTER ================= */
 
 .footer {
     background: linear-gradient(180deg, #0b1c2d, #081421);
-    /* El color ya lo forzamos arriba, pero lo dejamos por si acaso */
     color: #ffffff; 
     padding: 4rem 2rem 1.5rem;
     font-family: 'Segoe UI', sans-serif;
@@ -44,35 +43,39 @@
     gap: 3rem;
 }
 
-/* Títulos y Logo */
 .footer-brand h4 {
     margin-top: 1rem;
     font-size: 1.2rem;
     letter-spacing: 1px;
     font-weight: 700;
-    color: #ffffff !important; /* Refuerzo */
 }
 
 .footer-logo {
     max-width: 160px;
-    /* Si el logo tiene fondo blanco, esto ayuda a integrarlo, aunque lo ideal es PNG transparente */
-    mix-blend-mode: normal; 
+    display: block; /* Evita espacios extra */
 }
 
-/* Textos generales de columnas */
 .footer-col p {
     font-size: 0.95rem;
     margin: 0.6rem 0;
     line-height: 1.6;
-    color: #e0e0e0 !important; /* Un blanco ligeramente suave para lectura cómoda */
+    color: #e0e0e0 !important;
 }
 
-/* Iconos de contacto (teléfono, mapa, email) */
-.footer-col i {
+/* ================= ICONOS (ADAPTADO A ICONIFY) ================= */
+
+/* Estilos base para todos los iconos iconify en el footer */
+iconify-icon {
+    vertical-align: middle;
+    display: inline-block;
+    line-height: 1;
+}
+
+/* Iconos de Contacto (Naranjas) */
+.footer-contact iconify-icon {
     margin-right: 10px;
-    color: #f57c00 !important; /* Cambiamos el azul raro (#1b9aaa) por tu NARANJA corporativo */
-    width: 20px;
-    text-align: center;
+    color: #f57c00 !important;
+    font-size: 18px;
 }
 
 /* Redes Sociales */
@@ -91,32 +94,34 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #ffffff !important;
+    background: rgba(255,255,255,0.05);
     transition: all 0.3s ease;
-    background: rgba(255,255,255,0.05); /* Fondo muy sutil */
+    color: #ffffff !important;
 }
 
+/* Iconos dentro de redes sociales (Naranjas por defecto) */
+.footer-social iconify-icon {
+    font-size: 20px;
+    color: #f57c00 !important; /* CAMBIO CLAVE: Iconos naranjas */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover en Redes: Fondo naranja, icono blanco */
 .footer-social a:hover {
-    background: #f57c00; /* Naranja corporativo */
+    background: #f57c00;
     border-color: #f57c00;
     transform: translateY(-4px);
+}
+
+.footer-social a:hover iconify-icon {
     color: #ffffff !important;
+    transform: scale(1.1);
 }
 
-/* Parte inferior (Copyright) */
-.footer-bottom {
-    margin-top: 3rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    text-align: center;
-    font-size: 0.85rem;
-    color: #cccccc !important; /* Blanco un poco más apagado para no destacar tanto */
-    opacity: 1; /* Quitamos la opacidad baja que tenías (0.7) que lo hacía gris */
-}
-
-/* ================= MAPA ================= */
+/* ================= MAPA (CORREGIDO CON WIDTH 100%) ================= */
 .footer-map {
     margin: 3rem auto 0;
+    width: 100%;             /* ¡ESTA ES LA CLAVE QUE FALTABA! */
     max-width: 1200px;
     border-radius: 14px;
     overflow: hidden;
@@ -129,11 +134,20 @@
     height: 300px;
     border: none;
     display: block;
-    /* Filtro opcional para hacer el mapa más legible sobre fondo oscuro */
     filter: grayscale(20%) contrast(1.1); 
 }
 
-/* ================= ANIMACIÓN DE APARICIÓN ================= */
+/* ================= COPYRIGHT Y ANIMACIÓN ================= */
+.footer-bottom {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    text-align: center;
+    font-size: 0.85rem;
+    color: #cccccc !important;
+    opacity: 1;
+}
+
 .reveal-footer {
     opacity: 0;
     transform: translateY(60px);
@@ -167,7 +181,21 @@
         margin: 0 auto;
     }
     
-    .footer-col i {
-        margin: 0 5px 5px 0; /* Ajuste de iconos en móvil centrado */
+    /* Ajuste contacto móvil */
+    .footer-contact p {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+    }
+    .footer-contact iconify-icon {
+        margin: 0;
+    }
+
+    /* Mapa en móvil ocupa todo el ancho */
+    .footer-map {
+        width: 100%;
+        max-width: 100%;
+        margin: 2rem auto 0;
     }
 }
