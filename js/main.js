@@ -56,18 +56,37 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    // ================= MENÚ MÓVIL =================
+     // ================= MENÚ MÓVIL (COMPORTAMIENTO IDIOMAS) =================
     if (mobileToggle && topbar && nav) {
         mobileToggle.setAttribute('aria-expanded', 'false');
 
-        mobileToggle.addEventListener('click', function() {
+        // Al hacer clic en el botón: Abrir/Cerrar menú
+        mobileToggle.addEventListener('click', function(e) {
+            e.stopPropagation(); // Evita que el clic se propague inmediatamente
             const isOpen = topbar.classList.toggle('nav-open');
             mobileToggle.setAttribute('aria-expanded', String(isOpen));
-            mobileToggle.innerHTML = isOpen
-                ? '<i class="fas fa-times"></i>'
-                : '<i class="fas fa-bars"></i>';
+            // No cambiamos el icono, el CSS lo oculta automáticamente si está abierto
+        });
+
+        // Cerrar menú al hacer clic en un enlace de navegación
+        nav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                topbar.classList.remove('nav-open');
+                mobileToggle.setAttribute('aria-expanded', 'false');
+            });
         });
     }
+
+    // Cerrar menú al hacer clic FUERA (ej: en el Hero)
+    document.addEventListener('click', (e) => {
+        if (topbar && topbar.classList.contains('nav-open')) {
+            // Si el clic NO fue dentro de la barra ni en el botón
+            if (!topbar.contains(e.target)) {
+                topbar.classList.remove('nav-open');
+                mobileToggle.setAttribute('aria-expanded', 'false');
+            }
+        }
+    });
 
     // ================= BOTONES CON SCROLL GENÉRICO =================
     document.querySelectorAll('[data-scroll-target]').forEach(button => {
