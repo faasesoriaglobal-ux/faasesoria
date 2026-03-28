@@ -1,0 +1,116 @@
+/* ==================================================================
+   ANIMACIONES EXTRAS Y SEPARADORES
+   Archivo dedicado a efectos visuales transversales
+   ================================================================== */
+
+/* --- SEPARADOR "¡Y MUCHO MÁS!" --- */
+.separator-section {
+    width: 100%;
+    padding: 5rem 1rem;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.separator-content {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* Texto principal con degradado corporativo */
+.separator-text {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary);
+    display: block;
+    margin-bottom: 1.5rem;
+    
+    /* Degradado Rojo -> Naranja */
+    background: linear-gradient(135deg, var(--accent-red) 0%, var(--accent-orange) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    
+    /* Estado inicial (oculto) */
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* Línea decorativa */
+.separator-line {
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent-red), var(--accent-gold));
+    margin: 0 auto 2rem auto;
+    border-radius: 2px;
+    box-shadow: 0 2px 10px rgba(245, 124, 0, 0.3);
+    transition: width 1s ease-out 0.3s; /* Retraso para aparecer después del texto */
+}
+
+/* Puntos decorativos animados */
+.separator-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease-out 0.8s;
+}
+
+.separator-dots span {
+    width: 10px;
+    height: 10px;
+    background: var(--accent-orange);
+    border-radius: 50%;
+    display: inline-block;
+    animation: bounce-dot 1.5s infinite ease-in-out;
+}
+
+.separator-dots span:nth-child(2) { 
+    animation-delay: 0.2s; 
+    background: var(--accent-red); 
+}
+.separator-dots span:nth-child(3) { 
+    animation-delay: 0.4s; 
+    background: var(--accent-gold); 
+}
+
+@keyframes bounce-dot {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+}
+
+/* --- ESTADO VISIBLE (Activado por JS) --- */
+.separator-section.visible .separator-text {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.separator-section.visible .separator-line {
+    width: 120px; /* Ancho final de la línea */
+}
+
+.separator-section.visible .separator-dots {
+    opacity: 1;
+}
+
+/* Responsive Móvil */
+@media (max-width: 768px) {
+    .separator-text {
+        font-size: 2.2rem;
+    }
+    .separator-section {
+        padding: 3rem 1rem;
+    }
+    .separator-line {
+        width: 0 !important; /* En móvil la línea crece menos o nada si prefieres */
+    }
+    .separator-section.visible .separator-line {
+        width: 80px;
+    }
+}

@@ -160,3 +160,26 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
 });
+    // ================= SECCIONES REVEAL =================
+    const revealElements = document.querySelectorAll('.reveal, .fade-left, .fade-right, .separator-section');
+    
+    if (revealElements.length > 0) {
+        const revealObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active'); // Para reveal normales
+                    
+                    // Específico para el separador animado
+                    if (entry.target.classList.contains('separator-section')) {
+                        entry.target.classList.add('visible');
+                    }
+                }
+            });
+        }, {
+            threshold: 0.2 // Se activa cuando se ve el 20%
+        });
+        
+        revealElements.forEach(el => {
+            revealObserver.observe(el);
+        });
+    }
