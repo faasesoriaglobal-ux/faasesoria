@@ -393,3 +393,105 @@ nav a:hover::after {
         padding: 0.4rem;
     }
 }
+
+/* ==================================================================
+   CORRECCIÓN FINAL MÓVIL: TEXTOS Y MENÚ (SOBREESCRITURA SEGURA)
+   Añadir al FINAL de styles.css
+   ================================================================== */
+
+@media (max-width: 900px) {
+    
+    /* 1. ASEGURAR QUE EL MENÚ HAMBURGUESA SE VEA SIEMPRE */
+    .mobile-toggle {
+        display: flex !important; /* Forzar visualización */
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        background: transparent;
+        border: none;
+        color: #ffffff !important;
+        font-size: 1.6rem !important;
+        cursor: pointer;
+        z-index: 1001;
+        margin-left: 1rem;
+        padding: 0;
+    }
+
+    /* Asegurar que el icono dentro del botón se renderice */
+    .mobile-toggle i, 
+    .mobile-toggle svg,
+    .mobile-toggle .fa-bars,
+    .mobile-toggle .fa-times {
+        display: block;
+        font-size: inherit;
+        color: #ffffff;
+    }
+
+    /* 2. REDUCIR TÍTULOS GIGANTES (GLOBAL) */
+    
+    /* H1: Hero y Títulos Principales */
+    h1, .hero h1, .empresa-text-block h2, .section-title-large {
+        font-size: 2.2rem !important; /* Reducir drásticamente */
+        line-height: 1.2 !important;
+        word-wrap: break-word;
+        padding: 0 1rem;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* H2: Secciones Generales */
+    h2, .consulta-title, .timeline-header h2, .otros-title, .card-valores h3 {
+        font-size: 1.8rem !important; /* Ajuste fino */
+        line-height: 1.3 !important;
+        padding: 0 1rem;
+        text-align: center;
+    }
+
+    /* H3: Subtítulos */
+    h3 {
+        font-size: 1.4rem !important;
+        line-height: 1.3 !important;
+    }
+
+    /* 3. MEJORAR LEGIBILIDAD DE PÁRRAFOS Y CONTENEDORES */
+    
+    /* Párrafos generales */
+    p, .lead-modern, .hero-text, .empresa-text, .card-content p, .timeline-content p {
+        font-size: 1rem !important;
+        line-height: 1.6 !important;
+        padding: 0 1.2rem !important; /* Margen lateral para que no toque bordes */
+        text-align: left !important;
+        max-width: 100%;
+        word-wrap: break-word;
+    }
+
+    /* Contenedores principales */
+    .container, .container-empresa, .services-container, .otros-services-wrapper, .consulta-section, .about {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Header / Topbar ajustes finos */
+    .topbar {
+        padding: 0 1.5rem !important;
+        justify-content: space-between !important;
+    }
+
+    /* Logo en móvil */
+    .logo img, .navbar-logo {
+        height: 40px !important;
+        width: auto;
+    }
+}
+
+/* Ajuste extra para pantallas muy pequeñas (<400px) */
+@media (max-width: 400px) {
+    h1 { font-size: 1.8rem !important; }
+    h2 { font-size: 1.5rem !important; }
+    p { font-size: 0.9rem !important; padding: 0 1rem !important; }
+    .mobile-toggle { width: 40px; height: 40px; font-size: 1.4rem !important; }
+}
