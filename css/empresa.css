@@ -354,10 +354,12 @@
 
 .timeline-img { display: none; }
 
-/* ================= RESPONSIVE ================= */
+/* ================= RESPONSIVE (CORREGIDO) ================= */
+
+/* Tablet y Móvil Grande (hasta 900px) */
 @media (max-width: 900px) {
     .empresa-header { grid-template-columns: 1fr; gap: 2rem; }
-    .empresa-stats { flex-direction: row; justify-content: space-between; }
+    
     .empresa-grid { grid-template-columns: 1fr; }
     
     .timeline::before { left: 20px; }
@@ -368,11 +370,68 @@
     .empresa-text-block h2 { font-size: 2.2rem; }
 }
 
+/* Móvil Estándar (hasta 768px) - AQUÍ ESTÁ LA SOLUCIÓN FINAL */
+@media (max-width: 768px) {
+    .empresa-stats {
+        flex-direction: column !important; /* Una debajo de otra */
+        gap: 1.5rem !important;
+        width: 100%;
+        padding: 0 1rem;
+        align-items: center; /* Centrar las tarjetas */
+    }
+
+    .stat-item {
+        width: 100% !important;
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 1.5rem !important;
+        text-align: center;
+        border-left: none; /* Quitamos borde lateral para diseño centrado */
+        border-top: 4px solid var(--accent-orange); /* Añadimos borde superior */
+    }
+
+    .stat-item i {
+        display: block;
+        margin: 0 auto 1rem auto;
+        text-align: center;
+    }
+
+    .stat-number {
+        font-size: 2.2rem !important;
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+        font-size: 0.85rem;
+        line-height: 1.4;
+        text-align: center;
+    }
+    
+    /* Ajuste extra para el Grid (Fundadora + Valores) */
+    .empresa-grid {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+        padding: 0 1rem;
+    }
+    
+    .card-fundador, .card-valores {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
+/* Móvil Pequeño (hasta 600px) */
 @media (max-width: 600px) {
     .about { padding: 4rem 1.5rem; }
-    .stat-item { padding: 1.5rem; }
+    
+    .stat-item { padding: 1.2rem; }
     .stat-number { font-size: 2rem; }
+    
     .card-content { padding: 1.5rem; }
     .valores-list li { gap: 1rem; }
     .icon-box { min-width: 40px; height: 40px; font-size: 1rem; }
+    
+    .empresa-text-block h2 { font-size: 1.8rem; }
 }
