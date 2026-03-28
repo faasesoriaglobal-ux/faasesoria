@@ -56,34 +56,33 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-     // ================= MENÚ MÓVIL (COMPORTAMIENTO IDIOMAS) =================
+     // ================= MENÚ MÓVIL (SIMPLE Y ESTABLE) =================
     if (mobileToggle && topbar && nav) {
-        mobileToggle.setAttribute('aria-expanded', 'false');
-
-        // Al hacer clic en el botón: Abrir/Cerrar menú
+        
+        // Al hacer clic: Abrir o Cerrar menú
         mobileToggle.addEventListener('click', function(e) {
-            e.stopPropagation(); // Evita que el clic se propague inmediatamente
-            const isOpen = topbar.classList.toggle('nav-open');
-            mobileToggle.setAttribute('aria-expanded', String(isOpen));
-            // No cambiamos el icono, el CSS lo oculta automáticamente si está abierto
+            e.stopPropagation(); 
+            topbar.classList.toggle('nav-open');
+            
+            // Opcional: Si quieres que el icono cambie a una X al abrir, descomenta esto:
+            // const isOpen = topbar.classList.contains('nav-open');
+            // mobileToggle.innerHTML = isOpen ? '<svg...X...</svg>' : '<svg...Barras...</svg>';
+            // Si no quieres que cambie, deja el código así sin tocar el innerHTML.
         });
 
-        // Cerrar menú al hacer clic en un enlace de navegación
+        // Cerrar menú al hacer clic en un enlace
         nav.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 topbar.classList.remove('nav-open');
-                mobileToggle.setAttribute('aria-expanded', 'false');
             });
         });
     }
 
-    // Cerrar menú al hacer clic FUERA (ej: en el Hero)
+    // Cerrar menú al hacer clic FUERA (en el Hero o cualquier lado)
     document.addEventListener('click', (e) => {
         if (topbar && topbar.classList.contains('nav-open')) {
-            // Si el clic NO fue dentro de la barra ni en el botón
             if (!topbar.contains(e.target)) {
                 topbar.classList.remove('nav-open');
-                mobileToggle.setAttribute('aria-expanded', 'false');
             }
         }
     });

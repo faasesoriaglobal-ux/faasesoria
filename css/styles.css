@@ -419,10 +419,6 @@ nav a:hover::after {
     height: 24px;
 }
 
-/* 2. CUANDO EL MENÚ ESTÁ ABIERTO (.nav-open): OCULTAR EL BOTÓN */
-.topbar.nav-open .mobile-toggle {
-    display: none !important; /* Desaparece totalmente como el de idiomas */
-}
 
 /* 3. Estilos del menú desplegado */
 .topbar.nav-open nav {
