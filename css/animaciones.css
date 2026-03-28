@@ -114,3 +114,158 @@
         width: 80px;
     }
 }
+
+/* ==================================================================
+   LOGO CENTRADO Y ESTABLE
+   ================================================================== */
+
+/* El contenedor debe llamarse .logo-container para coincidir con el HTML */
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Esto es lo que centra el texto bajo el logo */
+    justify-content: center;
+    padding: 5px 0;
+}
+
+.logo-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    line-height: 1;
+}
+
+.logo-img {
+    height: 55px;
+    width: auto;
+    display: block;
+    margin-bottom: 0; 
+}
+
+.logo-slogan-script {
+    font-family: 'Great Vibes', cursive;
+    color: #d84343; /* CAMBIA ESTE COLOR POR EL DE TU "A" */
+    font-size: 1.5rem;
+    white-space: nowrap;
+    
+    /* Animación estable sin mover la barra */
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInUpStable 1s ease forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeInUpStable {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hover */
+.logo-link:hover .logo-slogan-script {
+    color: var(--brand-orange);
+}
+
+/* Móvil */
+@media (max-width: 768px) {
+    .logo-img { height: 45px; }
+    .logo-slogan-script { font-size: 1.2rem; }
+}
+/* ==================================================================
+   LOGO Y LEMA: POSICIONAMIENTO FORZADO Y ANIMACIÓN
+   Archivo: animaciones.css
+   ================================================================== */
+
+/* 1. Contenedor Principal: FUERZA el centrado vertical */
+.logo-container {
+    display: flex !important;       /* Forzamos flex */
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important; /* Esto lo baja al centro */
+    
+    /* ALTURA FIJA IGUAL A LA BARRA */
+    height: 80px !important;        /* Mismo alto que .topbar */
+    width: auto;
+    
+    padding: 0 !important;          /* Quitamos padding interno para controlar todo con margin */
+    margin-top: 0 !important;
+    
+    box-sizing: border-box;
+    z-index: 1001;
+}
+
+/* 2. El Enlace */
+.logo-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    line-height: 1;
+    position: relative;
+    /* Pequeño ajuste manual si sigue muy arriba */
+    margin-top: 2px; 
+}
+
+/* 3. La Imagen (FA) */
+.logo-img {
+    height: 50px !important;        /* Tamaño seguro que no toca bordes */
+    width: auto !important;
+    display: block !important;
+    margin-bottom: 4px;             /* Espacio entre logo y texto */
+    object-fit: contain;
+    transition: transform 0.4s ease;
+}
+
+/* Hover Imagen */
+.logo-link:hover .logo-img {
+    transform: translateY(-2px);
+}
+
+/* 4. El Lema ("Siempre contigo") */
+.logo-slogan-script {
+    font-family: 'Great Vibes', cursive;
+    color: #ffffff; /* CAMBIA ESTE COLOR AL DE TU "A" */
+    
+    font-size: 1.4rem;
+    font-weight: 400;
+    white-space: nowrap;
+    line-height: 1;
+    
+    /* Animación suave */
+    opacity: 0;
+    transform: translateY(5px);
+    animation: fadeInLogoUp 1s ease forwards;
+    animation-delay: 0.3s;
+    
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+@keyframes fadeInLogoUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hover Lema */
+.logo-link:hover .logo-slogan-script {
+    color: var(--brand-orange);
+}
+
+/* RESPONSIVE MÓVIL */
+@media (max-width: 768px) {
+    .logo-container {
+        height: 70px !important; /* Altura barra móvil */
+        justify-content: center !important;
+    }
+    .logo-img {
+        height: 40px !important;
+    }
+    .logo-slogan-script {
+        font-size: 1.1rem;
+    }
+}

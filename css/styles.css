@@ -134,13 +134,13 @@ section {
     transition: var(--transition);
 }
 
-/* Logo optimizado */
+/* Logo optimizado 
 .logo img {
     height: 50px;
     width: auto;
     object-fit: contain;
     display: block;
-}
+}*/
 
 /* Navegación */
 nav {
@@ -375,10 +375,10 @@ nav a:hover::after {
         display: block;
     }
 
-    .logo img {
+   /* .logo img {
         height: 40px;
     }
-
+*/
     h2 {
         font-size: 2rem;
     }
