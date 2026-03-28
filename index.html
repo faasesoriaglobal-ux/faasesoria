@@ -591,17 +591,29 @@
     <!-- COPYRIGHT -->
     <p class="footer-bottom" data-lang="footer_copy">© 2026 FA Asesoría Global · Todos los derechos reservados</p>
 </footer>
-<!-- VENTANA MODAL (CORREGIDA: Cierre añadido correctamente) -->
+<!-- VENTANA MODAL de "OTROS SERVICIOS" -->
 <div class="service-modal" id="serviceModal">
     <div class="modal-content">
+        <!-- Botón de cerrar -->
         <button class="modal-close" id="modalClose">&times;</button>
-        <div class="modal-icon" id="modalIcon"></div>
+        
+        <!-- NUEVO: Contenedor para el Logo de la empresa socia -->
+        <div id="modalLogo"></div>
+        
+        <!-- Textos -->
         <h3 id="modalTitle"></h3>
         <p id="modalDesc"></p>
+        
+        <!-- Lista de características -->
         <ul id="modalFeatures"></ul>
-        <a href="https://wa.me/34657878642" class="modal-btn" id="modalWhatsapp" target="_blank" rel="noopener noreferrer">
+        
+        <!-- Botón de WhatsApp -->
+        <a href="#" class="modal-btn" id="modalWhatsapp" target="_blank" rel="noopener noreferrer">
             <i class="fab fa-whatsapp"></i> <span>SOLICITA INFORMACIÓN</span>
         </a>
+
+        <!-- NUEVO: Nota de colaborador (se rellena con JS) -->
+        <div class="modal-partner-note" id="modalPartnerNote"></div>
     </div>
 </div>
 <!-- FIN DEL MODAL -->

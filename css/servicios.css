@@ -105,9 +105,7 @@
 
 /* CAJA DE SERVICIO (TARJETA) */
 .service-box {
-    /* NUEVO: Altura mínima forzada para que todas sean iguales */
     min-height: 600px; 
-    
     flex: 1 1 200px;
     position: relative;
     overflow: hidden;
@@ -402,9 +400,8 @@
    SECCIÓN 2: OTROS SERVICIOS (CON CONTENEDOR AGRUPADOR)
    ================================================================== */
 
-/* NUEVO: Contenedor que agrupa visualmente toda la sección de Otros Servicios */
 .otros-services-wrapper {
-    background-color: #fcf9f5; /* Un tono beige muy suave para diferenciar */
+    background-color: #fcf9f5;
     border-radius: 24px;
     padding: 3rem 2rem;
     margin: 4rem auto;
@@ -417,10 +414,9 @@
     width: 100%;
     position: relative;
     z-index: 2;
-    /* Eliminamos márgenes externos grandes ya que el wrapper los maneja */
     margin: 0; 
     padding: 0;
-    background: transparent; /* Quitamos el fondo anterior */
+    background: transparent;
     border: none;
 }
 
@@ -734,6 +730,226 @@
 }
 
 /* ==================================================================
+   MODAL DE OTROS SERVICIOS (ACTUALIZADO CON LOGOS Y COLABORADORES)
+   ================================================================== */
+
+.service-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.service-modal.active {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-content {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    transform: translateY(-20px);
+    transition: transform 0.3s ease;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    max-height: 90vh; /* Evitar que sea más alto que la pantalla */
+    overflow-y: auto; /* Scroll si el contenido es muy largo */
+}
+
+.service-modal.active .modal-content {
+    transform: translateY(0);
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #666;
+    transition: color 0.3s;
+    z-index: 10;
+}
+
+.modal-close:hover {
+    color: var(--accent-red);
+}
+
+/* Ocultar el antiguo contenedor de iconos si queda algún residuo */
+.modal-icon {
+    display: none !important;
+}
+
+
+/* ==================================================================
+   CORRECCIÓN MODAL: CAJA DE LOGO ADAPTATIVA
+   ================================================================== */
+
+#modalLogo {
+    width: 100%;
+    /* CAMBIO 1: Quitamos altura fija. Usamos min/max para que se adapte */
+    min-height: 60px; 
+    max-height: 120px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    
+    /* CAMBIO 2: Quitamos el fondo gris fuerte y el borde para limpiarlo */
+    background: transparent; 
+    border: none;
+    padding: 10px 0; /* Solo padding vertical */
+    box-sizing: border-box;
+}
+
+#modalLogo img {
+    /* CAMBIO 3: El logo decide el tamaño, pero con límites */
+    max-height: 100px; /* Altura máxima del logo */
+    max-width: 80%;    /* Ancho máximo para que no toque los bordes */
+    width: auto;       /* Mantiene proporción */
+    height: auto;      /* Importante: deja que la altura sea automática */
+    
+    object-fit: contain;
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+    transition: transform 0.3s ease;
+    display: block; /* Evita espacios extraños debajo */
+}
+
+#modalLogo img:hover {
+    transform: scale(1.05);
+}
+
+/* Títulos y Textos */
+#modalTitle {
+    color: var(--accent-red);
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+    font-family: var(--font-heading);
+}
+
+#modalDesc {
+    text-align: center;
+    font-style: italic;
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+/* Lista de características con Checks */
+#modalFeatures {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem 0;
+    background: #fff;
+    max-height: 250px;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+#modalFeatures::-webkit-scrollbar { width: 4px; }
+#modalFeatures::-webkit-scrollbar-track { background: transparent; }
+#modalFeatures::-webkit-scrollbar-thumb { background: #ddd; border-radius: 2px; }
+#modalFeatures::-webkit-scrollbar-thumb:hover { background: var(--accent-orange); }
+
+#modalFeatures li {
+    padding: 0.8rem 0.5rem;
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    align-items: flex-start;
+    font-size: 0.95rem;
+    color: var(--text);
+    line-height: 1.4;
+    transition: var(--transition-fast);
+}
+
+#modalFeatures li:last-child {
+    border-bottom: none;
+}
+
+#modalFeatures li:hover {
+    background: #fafafa;
+    padding-left: 5px;
+}
+
+/* Icono Check Personalizado */
+.check-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 24px;
+    height: 24px;
+    background: #e8f5e9;
+    color: #2e7d32;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin-right: 12px;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+/* Nota de Colaborador */
+.modal-partner-note {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-align: center;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+    line-height: 1.4;
+    font-style: italic;
+}
+
+.modal-partner-note strong {
+    color: var(--accent-orange);
+    font-weight: 700;
+}
+
+/* Botón del Modal */
+.modal-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--gradient-primary);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.3s;
+    width: 100%;
+    justify-content: center;
+    box-sizing: border-box;
+    box-shadow: 0 4px 15px rgba(194, 24, 91, 0.3);
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-primary);
+    font-size: 1rem;
+}
+
+.modal-btn:hover {
+    background: linear-gradient(135deg, var(--accent-red) 0%, var(--accent-orange) 80%);
+    box-shadow: 0 6px 20px rgba(194, 24, 91, 0.5);
+    transform: translateY(-2px);
+}
+
+/* ==================================================================
    RESPONSIVE
    ================================================================== */
 
@@ -746,7 +962,7 @@
 
 @media (max-width: 900px) {
     .service-box {
-        flex: 1 1 45%; /* 2 por fila en tablets */
+        flex: 1 1 45%;
     }
 }
 
@@ -757,7 +973,7 @@
     }
     .service-box {
         flex: 1 1 100%;
-        min-height: auto; /* En móvil dejamos que crezca natural */
+        min-height: auto;
     }
     .service-text h3 { font-size: 1.3rem; }
     
@@ -775,217 +991,15 @@
     .otro-card { padding: 2rem 1.5rem; }
     .icon-wrapper { width: 55px; height: 55px; }
     .otros-btn { padding: 1rem 2rem; font-size: 0.95rem; }
+    
+    .modal-content {
+        padding: 1.5rem;
+        width: 95%;
+    }
 }
 
 @media (max-width: 480px) {
     .otros-title { font-size: 1.8rem; }
     .otros-grid { grid-template-columns: 1fr; }
     .otros-btn { width: 100%; max-width: 350px; }
-}
-
-/* ================= MODAL DE  OTROS SERVICIOS ================= */
-.service-modal {
-    display: none;
-    position: fixed;
-    z-index: 9999;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(5px);
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.service-modal.active {
-    display: flex;
-    opacity: 1;
-}
-
-.modal-content {
-    background: white;
-    padding: 2.5rem;
-    border-radius: 15px;
-    max-width: 500px;
-    width: 90%;
-    position: relative;
-    transform: translateY(-20px);
-    transition: transform 0.3s ease;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
-}
-
-.service-modal.active .modal-content {
-    transform: translateY(0);
-}
-
-.modal-close {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    font-size: 2rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #666;
-    transition: color 0.3s;
-}
-
-.modal-close:hover {
-    color: #c2185b;
-}
-
-.modal-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.modal-content h3 {
-    color: #c2185b;
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-}
-
-.modal-content p {
-    color: #555;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-}
-
-.modal-content ul {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 2rem;
-}
-
-.modal-content ul li {
-    padding: 0.5rem 0;
-    color: #666;
-    border-bottom: 1px solid #eee;
-}
-
-.modal-content ul li:before {
-    content: "✓ ";
-    color: #c2185b;
-    font-weight: bold;
-}
-
-/* ================= MODAL DE SERVICIOS ================= */
-.service-modal {
-    display: none;
-    position: fixed;
-    z-index: 9999;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(5px);
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.service-modal.active {
-    display: flex;
-    opacity: 1;
-}
-
-.modal-content {
-    background: white;
-    padding: 2.5rem;
-    border-radius: 15px;
-    max-width: 500px;
-    width: 90%;
-    position: relative;
-    transform: translateY(-20px);
-    transition: transform 0.3s ease;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
-}
-
-.service-modal.active .modal-content {
-    transform: translateY(0);
-}
-
-.modal-close {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    font-size: 2rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #666;
-    transition: color 0.3s;
-}
-
-.modal-close:hover {
-    color: #c2185b;
-}
-
-.modal-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.modal-content h3 {
-    color: #c2185b;
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-}
-
-.modal-content p {
-    color: #555;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-}
-
-.modal-content ul {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 2rem;
-}
-
-.modal-content ul li {
-    padding: 0.5rem 0;
-    color: #666;
-    border-bottom: 1px solid #eee;
-}
-
-.modal-content ul li:before {
-    content: "✓ ";
-    color: #c2185b;
-    font-weight: bold;
-}
-
-/* BOTÓN NEUTRO */
-.modal-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    background: #e45908ee;
-    color: white;
-    padding: 1rem 2rem;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background 0.3s, transform 0.3s;
-    width: 100%;
-    justify-content: center;
-    box-sizing: border-box;
-}
-
-.modal-btn:hover {
-    background: #eede03;
-    transform: translateY(-2px);
-}
-
-@media (max-width: 768px) {
-    .modal-content {
-        padding: 1.5rem;
-        width: 95%;
-    }
 }
