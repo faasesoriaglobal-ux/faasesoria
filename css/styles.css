@@ -394,10 +394,10 @@ nav a:hover::after {
     }
 }
 /* ==================================================================
-   CORRECCIÓN COMPORTAMIENTO MENÚ MÓVIL (Estilo Idiomas)
+   MENÚ MÓVIL: BOTÓN SIEMPRE VISIBLE Y ESTABLE
    ================================================================== */
 
-/* 1. El botón siempre visible por defecto */
+/* El botón SIEMPRE visible, nunca se oculta ni se transparenta */
 .mobile-toggle {
     display: flex !important;
     align-items: center;
@@ -408,19 +408,24 @@ nav a:hover::after {
     border: none;
     color: #ffffff !important;
     cursor: pointer;
-    z-index: 1001;
-    transition: opacity 0.3s ease; /* Suavizar la desaparición */
+    z-index: 1002; /* Por encima del menú para poder cerrarlo si hace falta */
+    position: relative;
+    transition: transform 0.2s ease; /* Pequeño efecto al pulsar */
 }
 
-/* Asegurar que el SVG dentro sea blanco */
+/* Asegurar que el SVG sea blanco */
 .mobile-toggle svg {
     stroke: #ffffff !important;
     width: 24px;
     height: 24px;
 }
 
+/* Efecto opcional: girar un poco al estar activo */
+.topbar.nav-open .mobile-toggle {
+    transform: rotate(90deg); 
+}
 
-/* 3. Estilos del menú desplegado */
+/* Estilos del menú desplegado */
 .topbar.nav-open nav {
     display: flex !important;
     animation: slideDown 0.3s ease forwards;
