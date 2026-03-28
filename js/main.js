@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const mobileToggle = document.querySelector('.mobile-toggle');
     const nav = document.querySelector('header.topbar nav');
 
+    // ================= FUNCIONES AUXILIARES =================
     function scrollToTarget(targetSelector) {
         if (!targetSelector) return;
         const target = document.querySelector(targetSelector);
@@ -31,7 +32,8 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    // ================= SCROLL SUAVE EN MENÚ =================
+    // ================= SCROLL SUAVE EN MENÚ (CORREGIDO) =================
+    // Solo hace scroll, NO cierra el menú ni toca el icono para evitar parpadeos
     document.querySelectorAll('nav a[href^="#"]').forEach(enlace => {
         enlace.addEventListener('click', e => {
             e.preventDefault();
@@ -43,44 +45,36 @@ document.addEventListener("DOMContentLoaded", function() {
                         behavior: 'smooth',
                         block: 'start'
                     });
-
-                    if (topbar && topbar.classList.contains('nav-open')) {
-                        topbar.classList.remove('nav-open');
-                        if (mobileToggle) {
-                            mobileToggle.setAttribute('aria-expanded', 'false');
-                            mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
-                        }
-                    }
+                    // El cierre del menú se maneja exclusivamente en el evento de clic del enlace (abajo)
                 }
             }
         });
     });
 
-     // ================= MENÚ MÓVIL (SIMPLE Y ESTABLE) =================
+    // ================= MENÚ MÓVIL (ICONO SIEMPRE VISIBLE) =================
     if (mobileToggle && topbar && nav) {
         
-        // Al hacer clic: Abrir o Cerrar menú
+        // 1. Al hacer clic en el icono: Abrir/Cerrar menú
         mobileToggle.addEventListener('click', function(e) {
             e.stopPropagation(); 
             topbar.classList.toggle('nav-open');
-            
-            // Opcional: Si quieres que el icono cambie a una X al abrir, descomenta esto:
-            // const isOpen = topbar.classList.contains('nav-open');
-            // mobileToggle.innerHTML = isOpen ? '<svg...X...</svg>' : '<svg...Barras...</svg>';
-            // Si no quieres que cambie, deja el código así sin tocar el innerHTML.
+            // NO cambiamos el innerHTML. El icono permanece igual siempre.
         });
 
-        // Cerrar menú al hacer clic en un enlace
+        // 2. Al hacer clic en un enlace (Servicios, Contacto...):
+        // Cerramos el menú desplegable, pero el icono permanece visible gracias al CSS.
         nav.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 topbar.classList.remove('nav-open');
+                // IMPORTANTE: No modificamos el icono aquí.
             });
         });
     }
 
-    // Cerrar menú al hacer clic FUERA (en el Hero o cualquier lado)
+    // 3. Cerrar menú al hacer clic FUERA (en el Hero o cualquier lado)
     document.addEventListener('click', (e) => {
         if (topbar && topbar.classList.contains('nav-open')) {
+            // Si el clic NO fue dentro de la barra ni en el botón
             if (!topbar.contains(e.target)) {
                 topbar.classList.remove('nav-open');
             }

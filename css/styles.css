@@ -396,8 +396,6 @@ nav a:hover::after {
 /* ==================================================================
    MENÚ MÓVIL: BOTÓN SIEMPRE VISIBLE Y ESTABLE
    ================================================================== */
-
-/* El botón SIEMPRE visible, nunca se oculta ni se transparenta */
 .mobile-toggle {
     display: flex !important;
     align-items: center;
@@ -408,24 +406,22 @@ nav a:hover::after {
     border: none;
     color: #ffffff !important;
     cursor: pointer;
-    z-index: 1002; /* Por encima del menú para poder cerrarlo si hace falta */
+    z-index: 1002;
     position: relative;
-    transition: transform 0.2s ease; /* Pequeño efecto al pulsar */
+    transition: transform 0.2s ease;
 }
 
-/* Asegurar que el SVG sea blanco */
 .mobile-toggle svg {
     stroke: #ffffff !important;
     width: 24px;
     height: 24px;
 }
 
-/* Efecto opcional: girar un poco al estar activo */
+/* Opcional: Pequeña rotación al abrir */
 .topbar.nav-open .mobile-toggle {
     transform: rotate(90deg); 
 }
 
-/* Estilos del menú desplegado */
 .topbar.nav-open nav {
     display: flex !important;
     animation: slideDown 0.3s ease forwards;
