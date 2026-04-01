@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidad | FA Asesoría Global</title>
+    <meta name="description" content="Política de Privacidad de FA Asesoría Global. Cumplimiento RGPD y LOPD.">
+    
+    <!-- FUENTES GOOGLE (Las mismas que tu web) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- TUS ARCHIVOS CSS REALES -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animaciones.css">
+    
+    <!-- ESTILOS ESPECÍFICOS PARA ESTA PÁGINA -->
+    <style>
+        body { background-color: var(--bg-light); padding-top: 80px; }
+        .legal-wrapper { max-width: 900px; margin: 4rem auto; padding: 0 1.5rem; }
+        .legal-title {
+            font-family: var(--font-heading);
+            color: var(--primary);
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        .legal-title::after {
+            content: ''; display: block; width: 80px; height: 3px;
+            background: linear-gradient(90deg, var(--brand-orange), var(--brand-gold));
+            margin: 20px auto 0; border-radius: 2px;
+        }
+        .legal-card {
+            background: var(--bg-white);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--brand-orange);
+            transition: transform 0.3s ease;
+        }
+        .legal-card:hover { transform: translateY(-5px); }
+        .legal-card h3 {
+            font-family: var(--font-heading);
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 0.5rem;
+        }
+        .legal-card p, .legal-card li {
+            font-family: var(--font-body);
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        .legal-card ul { list-style: none; padding-left: 0; }
+        .legal-card ul li { position: relative; padding-left: 1.5rem; margin-bottom: 0.8rem; }
+        .legal-card ul li::before {
+            content: '•'; color: var(--brand-orange); font-weight: bold;
+            position: absolute; left: 0; font-size: 1.2rem; line-height: 1.6;
+        }
+        .btn-back {
+            display: inline-block; background: var(--brand-orange); color: white;
+            padding: 0.8rem 2rem; border-radius: var(--radius-pill);
+            text-decoration: none; font-weight: 600; transition: var(--transition);
+            margin-top: 2rem; border: none; cursor: pointer;
+        }
+        .btn-back:hover { background: var(--brand-red); transform: translateY(-2px); color: white; }
+        .center-btn { text-align: center; display: block; width: fit-content; margin: 3rem auto 0; }
+        
+        @media (max-width: 768px) {
+            .legal-card { padding: 1.5rem; }
+            .legal-title { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ================= HEADER (IDÉNTICO AL INDEX) ================= -->
+<header class="topbar">
+    <div class="logo-container">
+        <a href="index.html" class="logo-link">
+            <img src="img/fa.jpg" alt="FA Asesoría Global" class="logo-img">
+            <span class="logo-slogan-script">Siempre contigo</span>
+        </a>
+    </div>
+    <nav>
+        <a href="index.html#inicio">Inicio</a>
+        <a href="index.html#servicios">Servicios</a>
+        <a href="index.html#empresa">Empresa</a>
+        <a href="index.html#formulario">Contacto</a>
+    </nav>
+    <div class="header-actions">
+        <button class="consult-btn" onclick="window.location.href='index.html#formulario'">Consulta Online</button>
+        <!-- Selector simplificado para páginas legales -->
+        <div class="lang-dropdown">
+            <button class="lang-trigger"><span class="lang-text">ES</span></button>
+        </div>
+    </div>
+    <button class="mobile-toggle" aria-label="Abrir menú">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+</header>
+
+<!-- ================= CONTENIDO ================= -->
+<section class="legal-wrapper reveal">
+    <h1 class="legal-title">Política de Privacidad</h1>
+
+    <div class="legal-card">
+        <p>En cumplimiento del <strong>RGPD</strong> y la <strong>LOPDGDD</strong>, en <strong>FA Asesoría Global</strong> le informamos sobre el tratamiento de sus datos personales con la máxima confidencialidad.</p>
+    </div>
+
+    <div class="legal-card">
+        <h3>1. Responsable del Tratamiento</h3>
+        <p><strong>Identidad:</strong> FA Asesoría Global<br>
+        <strong>Dirección:</strong> Av. de Josep Tarradellas, 134, 08029 Barcelona<br>
+        <strong>Email:</strong> faasesoriaglobal@gmail.com<br>
+        <strong>Teléfono:</strong> +34 935 140 604</p>
+    </div>
+
+    <div class="legal-card">
+        <h3>2. Datos Recogidos</h3>
+        <p>Debido a nuestra actividad legal y de extranjería, podemos recoger:</p>
+        <ul>
+            <li>Datos identificativos (Nombre, DNI/NIE, Pasaporte).</li>
+            <li>Datos de contacto (Email, Teléfono, Dirección).</li>
+            <li>Datos laborales, fiscales y migratorios necesarios para el trámite.</li>
+            <li>Datos especialmente protegidos solo si son estrictamente necesarios y con su consentimiento explícito.</li>
+        </ul>
+    </div>
+
+    <div class="legal-card">
+        <h3>3. Finalidad</h3>
+        <ul>
+            <li>Gestión de servicios de asesoría legal, fiscal y de extranjería.</li>
+            <li>Comunicación con administraciones públicas.</li>
+            <li>Envío de comunicaciones comerciales (solo con consentimiento).</li>
+        </ul>
+    </div>
+
+    <div class="legal-card">
+        <h3>4. Derechos ARCO-POL</h3>
+        <p>Puede ejercer sus derechos de Acceso, Rectificación, Supresión, Limitación, Portabilidad y Oposición enviando un email a <strong>faasesoriaglobal@gmail.com</strong> adjuntando copia de su DNI/NIE. También puede reclamar ante la AEPD.</p>
+    </div>
+
+    <div class="center-btn">
+        <a href="index.html" class="btn-back">← Volver al Inicio</a>
+    </div>
+</section>
+
+<!-- ================= FOOTER (IDÉNTICO AL INDEX) ================= -->
+<footer class="footer reveal-footer">
+    <div class="footer-columns">
+        <div class="footer-col footer-brand">
+            <img src="img/fa.jpg" alt="FA Asesoría Global" class="footer-logo">
+            <h4>FA Asesoría Global</h4>
+            <p>Legal · Fiscal · Extranjería</p>
+            <div class="footer-social">
+                <a href="https://www.instagram.com/faasesoriaglobal" target="_blank"><iconify-icon icon="mdi:instagram"></iconify-icon></a>
+                <a href="https://www.facebook.com/faasesoriaglobal" target="_blank"><iconify-icon icon="mdi:facebook"></iconify-icon></a>
+                <a href="https://wa.me/34657878642" target="_blank"><iconify-icon icon="mdi:whatsapp"></iconify-icon></a>
+            </div>
+        </div>
+        <div class="footer-col">
+            <h4>Avisos legales</h4>
+            <a href="politica-privacidad.html">Política de Privacidad</a>
+            <a href="politica-cookies.html">Política de Cookies</a>
+            <a href="aviso-legal.html">Aviso Legal</a>
+        </div>
+        <div class="footer-col footer-contact">
+            <h4>Contacto</h4>
+            <p><iconify-icon icon="mdi:map-marker"></iconify-icon> Av. de Josep Tarradellas, 134, Barcelona</p>
+            <p><iconify-icon icon="mdi:phone"></iconify-icon> +34 935 140 604</p>
+            <p><iconify-icon icon="mdi:email"></iconify-icon> faasesoriaglobal@gmail.com</p>
+        </div>
+    </div>
+    <p class="footer-bottom">© 2026 FA Asesoría Global · Todos los derechos reservados</p>
+</footer>
+
+<script src="https://code.iconify.design/iconify-icon/2.0.0/iconify-icon.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

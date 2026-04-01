@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Cookies | FA Asesoría Global</title>
+    
+    <!-- FUENTES Y CSS REALES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animaciones.css">
+
+    <style>
+        body { background-color: var(--bg-light); padding-top: 80px; }
+        .legal-wrapper { max-width: 900px; margin: 4rem auto; padding: 0 1.5rem; }
+        .legal-title { font-family: var(--font-heading); color: var(--primary); text-align: center; font-size: 2.5rem; margin-bottom: 3rem; position: relative; }
+        .legal-title::after { content: ''; display: block; width: 80px; height: 3px; background: linear-gradient(90deg, var(--brand-orange), var(--brand-gold)); margin: 20px auto 0; }
+        .legal-card { background: var(--bg-white); padding: 2.5rem; margin-bottom: 2rem; border-radius: var(--radius); box-shadow: var(--shadow); border-left: 5px solid var(--brand-orange); }
+        .legal-card h3 { font-family: var(--font-heading); color: var(--primary); margin-top: 1.5rem; }
+        .legal-card p, .legal-card li { font-family: var(--font-body); color: var(--text-light); line-height: 1.8; margin-bottom: 1rem; }
+        .btn-back { display: inline-block; background: var(--brand-orange); color: white; padding: 0.8rem 2rem; border-radius: var(--radius-pill); text-decoration: none; font-weight: 600; margin-top: 2rem; }
+        .center-btn { text-align: center; display: block; width: fit-content; margin: 3rem auto 0; }
+        
+        /* Banner Cookies Estilo FA */
+        #cookie-banner { position: fixed; bottom: -100%; left: 0; width: 100%; background: rgba(14, 26, 43, 0.98); color: white; padding: 1.5rem 2rem; z-index: 9999; transition: bottom 0.5s cubic-bezier(0.2, 0.8, 0.2, 1); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; backdrop-filter: blur(10px); box-shadow: 0 -4px 20px rgba(0,0,0,0.2); }
+        #cookie-banner.show { bottom: 0; }
+        #cookie-banner p { margin: 0; flex: 1; min-width: 300px; font-family: var(--font-body); }
+        #cookie-banner a { color: var(--brand-gold); text-decoration: underline; }
+        .cookie-actions { display: flex; gap: 1rem; }
+        .cookie-btn { padding: 0.6rem 1.5rem; border-radius: var(--radius-pill); font-weight: 600; cursor: pointer; border: none; font-size: 0.9rem; transition: var(--transition); }
+        .btn-accept { background: var(--brand-orange); color: white; }
+        .btn-accept:hover { background: var(--brand-red); transform: translateY(-2px); }
+        .btn-reject { background: transparent; border: 1px solid white; color: white; }
+        .btn-reject:hover { background: white; color: var(--primary); }
+        @media (max-width: 768px) { #cookie-banner { flex-direction: column; text-align: center; } .cookie-actions { width: 100%; justify-content: center; } }
+    </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="topbar">
+    <div class="logo-container">
+        <a href="index.html" class="logo-link">
+            <img src="img/fa.jpg" alt="FA Asesoría Global" class="logo-img">
+            <span class="logo-slogan-script">Siempre contigo</span>
+        </a>
+    </div>
+    <nav><a href="index.html">Inicio</a></nav>
+</header>
+
+<!-- CONTENIDO -->
+<section class="legal-wrapper reveal">
+    <h1 class="legal-title">Política de Cookies</h1>
+    <div class="legal-card">
+        <p>En <strong>FA Asesoría Global</strong> utilizamos cookies propias y de terceros para mejorar su experiencia de navegación, analizar el tráfico y asegurar el correcto funcionamiento de nuestros servicios legales.</p>
+        
+        <h3>Tipos de cookies que utilizamos:</h3>
+        <ul>
+            <li><strong>Técnicas (Necesarias):</strong> Imprescindibles para navegar y usar funciones básicas como el formulario de contacto.</li>
+            <li><strong>Preferencias:</strong> Recuerdan su idioma seleccionado.</li>
+            <li><strong>Analíticas:</strong> Nos ayudan a entender cómo interactúa con la web para mejorar nuestros contenidos (Google Analytics).</li>
+        </ul>
+
+        <h3>Gestión de cookies</h3>
+        <p>Puede configurar su navegador para aceptar o rechazar cookies. Si las desactiva, algunas funcionalidades podrían no estar disponibles.</p>
+        <ul>
+            <li><strong>Chrome:</strong> Configuración → Privacidad y seguridad → Cookies</li>
+            <li><strong>Safari:</strong> Preferencias → Privacidad → Cookies</li>
+            <li><strong>Firefox:</strong> Opciones → Privacidad y seguridad → Cookies</li>
+        </ul>
+    </div>
+    <div class="center-btn">
+        <a href="index.html" class="btn-back">← Volver al Inicio</a>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer reveal-footer">
+    <div class="footer-columns">
+        <div class="footer-col footer-brand">
+            <img src="img/fa.jpg" alt="FA Asesoría Global" class="footer-logo">
+            <h4>FA Asesoría Global</h4>
+            <p>Legal · Fiscal · Extranjería</p>
+        </div>
+        <div class="footer-col">
+            <h4>Avisos legales</h4>
+            <a href="politica-privacidad.html">Privacidad</a>
+            <a href="politica-cookies.html">Cookies</a>
+            <a href="aviso-legal.html">Aviso Legal</a>
+        </div>
+    </div>
+    <p class="footer-bottom">© 2026 FA Asesoría Global</p>
+</footer>
+
+<!-- BANNER FUNCIONAL -->
+<div id="cookie-banner">
+    <p>Utilizamos cookies para mejorar su experiencia. Puede aceptarlas todas o rechazarlas. Más info en nuestra <a href="politica-cookies.html">Política de Cookies</a>.</p>
+    <div class="cookie-actions">
+        <button id="btn-reject" class="cookie-btn btn-reject">Rechazar</button>
+        <button id="btn-accept" class="cookie-btn btn-accept">Aceptar</button>
+    </div>
+</div>
+
+<script>
+    const banner = document.getElementById('cookie-banner');
+    if (!localStorage.getItem('fa_cookie_consent')) {
+        setTimeout(() => banner.classList.add('show'), 1000);
+    }
+    document.getElementById('btn-accept').addEventListener('click', () => { localStorage.setItem('fa_cookie_consent', 'accepted'); banner.classList.remove('show'); });
+    document.getElementById('btn-reject').addEventListener('click', () => { localStorage.setItem('fa_cookie_consent', 'rejected'); banner.classList.remove('show'); });
+</script>
+
+<script src="https://code.iconify.design/iconify-icon/2.0.0/iconify-icon.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

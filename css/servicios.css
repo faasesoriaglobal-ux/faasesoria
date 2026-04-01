@@ -690,6 +690,25 @@
     border-bottom-color: var(--accent-orange);
 }
 
+/*contacto con recepcion*/
+
+.whatsapp-link-custom {
+    color: var(--brand-orange) !important;
+    font-weight: 700;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.whatsapp-link-custom:hover {
+    color: var(--brand-red) !important;
+}
+
+
+
+
+
+
+
+
 /* ==================================================================
    ANIMACIONES DE ENTRADA
    ================================================================== */
