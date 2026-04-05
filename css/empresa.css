@@ -191,13 +191,14 @@
 .founder-lemma {
     font-family: 'Great Vibes', cursive !important;
     font-size: 1.6rem !important;
-    color: #f57c00 !important; /* Usamos el código HEX directo para evitar fallos de variables */
+    color: #f57c00 !important; /* HEX directo para asegurar el naranja */
     margin-bottom: 0.5rem !important;
     line-height: 1.4 !important;
     font-style: normal !important;
     display: block !important;
     text-decoration: none !important;
 }
+
 .founder-signature {
     font-size: 0.85rem;
     color: var(--text-gray);
@@ -274,12 +275,13 @@
     line-height: 1.5;
 }
 
-/* --- SEGMENTO DE RESEÑAS GOOGLE --- */
+/* --- SEGMENTO DE RESEÑAS GOOGLE (CORREGIDO Y MEJORADO) --- */
 .reviews-segment {
     margin-top: 2.5rem;
     padding-top: 1.5rem;
-    border-top: 1px solid #eee; /* Línea sólida gris muy clarita */
+    border-top: 1px solid #eee;
     animation: fadeIn 0.8s ease-out;
+    width: 100%;
 }
 
 .reviews-header {
@@ -287,6 +289,7 @@
     align-items: center;
     gap: 0.6rem;
     margin-bottom: 1.2rem;
+    width: 100%;
 }
 
 .google-icon {
@@ -309,33 +312,44 @@
     background: linear-gradient(90deg, #e0e0e0, transparent);
 }
 
-/* Contenedor del Carrusel */
+/* Contenedor del Carrusel (CRÍTICO) */
 .reviews-carousel-container {
-    overflow: hidden;
+    overflow: hidden; /* Oculta lo que se sale */
     position: relative;
-    min-height: 110px;
+    min-height: 120px;
+    width: 100%;
 }
 
 .reviews-track {
-    display: flex;
+    display: flex; /* Pone las tarjetas en fila horizontal */
     transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
     width: 100%;
 }
 
-/* Tarjeta Individual de Reseña */
+/* Tarjeta Individual de Reseña (CRÍTICO) */
 .review-card {
-    min-width: 100%;
+    min-width: 100%; /* Obliga a ocupar todo el ancho */
+    width: 100%;
+    flex-shrink: 0; /* Evita que se encoja */
     padding: 0.5rem 0.2rem;
     box-sizing: border-box;
     opacity: 0.9;
     transition: opacity 0.3s;
+    
+    /* Estilos centrados para móvil */
+    text-align: left; /* TEXTO A LA IZQUIERDA POR DEFECTO */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
+/* ESTRELLAS MEJORADAS */
 .stars {
-    color: #F4B400;
-    font-size: 0.9rem;
-    margin-bottom: 0.4rem;
-    letter-spacing: 2px;
+    color: #ffc107;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 3px;
+    text-shadow: 0px 1px 2px rgba(0,0,0,0.1);
 }
 
 .review-text {
@@ -345,10 +359,14 @@
     line-height: 1.5;
     margin: 0 0 0.6rem 0;
     display: -webkit-box;
-    -webkit-line-clamp: 3;
-    line-clamp: 3; /* CORREGIDO: Propiedad estándar añadida */
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    text-align: left;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .review-author {
@@ -358,28 +376,33 @@
     text-transform: uppercase;
     letter-spacing: 0.5px;
     display: block;
+    text-align: left;
 }
 
-/* Puntos Indicadores */
+/* PUNTOS INDICADORES MEJORADOS */
 .carousel-dots {
     display: flex;
     justify-content: center;
-    gap: 6px;
-    margin-top: 12px;
+    gap: 8px;
+    margin-top: 15px;
+    width: 100%;
 }
 
 .dot {
-    width: 6px;
-    height: 6px;
-    background-color: #ddd;
+    width: 8px;
+    height: 8px;
+    background-color: #e0e0e0;
     border-radius: 50%;
     transition: all 0.3s ease;
     cursor: pointer;
+    opacity: 0.5;
 }
 
 .dot.active {
     background-color: var(--accent-orange);
-    transform: scale(1.2);
+    transform: scale(1.3);
+    opacity: 1;
+    box-shadow: 0 0 5px rgba(245, 124, 0, 0.4);
 }
 
 /* ================= TIMELINE ================= */
@@ -507,26 +530,47 @@
 
 /* Móvil Estándar (hasta 768px) */
 @media (max-width: 768px) {
+    
+    /* 1. CENTRADO DE LAS CAJAS CONTENEDORAS (LO QUE FALLABA) */
+    .empresa-stats, 
+    .empresa-grid, 
+    .card-fundador, 
+    .card-valores {
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Esto centra la caja horizontalmente */
+    }
+
+    /* Aseguramos que el contenido de TEXTO dentro siga a la izquierda */
+    .card-content, 
+    .card-valores > h3, 
+    .reviews-segment {
+        text-align: left; 
+        width: 100%; /* Ocupan todo el ancho de la caja centrada */
+        box-sizing: border-box;
+    }
+
     /* Stats */
     .empresa-stats {
-        flex-direction: column !important;
         gap: 1.5rem !important;
         width: 100%;
         padding: 0 1rem;
-        align-items: center;
     }
     .stat-item {
         width: 100% !important;
-        max-width: 400px;
+        max-width: 400px; /* Ancho máximo para que no se estiren demasiado */
         margin: 0 auto;
         padding: 1.5rem !important;
-        text-align: center;
+        text-align: center; /* Las stats sí van centradas (número e icono) */
         border-left: none;
         border-top: 4px solid var(--accent-orange);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
-    .stat-item i { display: block; margin: 0 auto 1rem auto; text-align: center; }
-    .stat-number { font-size: 2.2rem !important; display: block; margin-bottom: 0.5rem; }
-    .stat-label { font-size: 0.85rem; line-height: 1.4; text-align: center; }
+    .stat-item i { display: block; margin: 0 auto 1rem auto; }
     
     /* Grid Principal */
     .empresa-grid {
@@ -536,23 +580,77 @@
     }
     .card-fundador, .card-valores {
         width: 100%;
-        max-width: 500px;
-        margin: 0 auto;
+        max-width: 500px; /* CLAVE: Limita el ancho y lo centra con margin auto */
+        text-align: left; /* Por defecto texto a la izquierda */
     }
     
-    /* Ajustes Específicos Nuevos */
-    .founder-lemma { font-size: 1.4rem !important; line-height: 1.3; }
-    .founder-signature { font-size: 0.75rem !important; }
+    /* Pilares: Icono y texto alineados */
+    .valores-list li { 
+        gap: 1rem; 
+        flex-direction: row; 
+        align-items: flex-start; 
+        text-align: left;
+        margin-bottom: 1.5rem;
+    }
+
+    /* Lema de la fundadora: Centrado por ser una firma */
+    .founder-quote-container {
+        text-align: center;
+        margin-top: 1.5rem;
+        width: 100%;
+    }
+    .founder-lemma { 
+        font-size: 1.4rem !important; 
+        line-height: 1.3; 
+        display: block;
+        margin: 0 auto 0.5rem auto;
+        text-align: center;
+    }
+    .founder-signature { 
+        font-size: 0.75rem !important; 
+        display: block;
+        text-align: center;
+    }
+    .highlight-text {
+        text-align: left; /* Cita a la izquierda */
+        margin: 1.5rem 0;
+        width: 100%;
+    }
     
-    .reviews-header h4 { font-size: 0.85rem; white-space: nowrap; }
+    /* Reseñas: Caja centrada, texto a la izquierda */
+    .reviews-header {
+        justify-content: flex-start; /* Título a la izquierda */
+    }
+    .reviews-header h4 { 
+        font-size: 0.9rem; 
+        white-space: nowrap; 
+    }
+    .review-card {
+        text-align: left; /* TEXTO A LA IZQUIERDA */
+        align-items: flex-start;
+        padding: 0.5rem 0;
+    }
+    .stars {
+        margin-bottom: 0.5rem;
+    }
     .review-text { 
-        font-size: 0.8rem; 
+        font-size: 0.85rem; 
         -webkit-line-clamp: 4; 
-        line-clamp: 4; /* CORREGIDO: Propiedad estándar añadida */
+        line-clamp: 4;
+        text-align: left;
+        max-width: 100%;
+        margin: 0 0 0.6rem 0;
     }
-    .review-author { font-size: 0.7rem; }
-    .valores-list li { gap: 10px; flex-direction: row; align-items: flex-start; }
-    .valores-list .icon-box { min-width: 30px; margin-top: 2px; }
+    .review-author { 
+        font-size: 0.75rem; 
+        text-align: left;
+        display: block;
+    }
+    .carousel-dots {
+        justify-content: center; /* Puntos sí centrados */
+        margin-top: 15px;
+        width: 100%;
+    }
 }
 
 /* Móvil Pequeño (hasta 600px) */
