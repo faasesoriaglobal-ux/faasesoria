@@ -25,6 +25,10 @@ document.addEventListener('DOMContentLoaded', function() {
             nuestro_origen: "El Origen",
             fundador_text_new_1: "Nacido de la visión de <strong>Flor Andino</strong>. Tras vivir en primera persona los desafíos migratorios en 2004, transformó esa experiencia en un puente de ayuda real, consolidando en 2016 una firma estructurada y multidisciplinaria.",
             fundador_text_new_2: "\"Nuestro compromiso es brindar soluciones reales, escuchando cada necesidad para convertir la asesoría en un verdadero apoyo.\"",
+            // >>> NUEVAS CLAVES AÑADIDAS <<<
+            founder_lemma: "\"No pongas límites a tus exigencias\"",
+            founder_signature: "— Flor Andino, Fundadora",
+            
             valores_title: "Nuestros Pilares",
             val_1_t: "Acompañamiento Humano", val_1_d: "Cercanía y empatía en cada trámite.",
             val_2_t: "Integridad Ética", val_2_d: "Transparencia total y seguridad jurídica.",
@@ -195,6 +199,10 @@ document.addEventListener('DOMContentLoaded', function() {
             nuestro_origen: "The Origin",
             fundador_text_new_1: "Born from the vision of <strong>Flor Andino</strong>. After experiencing migration challenges firsthand in 2004, she transformed that experience into a bridge of real help, consolidating a structured firm in 2016.",
             fundador_text_new_2: "\"Our commitment is to provide real solutions, listening to every need to make our advisory a true support.\"",
+            // >>> NEW KEYS ADDED <<<
+            founder_lemma: "\"Don't limit your demands\"",
+            founder_signature: "— Flor Andino, Founder",
+
             valores_title: "Our Pillars",
             val_1_t: "Human Support", val_1_d: "Closeness and empathy in every procedure.",
             val_2_t: "Ethical Integrity", val_2_d: "Total transparency and legal security.",
@@ -365,6 +373,10 @@ document.addEventListener('DOMContentLoaded', function() {
             nuestro_origen: "L'Origine",
             fundador_text_new_1: "Né de la vision de <strong>Flor Andino</strong>. Après avoir vécu les défis migratoires en 2004, elle a transformé cette expérience en un pont d'aide réelle, consolidant un cabinet structuré en 2016.",
             fundador_text_new_2: "\"Notre engagement est de fournir de vraies solutions, en écoutant chaque besoin pour faire de notre conseil un véritable soutien.\"",
+            // >>> NOUVELLES CLÉS AJOUTÉES <<<
+            founder_lemma: "\"Ne fixez pas de limites à vos exigences\"",
+            founder_signature: "— Flor Andino, Fondatrice",
+
             valores_title: "Nos Piliers",
             val_1_t: "Accompagnement Humain", val_1_d: "Proximité et empathie dans chaque démarche.",
             val_2_t: "Intégrité Éthique", val_2_d: "Transparence totale et sécurité juridique.",
@@ -535,6 +547,10 @@ document.addEventListener('DOMContentLoaded', function() {
             nuestro_origen: "L'Origen",
             fundador_text_new_1: "Nascut de la visió de <strong>Flor Andino</strong>. Després de viure els reptes migratoris en primera persona el 2004, va transformar aquesta experiència en un pont d'ajuda real, consolidant una firma estructurada el 2016.",
             fundador_text_new_2: "\"El nostre compromís és brindar solucions reals, escoltant cada necessitat per convertir l'assessoria en un veritable suport.\"",
+            // >>> NOVES CLAUS AFEGIDES <<<
+            founder_lemma: "\"No posis límits a les teves exigències\"",
+            founder_signature: "— Flor Andino, Fundadora",
+
             valores_title: "Els Nostres Pilars",
             val_1_t: "Acompanyament Humà", val_1_d: "Proximitat i empatia en cada tràmit.",
             val_2_t: "Integritat Ètica", val_2_d: "Transparència total i seguretat jurídica.",

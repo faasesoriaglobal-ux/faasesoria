@@ -8,7 +8,7 @@
     --text-gray: #555555;
     --radius-md: 12px;
     --radius-lg: 20px;
-    --shadow-soft: 0 10px 40px rgba(245, 124, 0, 0.1); /* Sombra tintada naranja suave */
+    --shadow-soft: 0 10px 40px rgba(245, 124, 0, 0.1);
     --font-heading: 'Playfair Display', serif;
     --font-body: 'Inter', sans-serif;
 }
@@ -85,7 +85,7 @@
     padding: 2rem;
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-soft);
-    border-left: 4px solid var(--accent-orange); /* Borde Naranja */
+    border-left: 4px solid var(--accent-orange);
     transition: transform 0.3s ease;
 }
 
@@ -96,7 +96,6 @@
 .stat-item i {
     font-size: 2rem;
     margin-bottom: 1rem;
-    /* Color definido inline en HTML o usar variable */
 }
 
 .stat-number {
@@ -124,7 +123,7 @@
     margin-bottom: 6rem;
 }
 
-/* Tarjeta Fundador (Blanca) */
+/* Tarjeta Fundador */
 .card-fundador {
     background: var(--bg-white);
     border-radius: var(--radius-lg);
@@ -132,7 +131,7 @@
     box-shadow: var(--shadow-soft);
     display: flex;
     flex-direction: column;
-    border-top: 5px solid var(--accent-yellow); /* Detalle Amarillo */
+    border-top: 5px solid var(--accent-yellow);
 }
 
 .card-image-wrapper {
@@ -159,7 +158,7 @@
 .card-content h3 {
     font-family: var(--font-heading);
     font-size: 2rem;
-    color: var(--accent-orange); /* Título Naranja */
+    color: var(--accent-orange);
     margin-bottom: 1.5rem;
 }
 
@@ -176,19 +175,48 @@
     border-left: 3px solid var(--accent-orange);
     padding-left: 1rem;
     margin-top: 1.5rem;
-    background: #fff8e1; /* Fondo amarillo muy suave */
+    background: #fff8e1;
     padding: 1rem;
     border-radius: 0 8px 8px 0;
 }
 
-/* Tarjeta Valores (Blanca con bordes de color) */
+/* --- LEMA DE LA FUNDADORA --- */
+.founder-quote-container {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    animation: fadeIn 1s ease-out;
+}
+
+.founder-lemma {
+    font-family: 'Great Vibes', cursive !important;
+    font-size: 1.6rem !important;
+    color: #f57c00 !important; /* Usamos el código HEX directo para evitar fallos de variables */
+    margin-bottom: 0.5rem !important;
+    line-height: 1.4 !important;
+    font-style: normal !important;
+    display: block !important;
+    text-decoration: none !important;
+}
+.founder-signature {
+    font-size: 0.85rem;
+    color: var(--text-gray);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+}
+
+/* Tarjeta Valores */
 .card-valores {
     background: var(--bg-white);
     color: var(--primary);
     border-radius: var(--radius-lg);
     padding: 2.5rem;
     box-shadow: var(--shadow-soft);
-    border-top: 5px solid var(--accent-orange); /* Detalle Naranja */
+    border-top: 5px solid var(--accent-orange);
+    display: flex;
+    flex-direction: column;
 }
 
 .card-valores h3 {
@@ -204,6 +232,7 @@
     list-style: none;
     padding: 0;
     margin: 0;
+    flex-grow: 1;
 }
 
 .valores-list li {
@@ -216,7 +245,7 @@
 .icon-box {
     min-width: 50px;
     height: 50px;
-    background: #fff8e1; /* Fondo amarillo suave */
+    background: #fff8e1;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -245,6 +274,114 @@
     line-height: 1.5;
 }
 
+/* --- SEGMENTO DE RESEÑAS GOOGLE --- */
+.reviews-segment {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #eee; /* Línea sólida gris muy clarita */
+    animation: fadeIn 0.8s ease-out;
+}
+
+.reviews-header {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 1.2rem;
+}
+
+.google-icon {
+    font-size: 1.2rem;
+    color: #DB4437;
+}
+
+.reviews-header h4 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.reviews-header .separator-line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, #e0e0e0, transparent);
+}
+
+/* Contenedor del Carrusel */
+.reviews-carousel-container {
+    overflow: hidden;
+    position: relative;
+    min-height: 110px;
+}
+
+.reviews-track {
+    display: flex;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    width: 100%;
+}
+
+/* Tarjeta Individual de Reseña */
+.review-card {
+    min-width: 100%;
+    padding: 0.5rem 0.2rem;
+    box-sizing: border-box;
+    opacity: 0.9;
+    transition: opacity 0.3s;
+}
+
+.stars {
+    color: #F4B400;
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+    letter-spacing: 2px;
+}
+
+.review-text {
+    font-size: 0.85rem;
+    font-style: italic;
+    color: #555;
+    line-height: 1.5;
+    margin: 0 0 0.6rem 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3; /* CORREGIDO: Propiedad estándar añadida */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.review-author {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: block;
+}
+
+/* Puntos Indicadores */
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 12px;
+}
+
+.dot {
+    width: 6px;
+    height: 6px;
+    background-color: #ddd;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: var(--accent-orange);
+    transform: scale(1.2);
+}
+
 /* ================= TIMELINE ================= */
 .timeline-container {
     max-width: 1000px;
@@ -270,7 +407,7 @@
     top: 0;
     bottom: 0;
     width: 2px;
-    background: var(--accent-yellow); /* Línea Amarilla */
+    background: var(--accent-yellow);
     transform: translateX(-50%);
 }
 
@@ -296,7 +433,6 @@
     text-align: left;
 }
 
-/* Punto central Naranja */
 .timeline-item::after {
     content: '';
     position: absolute;
@@ -306,7 +442,7 @@
     background: var(--accent-orange);
     border: 4px solid var(--bg-white);
     border-radius: 50%;
-    box-shadow: 0 0 0 4px rgba(255, 193, 7, 0.3); /* Sombra amarilla */
+    box-shadow: 0 0 0 4px rgba(255, 193, 7, 0.3);
     z-index: 2;
 }
 
@@ -321,7 +457,7 @@
     position: relative;
     width: 100%;
     transition: transform 0.3s ease;
-    border-bottom: 3px solid var(--accent-yellow); /* Detalle inferior amarillo */
+    border-bottom: 3px solid var(--accent-yellow);
 }
 
 .timeline-content:hover {
@@ -354,12 +490,11 @@
 
 .timeline-img { display: none; }
 
-/* ================= RESPONSIVE (CORREGIDO) ================= */
+/* ================= RESPONSIVE ================= */
 
 /* Tablet y Móvil Grande (hasta 900px) */
 @media (max-width: 900px) {
     .empresa-header { grid-template-columns: 1fr; gap: 2rem; }
-    
     .empresa-grid { grid-template-columns: 1fr; }
     
     .timeline::before { left: 20px; }
@@ -370,68 +505,64 @@
     .empresa-text-block h2 { font-size: 2.2rem; }
 }
 
-/* Móvil Estándar (hasta 768px) - AQUÍ ESTÁ LA SOLUCIÓN FINAL */
+/* Móvil Estándar (hasta 768px) */
 @media (max-width: 768px) {
+    /* Stats */
     .empresa-stats {
-        flex-direction: column !important; /* Una debajo de otra */
+        flex-direction: column !important;
         gap: 1.5rem !important;
         width: 100%;
         padding: 0 1rem;
-        align-items: center; /* Centrar las tarjetas */
+        align-items: center;
     }
-
     .stat-item {
         width: 100% !important;
         max-width: 400px;
         margin: 0 auto;
         padding: 1.5rem !important;
         text-align: center;
-        border-left: none; /* Quitamos borde lateral para diseño centrado */
-        border-top: 4px solid var(--accent-orange); /* Añadimos borde superior */
+        border-left: none;
+        border-top: 4px solid var(--accent-orange);
     }
-
-    .stat-item i {
-        display: block;
-        margin: 0 auto 1rem auto;
-        text-align: center;
-    }
-
-    .stat-number {
-        font-size: 2.2rem !important;
-        display: block;
-        margin-bottom: 0.5rem;
-    }
-
-    .stat-label {
-        font-size: 0.85rem;
-        line-height: 1.4;
-        text-align: center;
-    }
+    .stat-item i { display: block; margin: 0 auto 1rem auto; text-align: center; }
+    .stat-number { font-size: 2.2rem !important; display: block; margin-bottom: 0.5rem; }
+    .stat-label { font-size: 0.85rem; line-height: 1.4; text-align: center; }
     
-    /* Ajuste extra para el Grid (Fundadora + Valores) */
+    /* Grid Principal */
     .empresa-grid {
         grid-template-columns: 1fr !important;
         gap: 2rem !important;
         padding: 0 1rem;
     }
-    
     .card-fundador, .card-valores {
         width: 100%;
         max-width: 500px;
         margin: 0 auto;
     }
+    
+    /* Ajustes Específicos Nuevos */
+    .founder-lemma { font-size: 1.4rem !important; line-height: 1.3; }
+    .founder-signature { font-size: 0.75rem !important; }
+    
+    .reviews-header h4 { font-size: 0.85rem; white-space: nowrap; }
+    .review-text { 
+        font-size: 0.8rem; 
+        -webkit-line-clamp: 4; 
+        line-clamp: 4; /* CORREGIDO: Propiedad estándar añadida */
+    }
+    .review-author { font-size: 0.7rem; }
+    .valores-list li { gap: 10px; flex-direction: row; align-items: flex-start; }
+    .valores-list .icon-box { min-width: 30px; margin-top: 2px; }
 }
 
 /* Móvil Pequeño (hasta 600px) */
 @media (max-width: 600px) {
     .about { padding: 4rem 1.5rem; }
-    
     .stat-item { padding: 1.2rem; }
     .stat-number { font-size: 2rem; }
-    
     .card-content { padding: 1.5rem; }
-    .valores-list li { gap: 1rem; }
-    .icon-box { min-width: 40px; height: 40px; font-size: 1rem; }
-    
     .empresa-text-block h2 { font-size: 1.8rem; }
+    
+    .founder-lemma { font-size: 1.2rem !important; }
+    .reviews-header h4 { font-size: 0.75rem; }
 }

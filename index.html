@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#c2185b">
     
-    <!-- AÑADIR ESTO: Importar fuentes de Google -->
+    <!-- Importar fuentes de Google -->
     <link rel="canonical" href="https://faasesoriaglobal.com/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,8 +16,6 @@
     
     <!-- Iconos -->
     <script src="https://code.iconify.design/iconify-icon/2.0.0/iconify-icon.min.js"></script>
-    
-    <!-- ... resto de tu código CSS ... -->
     
     <!-- CSS base -->
     <link rel="stylesheet" href="css/styles.css">
@@ -40,11 +38,8 @@
         <a href="#inicio" class="logo-link">
             <img src="img/fa.jpg" alt="FA Asesoría Global" class="logo-img">
         </a>
-        <!-- El lema ahora es un elemento separado pero vinculado -->
-         <span class="logo-slogan-script">Siempre contigo</span>
+        <span class="logo-slogan-script">Siempre contigo</span>
     </div>
-
-    <!-- Resto del menú... -->
 
     <nav>
         <a href="#inicio" data-lang="nav_inicio">Inicio</a>
@@ -62,11 +57,9 @@
         <div class="lang-dropdown">
             <button class="lang-trigger" id="langTrigger" aria-label="Seleccionar idioma">
                 <span class="current-flag" id="mainFlag">
-                    <!-- Bandera España por defecto -->
                     <svg viewBox="0 0 640 480" width="20" height="20"><path fill="#AA151B" d="M0 0h640v480H0z"/><path fill="#F1BF00" d="M0 120h640v240H0z"/></svg>
                 </span>
                 <span class="lang-text">ES</span>
-                <i class="fas fa-chevron-down"></i>
             </button>
 
             <div class="lang-menu" id="langMenu">
@@ -90,15 +83,13 @@
         </div>
     </div>
     
-    <!-- Icono Menú Móvil (Visible solo en móvil con JS) -->
-
-<button class="mobile-toggle" aria-label="Abrir menú" aria-expanded="false">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-        <line x1="3" y1="12" x2="21" y2="12"></line>
-        <line x1="3" y1="6" x2="21" y2="6"></line>
-        <line x1="3" y1="18" x2="21" y2="18"></line>
-    </svg>
-</button>
+    <button class="mobile-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+    </button>
 </header>
 
 <!-- ================= HERO ================= -->
@@ -112,7 +103,6 @@
         <div class="slide" data-slide="5" style="background-image:url('img/6.jpg')"></div>
         <div class="slide" data-slide="6" style="background-image:url('img/7.jpg')"></div>
         <div class="slide" data-slide="7" style="background-image:url('img/8.jpg')"></div>
-        
     </div>
 
     <div class="hero-content">
@@ -121,16 +111,16 @@
             <p class="hero-text active" data-slide="0" data-lang="hero_text_0">Siempre contigo en tu proceso legal y migratorio</p>
             <p class="hero-text" data-slide="1" data-lang="hero_text_1">Acompañamiento humano, ético y profesional</p>
             <p class="hero-text" data-slide="2" data-lang="hero_text_2">Soluciones legales, fiscales y administrativas integrales</p>
-             <p class="hero-text" data-slide="3" data-lang="hero_text_3">Tranquilidad financiera y crecimiento</p>
-              <p class="hero-text" data-slide="4" data-lang="hero_text_4">Empatía, protección y soluciones humanas</p>
-               <p class="hero-text" data-slide="5" data-lang="hero_text_5">Ahorro, cumplimiento y eficiencia</p>
-             <p class="hero-text" data-slide="6" data-lang="hero_text_6">Reencuentro, unidad familiar y éxito en trámites</p>
-              <p class="hero-text" data-slide="7" data-lang="hero_text_7">Protege tu Creatividad e Innovación</p>
+            <p class="hero-text" data-slide="3" data-lang="hero_text_3">Tranquilidad financiera y crecimiento</p>
+            <p class="hero-text" data-slide="4" data-lang="hero_text_4">Empatía, protección y soluciones humanas</p>
+            <p class="hero-text" data-slide="5" data-lang="hero_text_5">Ahorro, cumplimiento y eficiencia</p>
+            <p class="hero-text" data-slide="6" data-lang="hero_text_6">Reencuentro, unidad familiar y éxito en trámites</p>
+            <p class="hero-text" data-slide="7" data-lang="hero_text_7">Protege tu Creatividad e Innovación</p>
         </div>
     </div>
 </section>
 
-<!-- ================= HISTORIA / EMPRESA (DISEÑO ACTUALIZADO) ================= -->
+<!-- ================= HISTORIA / EMPRESA ================= -->
 <section class="section-color about" id="empresa">
     <div class="container-empresa">
         
@@ -176,37 +166,43 @@
                     <p data-lang="fundador_text_new_2" class="highlight-text">
                         "Nuestro compromiso es brindar soluciones reales, escuchando cada necesidad para convertir la asesoría en un verdadero apoyo."
                     </p>
+                    
+                    <!-- LEMA DE LA FUNDADORA -->
+                    <div class="founder-quote-container">
+                        <p class="founder-lemma" data-lang="founder_lemma">"No pongas límites a tus exigencias"</p>
+                        <span class="founder-signature" data-lang="founder_signature">— Flor Andino, Fundadora</span>
+                    </div>
+
                 </div>
             </div>
 
-            <!-- Tarjeta 2: Valores -->
+            <!-- Tarjeta 2: Valores + Reseñas -->
             <div class="card-valores">
                 <h3 data-lang="valores_title">Nuestros Pilares</h3>
+                
                 <ul class="valores-list">
                     <li>
                        <div class="icon-box">
-                <!-- Icono Corazón -->
-                <iconify-icon icon="mdi:heart" style="font-size: 24px; color: var(--brand-orange, #f57c00);"></iconify-icon>
-            </div>
+                            <iconify-icon icon="mdi:heart"></iconify-icon>
+                        </div>
                         <div>
                             <strong data-lang="val_1_t">Acompañamiento Humano</strong>
                             <span data-lang="val_1_d">Cercanía y empatía en cada trámite.</span>
                         </div>
                     </li>
                     <li>
-<div class="icon-box">
-                <!-- Icono Escudo -->
-                <iconify-icon icon="mdi:shield-check" style="font-size: 24px; color: var(--brand-orange, #f57c00);"></iconify-icon>
-            </div>                        <div>
+                        <div class="icon-box">
+                            <iconify-icon icon="mdi:shield-check"></iconify-icon>
+                        </div>
+                        <div>
                             <strong data-lang="val_2_t">Integridad Ética</strong>
                             <span data-lang="val_2_d">Transparencia total y seguridad jurídica.</span>
                         </div>
                     </li>
                     <li>
                         <div class="icon-box">
-                <!-- Icono Bombilla Encendida -->
-                <iconify-icon icon="mdi:lightbulb-on" style="font-size: 24px; color: var(--brand-orange, #f57c00);"></iconify-icon>
-            </div>
+                            <iconify-icon icon="mdi:lightbulb-on"></iconify-icon>
+                        </div>
                         <div>
                             <strong data-lang="val_3_t">Innovación</strong>
                             <span data-lang="val_3_d">Soluciones ágiles adaptadas a ti.</span>
@@ -214,15 +210,58 @@
                     </li>
                     <li>
                            <div class="icon-box">
-                <!-- Icono Grupo Diverso -->
-                <iconify-icon icon="mdi:account-group" style="font-size: 24px; color: var(--brand-orange, #f57c00);"></iconify-icon>
-            </div>
+                            <iconify-icon icon="mdi:account-group"></iconify-icon>
+                        </div>
                         <div>
                             <strong data-lang="val_4_t">Respeto a la Diversidad</strong>
                             <span data-lang="val_4_d">Un espacio inclusivo para todos.</span>
                         </div>
                     </li>
                 </ul>
+
+                <!-- SEGMENTO DE RESEÑAS GOOGLE -->
+                <div class="reviews-segment">
+                    <div class="reviews-header">
+                        <iconify-icon icon="mdi:google" class="google-icon"></iconify-icon>
+                        <h4 data-lang="reviews_title">Lo que dicen en Google</h4>
+                        
+                    </div>
+                    
+                    <div class="reviews-carousel-container">
+                        <div class="reviews-track" id="reviewsTrack">
+                            
+                            <!-- Reseña 1 -->
+                            <div class="review-card">
+                                <div class="stars">★★★★★</div>
+                                <p class="review-text">"Mil Gracias por su profesionalidad, su buena disposición y gentil trato."</p>
+                                <span class="review-author">—Riannangels.</span>
+                            </div>
+
+                            <!-- Reseña 2 -->
+                            <div class="review-card">
+                                <div class="stars">★★★★★</div>
+                                <p class="review-text">"He tramitado mi nacionalidad y el arraigo de mis padres y estoy muy satisfecha porque ya tengo el DNI y mis padres el NIE."</p>
+                                <span class="review-author">—Malvina Joca.</span>
+                            </div>
+
+                            <!-- Reseña 3 -->
+                            <div class="review-card">
+                                <div class="stars">★★★★★</div>
+                                <p class="review-text">"Felicito el excelente equipo de profecionalss y la exelente atención al público de todo el equipo de FA asesorias y muchas bendiciones."</p>
+                                <span class="review-author">—Jean Davida</span>
+                            </div>
+
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+                <!-- FIN SEGMENTO RESEÑAS -->
+
             </div>
         </div>
 
@@ -296,11 +335,10 @@
                     <li data-lang="servicio_1_item_6" data-service="Recuperación de tarjetas" data-phone="+34605842185">. Recuperación de tarjetas.</li>
                     <li data-lang="servicio_1_item_7" data-service="Reagrupación familiar" data-phone="+34605842185">Reagrupación familiar</li>
                     <li data-lang="servicio_1_item_8" data-service="Recursos administrativos y contenciosos." data-phone="+34605842185">Recursos administrativos y contenciosos.</li>
-                
                 </ul>
                 <button class="form-btn js-wa-qSuick" data-wa-phone="+34692488666" data-wa-service="Extranjería">
-    <span data-lang="btn_solicitar_asesoria">Solicitar asesoría</span>
-</button>
+                    <span data-lang="btn_solicitar_asesoria">Solicitar asesoría</span>
+                </button>
             </div>
         </div>
 
@@ -321,47 +359,46 @@
                     <li data-lang="servicio_2_item_1" data-service="Defensa Penal" data-phone="+34605842185">Defensa Penal</li>
                     <li data-lang="servicio_2_item_2" data-service="Cancelación de antecedentes penales y policiales" data-phone="+34605842185">Cancelación de antecedentes penales y policiales</li>
                     <li data-lang="servicio_2_item_3" data-service="Violencia de género (defensa y acompañamiento)" data-phone="+34605842185">Violencia de género (defensa y acompañamiento)</li>
-                    <li data-lang="servicio_2_item_4" data-service="Contratos civiles (alquiler, compraventa, servicios)" data-phone="+34605842185">Contratos civiles (alquiler, compraventa, servicios).</li>
+                    <li data-lang="servicio_2_item_4" data-service="Contratos civiles (alquiler, compraventa, servicios)." data-phone="+34605842185">Contratos civiles (alquiler, compraventa, servicios).</li>
                     <li data-lang="servicio_2_item_5" data-service="Constitución de sociedades" data-phone="+34605842185">Constitución de sociedades</li>
                     <li data-lang="servicio_2_item_6" data-service="Recursos administrativos y contenciosos" data-phone="+34605842185">Recursos administrativos y contenciosos</li>
                     <li data-lang="servicio_2_item_7" data-service="Visados" data-phone="+34605842185">Visados</li>
                     <li data-lang="servicio_2_item_8" data-service="Homologación de títulos universitarios" data-phone="+34605842185">Homologación de títulos universitarios</li>
                     <li data-lang="servicio_2_item_9" data-service="Seguimiento documental y confidencialidad" data-phone="+34605842185">Seguimiento documental y confidencialidad</li>
                 </ul>
-                         <button class="form-btn js-wa-quick" data-wa-phone="+34605842185" data-wa-service="Área Legal">
-    <span data-lang="btn_solicitar_asesoria">Solicitar asesoría</span>
-</button>
+                <button class="form-btn js-wa-quick" data-wa-phone="+34605842185" data-wa-service="Área Legal">
+                    <span data-lang="btn_solicitar_asesoria">Solicitar asesoría</span>
+                </button>
             </div>
         </div>
 
        <!-- FISCAL -->
-<div class="service-box">
-    <div class="service-badge fiscal">
-        <span class="badge-icon">📊</span> <span data-lang="badge_fiscal">Fiscal</span>
-    </div>
-    <img src="img/fiscal.png" alt="Área fiscal">
-    <div class="service-overlay"></div>
-    <div class="service-text">
-        <span class="service-label" data-lang="label_fiscal">Departamento Fiscal</span>
-        <h3 data-lang="servicio_3_title">Fiscal y Contable</h3>
-        <p data-lang="servicio_3_subtitle">Autónomos · Empresas · IRPF</p>
-    </div>
-    <div class="service-more">
-        <ul>
-            <!-- Texto visible IDÉNTICO al JS en español -->
-            <li data-lang="servicio_3_item_1" data-service="Declaraciones anuales e IRPF" data-phone="+34605842185">Declaraciones anuales e IRPF</li>
-            <li data-lang="servicio_3_item_2" data-service="Contabilidad para autónomos y empresas" data-phone="+34605842185">Contabilidad para autónomos y empresas</li>
-            <li data-lang="servicio_3_item_3" data-service="Gestión de impuestos" data-phone="+34605842185">Gestión de impuestos</li>
-            <li data-lang="servicio_3_item_4" data-service="Asesoría financiera y previsión fiscal" data-phone="+34605842185">Asesoría financiera y previsión fiscal</li>
-            <li data-lang="servicio_3_item_5" data-service="Atención y asesoramiento presencial y telefónica" data-phone="+34605842185">Atención y asesoramiento presencial y telefónica</li>
-            <li data-lang="servicio_3_item_6" data-service="Constitución de empresas (Mercantil)" data-phone="+34605842185">Constitución de empresas (Mercantil)</li>
-            <li data-lang="servicio_3_item_7" data-service="Patentes" data-phone="+34605842185">Patentes</li>
-        </ul>
-        <button class="form-btn js-wa-quick" data-wa-phone="+34605842185" data-wa-service="Fiscal y Contable">
-            <span data-lang="btn_solicitar_asesoria">Solicitar asesoría</span>
-        </button>
-    </div>
-</div>
+        <div class="service-box">
+            <div class="service-badge fiscal">
+                <span class="badge-icon">📊</span> <span data-lang="badge_fiscal">Fiscal</span>
+            </div>
+            <img src="img/fiscal.png" alt="Área fiscal">
+            <div class="service-overlay"></div>
+            <div class="service-text">
+                <span class="service-label" data-lang="label_fiscal">Departamento Fiscal</span>
+                <h3 data-lang="servicio_3_title">Fiscal y Contable</h3>
+                <p data-lang="servicio_3_subtitle">Autónomos · Empresas · IRPF</p>
+            </div>
+            <div class="service-more">
+                <ul>
+                    <li data-lang="servicio_3_item_1" data-service="Declaraciones anuales e IRPF" data-phone="+34605842185">Declaraciones anuales e IRPF</li>
+                    <li data-lang="servicio_3_item_2" data-service="Contabilidad para autónomos y empresas" data-phone="+34605842185">Contabilidad para autónomos y empresas</li>
+                    <li data-lang="servicio_3_item_3" data-service="Gestión de impuestos" data-phone="+34605842185">Gestión de impuestos</li>
+                    <li data-lang="servicio_3_item_4" data-service="Asesoría financiera y previsión fiscal" data-phone="+34605842185">Asesoría financiera y previsión fiscal</li>
+                    <li data-lang="servicio_3_item_5" data-service="Atención y asesoramiento presencial y telefónica" data-phone="+34605842185">Atención y asesoramiento presencial y telefónica</li>
+                    <li data-lang="servicio_3_item_6" data-service="Constitución de empresas (Mercantil)" data-phone="+34605842185">Constitución de empresas (Mercantil)</li>
+                    <li data-lang="servicio_3_item_7" data-service="Patentes" data-phone="+34605842185">Patentes</li>
+                </ul>
+                <button class="form-btn js-wa-quick" data-wa-phone="+34605842185" data-wa-service="Fiscal y Contable">
+                    <span data-lang="btn_solicitar_asesoria">Solicitar asesoría</span>
+                </button>
+            </div>
+        </div>
 
         <!-- AUTÓNOMOS -->
         <div class="service-box">
@@ -385,20 +422,18 @@
                     <li data-lang="servicio_4_item_6" data-service="Tramite de numero de seguridad social" data-phone="+34672727920">Número de Seguridad Social</li>
                     <li data-lang="servicio_4_item_7" data-service="Prestaciones y ayudas" data-phone="+34672727920">Prestaciones y ayudas</li>
                     <li data-lang="servicio_4_item_8" data-service="Registro de marcas" data-phone="+34672727920">Registro de marcas</li>
-
                 </ul>
-                         <button class="form-btn js-wa-quick" data-wa-phone="+34672727920" data-wa-service="Autónomos">
-    <span data-lang="btn_solicitar_asesoria">Solicitar asesoría</span>
-</button>
+                <button class="form-btn js-wa-quick" data-wa-phone="+34672727920" data-wa-service="Autónomos">
+                    <span data-lang="btn_solicitar_asesoria">Solicitar asesoría</span>
+                </button>
             </div>
         </div>
     </section>
 </section>
 
-<!-- SEPARADOR ANIMADO: ¡Y MUCHO MÁS! -->
+<!-- SEPARADOR ANIMADO -->
 <div class="separator-section">
     <div class="separator-content">
-        <!-- AÑADIDO data-lang="separator_text" -->
         <span class="separator-text" data-lang="separator_text">¡Y mucho más!</span>
         <div class="separator-line"></div>
         <div class="separator-dots">
@@ -512,32 +547,26 @@
         </div>
 
         <div class="otros-footer">
-            <!-- BOTÓN CORREGIDO: Scroll suave al formulario -->
             <button class="otros-btn" data-scroll-target="#formulario">
                 <span data-lang="otros_btn">Solicitar asesoría completa</span>
                 <span class="btn-icon">→</span>
             </button>
 
-
-<!-- NOTA:-->
-<!-- AÑADIDO data-lang="otros_note" AL PÁRRAFO -->
-<p class="otros-note" data-lang="otros_note">
-    ¿No encuentras lo que buscas? 
-    <a href="https://wa.me/34657878642?text=Hola,%20necesito%20una%20asesoría%20personalizada" 
-       target="_blank" 
-       rel="noopener noreferrer" 
-       style="color: var(--brand-orange); font-weight: 700; text-decoration: underline;">
-       Contáctanos aquí
-    </a> 
-    para una solución personalizada.
-</p>
-
-
-     </div>
+            <p class="otros-note" data-lang="otros_note">
+                ¿No encuentras lo que buscas? 
+                <a href="https://wa.me/34657878642?text=Hola,%20necesito%20una%20asesoría%20personalizada" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   style="color: var(--brand-orange); font-weight: 700; text-decoration: underline;">
+                   Contáctanos aquí
+                </a> 
+                para una solución personalizada.
+            </p>
+        </div>
     </section>
 </div>
 
-<!-- ================= FORMULARIO (ÚNICO Y CORREGIDO) ================= -->
+<!-- ================= FORMULARIO ================= -->
 <section class="consulta-section" id="formulario">
     <h2 class="consulta-title" data-lang="formulario_title">HAZ TU CONSULTA</h2>
     
@@ -589,7 +618,6 @@
             </label>
         </div>
 
-        <!-- BOTÓN ACTUALIZADO -->
         <button type="submit" class="form-btn" data-lang="form_btn">Enviar consulta</button>
     </form>
 </section>
@@ -598,32 +626,26 @@
 <!-- ================= FOOTER ================= -->
 <footer class="footer reveal-footer" id="contacto">
     <div class="footer-columns">
-        <!-- LOGO + EMPRESA -->
         <div class="footer-col footer-brand">
             <img src="img/fa.jpg" alt="FA Asesoría Global" class="footer-logo">
             <h4 data-lang="footer_empresa">FA Asesoría Global</h4>
             <p data-lang="footer_servicios">Legal · Fiscal · Extranjería</p>
             <div class="footer-social">
-                <!-- Instagram -->
                 <a href="https://www.instagram.com/faasesoriaglobal" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
                     <iconify-icon icon="mdi:instagram"></iconify-icon>
                 </a>
-                <!-- Facebook -->
                 <a href="https://www.facebook.com/faasesoriaglobal/?locale=es_ES" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
                     <iconify-icon icon="mdi:facebook"></iconify-icon>
                 </a>
-                <!-- Linktree (Logo Oficial) -->
                 <a href="https://linktr.ee/faasesoriaglobal?utm_source=linktree_profile_share&ltsid=909ef9a7-a69a-42a9-8bc4-2e764c14f65f" aria-label="Linktree" target="_blank" rel="noopener noreferrer">
                     <iconify-icon icon="simple-icons:linktree"></iconify-icon>
                 </a>
-                <!-- WhatsApp -->
                 <a href="https://wa.me/34657878642" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
                     <iconify-icon icon="mdi:whatsapp"></iconify-icon>
                 </a>
             </div>
         </div>
 
-        <!-- AVISOS LEGALES (Convertidos a enlaces) -->
         <div class="footer-col">
             <h4 data-lang="avisos_legales">Avisos legales</h4>
             <a href="aviso-legal.html" target="_blank" rel="noopener" data-lang="aviso_legal">Aviso legal</a>
@@ -631,7 +653,6 @@
             <a href="politica-cookies.html" target="_blank" rel="noopener" data-lang="cookies">Cookies</a>
         </div>
 
-        <!-- CONTACTO -->
         <div class="footer-col footer-contact">
             <h4 data-lang="footer_contacto">Contacto</h4>
             <p><iconify-icon icon="mdi:map-marker"></iconify-icon> Av. de Josep Tarradellas, 134, Eixample, 08029 Barcelona</p>
@@ -640,40 +661,27 @@
         </div>
     </div>
 
-    <!-- MAPA -->
     <div class="footer-map">
         <iframe src="https://www.google.com/maps?q=Av.%20de%20Josep%20Tarradellas,%20134,%20Barcelona&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 
-    <!-- COPYRIGHT -->
     <p class="footer-bottom" data-lang="footer_copy">© 2026 FA Asesoría Global · Todos los derechos reservados</p>
 </footer>
+
 <!-- VENTANA MODAL de "OTROS SERVICIOS" -->
 <div class="service-modal" id="serviceModal">
     <div class="modal-content">
-        <!-- Botón de cerrar -->
         <button class="modal-close" id="modalClose">&times;</button>
-        
-        <!-- NUEVO: Contenedor para el Logo de la empresa socia -->
         <div id="modalLogo"></div>
-        
-        <!-- Textos -->
         <h3 id="modalTitle"></h3>
         <p id="modalDesc"></p>
-        
-        <!-- Lista de características -->
         <ul id="modalFeatures"></ul>
-        
-        <!-- Botón de WhatsApp -->
         <a href="#" class="modal-btn" id="modalWhatsapp" target="_blank" rel="noopener noreferrer">
             <i class="fab fa-whatsapp"></i> <span>SOLICITA INFORMACIÓN</span>
         </a>
-
-        <!-- NUEVO: Nota de colaborador (se rellena con JS) -->
         <div class="modal-partner-note" id="modalPartnerNote"></div>
     </div>
 </div>
-<!-- FIN DEL MODAL -->
 
 <!-- JS -->
 <script src="js/main.js"></script>
@@ -682,5 +690,6 @@
 <script src="js/idiomas.js"></script>
 <script src="js/wa.js"></script>
 <script src="js/cookies.js"></script>
+
 </body>
 </html>

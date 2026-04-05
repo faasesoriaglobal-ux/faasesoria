@@ -32,8 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    // ================= SCROLL SUAVE EN MENÚ (CORREGIDO) =================
-    // Solo hace scroll, NO cierra el menú ni toca el icono para evitar parpadeos
+    // ================= SCROLL SUAVE EN MENÚ =================
     document.querySelectorAll('nav a[href^="#"]').forEach(enlace => {
         enlace.addEventListener('click', e => {
             e.preventDefault();
@@ -45,36 +44,31 @@ document.addEventListener("DOMContentLoaded", function() {
                         behavior: 'smooth',
                         block: 'start'
                     });
-                    // El cierre del menú se maneja exclusivamente en el evento de clic del enlace (abajo)
                 }
             }
         });
     });
 
-    // ================= MENÚ MÓVIL (ICONO SIEMPRE VISIBLE) =================
+    // ================= MENÚ MÓVIL =================
     if (mobileToggle && topbar && nav) {
         
         // 1. Al hacer clic en el icono: Abrir/Cerrar menú
         mobileToggle.addEventListener('click', function(e) {
             e.stopPropagation(); 
             topbar.classList.toggle('nav-open');
-            // NO cambiamos el innerHTML. El icono permanece igual siempre.
         });
 
-        // 2. Al hacer clic en un enlace (Servicios, Contacto...):
-        // Cerramos el menú desplegable, pero el icono permanece visible gracias al CSS.
+        // 2. Al hacer clic en un enlace: Cerrar menú
         nav.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 topbar.classList.remove('nav-open');
-                // IMPORTANTE: No modificamos el icono aquí.
             });
         });
     }
 
-    // 3. Cerrar menú al hacer clic FUERA (en el Hero o cualquier lado)
+    // 3. Cerrar menú al hacer clic FUERA
     document.addEventListener('click', (e) => {
         if (topbar && topbar.classList.contains('nav-open')) {
-            // Si el clic NO fue dentro de la barra ni en el botón
             if (!topbar.contains(e.target)) {
                 topbar.classList.remove('nav-open');
             }
@@ -140,27 +134,8 @@ document.addEventListener("DOMContentLoaded", function() {
         footerObserver.observe(footer);
     }
 
-    // ================= SECCIONES REVEAL =================
-    const revealElements = document.querySelectorAll('.reveal, .fade-left, .fade-right');
-    
-    if (revealElements.length > 0) {
-        const revealObserver = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                }
-            });
-        }, {
-            threshold: 0.1
-        });
-        
-        revealElements.forEach(el => {
-            revealObserver.observe(el);
-        });
-    }
-
-});
-    // ================= SECCIONES REVEAL =================
+    // ================= SECCIONES REVEAL (UNIFICADO) =================
+    // Incluye: reveal, fade-left, fade-right y separator-section
     const revealElements = document.querySelectorAll('.reveal, .fade-left, .fade-right, .separator-section');
     
     if (revealElements.length > 0) {
@@ -176,10 +151,43 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
             });
         }, {
-            threshold: 0.2 // Se activa cuando se ve el 20%
+            threshold: 0.2
         });
         
         revealElements.forEach(el => {
             revealObserver.observe(el);
         });
     }
+
+    // ================= CARRUSEL DE RESEÑAS GOOGLE =================
+    const reviewsTrack = document.getElementById('reviewsTrack');
+    
+    if (reviewsTrack) {
+        let index = 0;
+        const cards = reviewsTrack.querySelectorAll('.review-card');
+        const total = cards.length;
+        const dots = document.querySelectorAll('.carousel-dots .dot');
+
+        // Función para actualizar la posición del carrusel y los puntos
+        const updateCarousel = () => {
+            // Mover el track horizontalmente
+            reviewsTrack.style.transform = `translateX(-${index * 100}%)`;
+            
+            // Actualizar clase 'active' en los puntos
+            dots.forEach((d, i) => {
+                if (i === index) {
+                    d.classList.add('active');
+                } else {
+                    d.classList.remove('active');
+                }
+            });
+        };
+
+        // Cambiar cada 4 segundos
+        setInterval(() => {
+            index = (index + 1) % total; // Volver a 0 cuando llega al final
+            updateCarousel();
+        }, 4000);
+    }
+
+});
