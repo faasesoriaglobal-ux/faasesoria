@@ -35,6 +35,32 @@
         .btn-reject { background: transparent; border: 1px solid white; color: white; }
         .btn-reject:hover { background: white; color: var(--primary); }
         @media (max-width: 768px) { #cookie-banner { flex-direction: column; text-align: center; } .cookie-actions { width: 100%; justify-content: center; } }
+
+        /* Footer Simple para Legales */
+        .legal-footer-simple {
+            background-color: var(--primary);
+            color: #ffffff;
+            padding: 2rem 0;
+            margin-top: 4rem;
+            text-align: center;
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+        }
+        .legal-footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+        .legal-footer-links a {
+            color: #ffffff;
+            text-decoration: none;
+            opacity: 0.7;
+            transition: all 0.3s ease;
+            font-size: 0.85rem;
+        }
+        .legal-footer-links a:hover { opacity: 1; color: var(--brand-orange); text-decoration: underline; }
     </style>
 </head>
 <body>
@@ -47,59 +73,78 @@
             <span class="logo-slogan-script">Siempre contigo</span>
         </a>
     </div>
-    <nav><a href="index.html">Inicio</a></nav>
+    <nav>
+        <a href="index.html#inicio" data-lang="nav_inicio">Inicio</a>
+        <a href="index.html#servicios" data-lang="nav_servicios">Servicios</a>
+        <a href="index.html#empresa" data-lang="nav_empresa">Sobre nosotros</a>
+        <a href="index.html#formulario" data-lang="nav_contacto">Contacto</a>
+    </nav>
+    <div class="header-actions">
+        <button class="consult-btn" onclick="window.location.href='index.html#formulario'" data-lang="consulta_online">Consulta Online</button>
+        <div class="lang-dropdown">
+            <button class="lang-trigger" id="langTrigger" aria-label="Seleccionar idioma">
+                <span class="current-flag" id="mainFlag">
+                    <svg viewBox="0 0 640 480" width="20" height="20"><path fill="#AA151B" d="M0 0h640v480H0z"/><path fill="#F1BF00" d="M0 120h640v240H0z"/></svg>
+                </span>
+                <span class="lang-text">ES</span>
+            </button>
+            <div class="lang-menu" id="langMenu">
+                <button class="lang-option" data-idioma="es"><svg viewBox="0 0 640 480" width="18" height="18"><path fill="#AA151B" d="M0 0h640v480H0z"/><path fill="#F1BF00" d="M0 120h640v240H0z"/></svg><span>Español</span></button>
+                <button class="lang-option" data-idioma="en"><svg viewBox="0 0 640 480" width="18" height="18"><path fill="#012169" d="M0 0h640v480H0z"/><path stroke="#FFF" stroke-width="60" d="M0 0l640 480M640 0L0 480"/><path stroke="#C8102E" stroke-width="40" d="M0 0l640 480M640 0L0 480"/><path fill="#FFF" d="M0 180h640v120H0zM240 0h160v480H240z"/><path fill="#C8102E" d="M0 220h640v40H0zM280 0h80v480h-80z"/></svg><span>English</span></button>
+                <button class="lang-option" data-idioma="fr"><svg viewBox="0 0 640 480" width="18" height="18"><path fill="#002395" d="M0 0h213.33v480H0z"/><path fill="#FFF" d="M213.33 0h213.34v480H213.33z"/><path fill="#ED2939" d="M426.67 0H640v480H426.67z"/></svg><span>Français</span></button>
+                <button class="lang-option" data-idioma="ca"><svg viewBox="0 0 640 480" width="18" height="18"><path fill="#FCDD09" d="M0 0h640v480H0z"/><path stroke="#DA121A" stroke-width="24" d="M0 30h640M0 90h640M0 150h640M0 210h640M0 270h640M0 330h640M0 390h640M0 450h640"/></svg><span>Català</span></button>
+            </div>
+        </div>
+    </div>
+    <button class="mobile-toggle" aria-label="Abrir menú">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
 </header>
 
 <!-- CONTENIDO -->
 <section class="legal-wrapper reveal">
-    <h1 class="legal-title">Política de Cookies</h1>
+    <h1 class="legal-title" data-lang="cookies_title">Política de Cookies</h1>
     <div class="legal-card">
-        <p>En <strong>FA Asesoría Global</strong> utilizamos cookies propias y de terceros para mejorar su experiencia de navegación, analizar el tráfico y asegurar el correcto funcionamiento de nuestros servicios legales.</p>
+        <p data-lang="cookies_intro">En <strong>FA Asesoría Global</strong> utilizamos cookies propias y de terceros para mejorar su experiencia de navegación, analizar el tráfico y asegurar el correcto funcionamiento de nuestros servicios legales.</p>
         
-        <h3>Tipos de cookies que utilizamos:</h3>
+        <h3 data-lang="cookies_types_title">Tipos de cookies que utilizamos:</h3>
         <ul>
-            <li><strong>Técnicas (Necesarias):</strong> Imprescindibles para navegar y usar funciones básicas como el formulario de contacto.</li>
-            <li><strong>Preferencias:</strong> Recuerdan su idioma seleccionado.</li>
-            <li><strong>Analíticas:</strong> Nos ayudan a entender cómo interactúa con la web para mejorar nuestros contenidos (Google Analytics).</li>
+            <li data-lang="cookies_tech"><strong>Técnicas (Necesarias):</strong> Imprescindibles para navegar y usar funciones básicas como el formulario de contacto.</li>
+            <li data-lang="cookies_pref"><strong>Preferencias:</strong> Recuerdan su idioma seleccionado.</li>
+            <li data-lang="cookies_analytics"><strong>Analíticas:</strong> Nos ayudan a entender cómo interactúa con la web para mejorar nuestros contenidos (Google Analytics).</li>
         </ul>
 
-        <h3>Gestión de cookies</h3>
-        <p>Puede configurar su navegador para aceptar o rechazar cookies. Si las desactiva, algunas funcionalidades podrían no estar disponibles.</p>
+        <h3 data-lang="cookies_manage_title">Gestión de cookies</h3>
+        <p data-lang="cookies_manage_text">Puede configurar su navegador para aceptar o rechazar cookies. Si las desactiva, algunas funcionalidades podrían no estar disponibles.</p>
         <ul>
-            <li><strong>Chrome:</strong> Configuración → Privacidad y seguridad → Cookies</li>
-            <li><strong>Safari:</strong> Preferencias → Privacidad → Cookies</li>
-            <li><strong>Firefox:</strong> Opciones → Privacidad y seguridad → Cookies</li>
+            <li data-lang="cookies_chrome"><strong>Chrome:</strong> Configuración → Privacidad y seguridad → Cookies</li>
+            <li data-lang="cookies_safari"><strong>Safari:</strong> Preferencias → Privacidad → Cookies</li>
+            <li data-lang="cookies_firefox"><strong>Firefox:</strong> Opciones → Privacidad y seguridad → Cookies</li>
         </ul>
     </div>
     <div class="center-btn">
-        <a href="index.html" class="btn-back">← Volver al Inicio</a>
+        <a href="index.html" class="btn-back" data-lang="btn_back_home">← Volver al Inicio</a>
     </div>
 </section>
 
-<!-- FOOTER -->
-<footer class="footer reveal-footer">
-    <div class="footer-columns">
-        <div class="footer-col footer-brand">
-            <img src="img/fa.jpg" alt="FA Asesoría Global" class="footer-logo">
-            <h4>FA Asesoría Global</h4>
-            <p>Legal · Fiscal · Extranjería</p>
-        </div>
-        <div class="footer-col">
-            <h4>Avisos legales</h4>
-            <a href="politica-privacidad.html">Privacidad</a>
-            <a href="politica-cookies.html">Cookies</a>
-            <a href="aviso-legal.html">Aviso Legal</a>
+<!-- FOOTER SIMPLIFICADO -->
+<footer class="legal-footer-simple">
+    <div class="container">
+        <p class="footer-copy" data-lang="footer_copy">© 2026 FA Asesoría Global · Todos los derechos reservados</p>
+        <div class="legal-footer-links">
+            <a href="aviso-legal.html" data-lang="link_legal">Aviso Legal</a>
+            <a href="politica-privacidad.html" data-lang="link_privacy">Privacidad</a>
+            <a href="politica-cookies.html" data-lang="link_cookies">Cookies</a>
         </div>
     </div>
-    <p class="footer-bottom">© 2026 FA Asesoría Global</p>
 </footer>
 
 <!-- BANNER FUNCIONAL -->
 <div id="cookie-banner">
-    <p>Utilizamos cookies para mejorar su experiencia. Puede aceptarlas todas o rechazarlas. Más info en nuestra <a href="politica-cookies.html">Política de Cookies</a>.</p>
+    <p data-lang="cookie_banner_text">Utilizamos cookies para mejorar su experiencia. Puede aceptarlas todas o rechazarlas. Más info en nuestra <a href="politica-cookies.html">Política de Cookies</a>.</p>
     <div class="cookie-actions">
-        <button id="btn-reject" class="cookie-btn btn-reject">Rechazar</button>
-        <button id="btn-accept" class="cookie-btn btn-accept">Aceptar</button>
+        <button id="btn-reject" class="cookie-btn btn-reject" data-lang="btn_reject">Rechazar</button>
+        <button id="btn-accept" class="cookie-btn btn-accept" data-lang="btn_accept">Aceptar</button>
     </div>
 </div>
 
@@ -114,5 +159,6 @@
 
 <script src="https://code.iconify.design/iconify-icon/2.0.0/iconify-icon.min.js"></script>
 <script src="js/main.js"></script>
+<script src="js/idiomas.js"></script>
 </body>
 </html>
