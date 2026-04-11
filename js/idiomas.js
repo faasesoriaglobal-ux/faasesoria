@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
 
     // ================= OBJETO DE TRADUCCIONES COMPLETO =================
-    const translations = {
+const translations = {
         es: {
             // Header & Nav
             nav_inicio: "Inicio", nav_servicios: "Servicios", nav_empresa: "Sobre nosotros", nav_contacto: "Contacto", consulta_online: "Consulta online",
@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
             empresa_text_new: "Con un enfoque humano y ético, no solo gestionamos trámites; coordinamos una red de expertos para garantizar tu tranquilidad jurídica. Tu éxito es nuestro compromiso.",
             stat_anios: "Años de experiencia",
             stat_clientes: "Clientes internacionales",
+            stat_happy_clients: "Clientes felices",
             nuestro_origen: "El Origen",
             fundador_text_new_1: "Nacido de la visión de <strong>Flor Andino</strong>. Tras vivir en primera persona los desafíos migratorios en 2004, transformó esa experiencia en un puente de ayuda real, consolidando en 2016 una firma estructurada y multidisciplinaria.",
             fundador_text_new_2: "\"Nuestro compromiso es brindar soluciones reales, escuchando cada necesidad para convertir la asesoría en un verdadero apoyo.\"",
@@ -145,6 +146,21 @@ document.addEventListener('DOMContentLoaded', function() {
             link_cookies: "Política de Cookies",
             link_legal: "Aviso Legal",
 
+            // --- PÁGINA 404 ---
+            error_404_title: "¡Ups! Página no encontrada",
+            error_404_message: "Parece que te has perdido en el proceso legal.<br>La página que buscas no existe o ha sido movida.<br>No te preocupes, podemos ayudarte a encontrar el camino de vuelta.",
+            error_404_btn: "← Volver al Inicio",
+            error_404_footer: "&copy; 2026 FA Asesoría Global. ¿Necesitas ayuda? <a href='mailto:faasesoriaglobal@gmail.com'>Contáctanos</a>",
+
+            // --- RESEÑAS GOOGLE ---
+            reviews_title: "Lo que dicen en Google",
+            review_1_text: "\"Mil Gracias por su profesionalidad, su buena disposición y gentil trato.\"",
+            review_1_author: "— Riannangels.",
+            review_2_text: "\"He tramitado mi nacionalidad y el arraigo de mis padres y estoy muy satisfecha porque ya tengo el DNI y mis padres el NIE.\"",
+            review_2_author: "— Malvina Joca.",
+            review_3_text: "\"Felicito el excelente equipo de profesionales y la excelente atención al público de todo el equipo de FA asesorías y muchas bendiciones.\"",
+            review_3_author: "— Jean Davida.",
+
             // --- POLÍTICA DE COOKIES ---
             cookies_title: "Política de Cookies",
             cookies_intro: "En <strong>FA Asesoría Global</strong> utilizamos cookies propias y de terceros para mejorar su experiencia de navegación, analizar el tráfico y asegurar el correcto funcionamiento de nuestros servicios legales.",
@@ -196,6 +212,7 @@ document.addEventListener('DOMContentLoaded', function() {
             empresa_text_new: "With a human and ethical approach, we don't just manage procedures; we coordinate a network of experts to guarantee your legal peace of mind. Your success is our commitment.",
             stat_anios: "Years of experience",
             stat_clientes: "International clients",
+            stat_happy_clients: "Happy clients",
             nuestro_origen: "The Origin",
             fundador_text_new_1: "Born from the vision of <strong>Flor Andino</strong>. After experiencing migration challenges firsthand in 2004, she transformed that experience into a bridge of real help, consolidating a structured firm in 2016.",
             fundador_text_new_2: "\"Our commitment is to provide real solutions, listening to every need to make our advisory a true support.\"",
@@ -319,6 +336,21 @@ document.addEventListener('DOMContentLoaded', function() {
             link_cookies: "Cookies Policy",
             link_legal: "Legal Notice",
 
+            // --- 404 PAGE ---
+            error_404_title: "Oops! Page not found",
+            error_404_message: "It seems you got lost in the legal process.<br>The page you are looking for does not exist or has been moved.<br>Don't worry, we can help you find your way back.",
+            error_404_btn: "← Back to Home",
+            error_404_footer: "&copy; 2026 FA Asesoría Global. Need help? <a href='mailto:faasesoriaglobal@gmail.com'>Contact us</a>",
+
+            // --- GOOGLE REVIEWS ---
+            reviews_title: "What they say on Google",
+            review_1_text: "\"A thousand thanks for their professionalism, willingness and kind treatment.\"",
+            review_1_author: "— Riannangels.",
+            review_2_text: "\"I processed my nationality and my parents' residency. I am very satisfied because I now have my ID and my parents have their NIE.\"",
+            review_2_author: "— Malvina Joca.",
+            review_3_text: "\"I congratulate the excellent team of professionals and the excellent customer service of the entire FA Asesorías team. Many blessings.\"",
+            review_3_author: "— Jean Davida.",
+
             // --- COOKIES POLICY ---
             cookies_title: "Cookies Policy",
             cookies_intro: "At <strong>FA Asesoría Global</strong> we use our own and third-party cookies to improve your browsing experience, analyze traffic and ensure the correct functioning of our legal services.",
@@ -370,6 +402,7 @@ document.addEventListener('DOMContentLoaded', function() {
             empresa_text_new: "Avec une approche humaine et éthique, nous ne gérons pas seulement des procédures ; nous coordonnons un réseau d'experts pour garantir votre tranquillité juridique. Votre réussite est notre engagement.",
             stat_anios: "Années d'expérience",
             stat_clientes: "Clients internationaux",
+            stat_happy_clients: "Clients satisfaits",
             nuestro_origen: "L'Origine",
             fundador_text_new_1: "Né de la vision de <strong>Flor Andino</strong>. Après avoir vécu les défis migratoires en 2004, elle a transformé cette expérience en un pont d'aide réelle, consolidant un cabinet structuré en 2016.",
             fundador_text_new_2: "\"Notre engagement est de fournir de vraies solutions, en écoutant chaque besoin pour faire de notre conseil un véritable soutien.\"",
@@ -493,6 +526,21 @@ document.addEventListener('DOMContentLoaded', function() {
             link_cookies: "Politique des Cookies",
             link_legal: "Avis Légal",
 
+            // --- PAGE 404 ---
+            error_404_title: "Oups ! Page non trouvée",
+            error_404_message: "Il semble que vous vous soyez perdu dans le processus juridique.<br>La page que vous cherchez n'existe pas ou a été déplacée.<br>Ne vous inquiétez pas, nous pouvons vous aider à retrouver votre chemin.",
+            error_404_btn: "← Retour à l'accueil",
+            error_404_footer: "&copy; 2026 FA Asesoría Global. Besoin d'aide ? <a href='mailto:faasesoriaglobal@gmail.com'>Contactez-nous</a>",
+
+            // --- AVIS GOOGLE ---
+            reviews_title: "Ce qu'ils disent sur Google",
+            review_1_text: "\"Mille mercis pour leur professionnalisme, leur bonne volonté et leur traitement bienveillant.\"",
+            review_1_author: "— Riannangels.",
+            review_2_text: "\"J'ai fait ma nationalité et le titre de séjour de mes parents. Je suis très satisfaite car j'ai maintenant ma carte d'identité et mes parents leur NIE.\"",
+            review_2_author: "— Malvina Joca.",
+            review_3_text: "\"Je félicite l'excellente équipe de professionnels et l'excellent service client de toute l'équipe FA Asesorías. Beaucoup de bénédictions.\"",
+            review_3_author: "— Jean Davida.",
+
             // --- POLITIQUE DES COOKIES ---
             cookies_title: "Politique des Cookies",
             cookies_intro: "Chez <strong>FA Asesoría Global</strong>, nous utilisons des cookies propres et tiers pour améliorer votre expérience de navigation, analyser le trafic et assurer le bon fonctionnement de nos services juridiques.",
@@ -544,6 +592,7 @@ document.addEventListener('DOMContentLoaded', function() {
             empresa_text_new: "Amb un enfocament humà i ètic, no només gestionem tràmits; coordinem una xarxa d'experts per garantir la teva tranquil·litat jurídica. El teu èxit és el nostre compromís.",
             stat_anios: "Anys d'experiència",
             stat_clientes: "Clients internacionals",
+            stat_happy_clients: "Clients feliços",
             nuestro_origen: "L'Origen",
             fundador_text_new_1: "Nascut de la visió de <strong>Flor Andino</strong>. Després de viure els reptes migratoris en primera persona el 2004, va transformar aquesta experiència en un pont d'ajuda real, consolidant una firma estructurada el 2016.",
             fundador_text_new_2: "\"El nostre compromís és brindar solucions reals, escoltant cada necessitat per convertir l'assessoria en un veritable suport.\"",
@@ -667,6 +716,21 @@ document.addEventListener('DOMContentLoaded', function() {
             link_cookies: "Política de Cookies",
             link_legal: "Avís Legal",
 
+            // --- PÀGINA 404 ---
+            error_404_title: "Ups! Pàgina no trobada",
+            error_404_message: "Sembla que t'has perdut en el procés legal.<br>La pàgina que busques no existeix o s'ha mogut.<br>No et preocupis, et podem ajudar a trobar el camí de tornada.",
+            error_404_btn: "← Tornar a l'inici",
+            error_404_footer: "&copy; 2026 FA Asesoría Global. Necessites ajuda? <a href='mailto:faasesoriaglobal@gmail.com'>Contacta'ns</a>",
+
+            // --- RESSENYES GOOGLE ---
+            reviews_title: "El que diuen a Google",
+            review_1_text: "\"Mil gràcies pel seu professionalitat, la seva bona disposició i el tracte amable.\"",
+            review_1_author: "— Riannangels.",
+            review_2_text: "\"He tramitat la meva nacionalitat i l'arrelament dels meus pares. Estic molt satisfeta perquè ja tinc el DNI i els meus pares el NIE.\"",
+            review_2_author: "— Malvina Joca.",
+            review_3_text: "\"Felicito l'excel·lent equip de professionals i l'excel·lent atenció al públic de tot l'equip de FA Asesorías. Moltes benediccions.\"",
+            review_3_author: "— Jean Davida.",
+
             // --- POLÍTICA DE COOKIES ---
             cookies_title: "Política de Cookies",
             cookies_intro: "A <strong>FA Asesoría Global</strong> utilitzem cookies pròpies i de tercers per millorar la seva experiència de navegació, analitzar el trànsit i assegurar el correcte funcionament dels nostres serveis legals.",
@@ -698,7 +762,6 @@ document.addEventListener('DOMContentLoaded', function() {
             legal_disclaimer_text: "FA Asesoría Global no es fa responsable dels danys o perjudicis que puguin derivar-se de l'ús incorrecte de la informació continguda en aquest web, ni de les accions realitzades per terços basant-se en dicha informació."
         }
     };
-
     // ================= VARIABLES =================
     let currentLang = 'es';
     const langTrigger = document.getElementById('langTrigger');

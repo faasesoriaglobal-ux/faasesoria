@@ -6,12 +6,12 @@
     <title>Página no encontrada | FA Asesoría Global</title>
     <meta name="description" content="La página que buscas no existe. Vuelve al inicio de FA Asesoría Global.">
     
-    <!-- Fuentes Google (Las mismas que tu web) -->
+    <!-- Fuentes Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     
-    <!-- Tus CSS reales -->
+    <!-- Tus CSS -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/animaciones.css">
 
@@ -65,7 +65,7 @@
             margin-bottom: 2.5rem;
         }
 
-  .btn-home {
+        .btn-home {
             display: inline-block;
             background-color: #f57c00 !important; /* NARANJA FIJO */
             color: #ffffff !important; /* BLANCO FIJO */
@@ -80,18 +80,22 @@
         }
 
         .btn-home:hover {
-            background-color: #d86c00;
+            background-color: #d86c00 !important;
             transform: translateY(-3px);
             box-shadow: 0 6px 20px rgba(245, 124, 0, 0.4);
-            color: white;
+            color: white !important;
+            text-decoration: none;
         }
 
         .logo-small {
             margin-bottom: 2rem;
             max-width: 150px;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
         }
         
-        /* Footer simple para la 404 */
         .simple-footer {
             text-align: center;
             padding: 2rem;
@@ -113,31 +117,33 @@
     <div class="error-wrapper">
         <div class="error-content">
             
-            <!-- Logo Pequeño (Opcional, usa tu logo real) -->
-            <img src="img/fa.jpg" alt="FA Asesoría Global" class="logo-small" style="border-radius: 50%; width: 80px; height: 80px; object-fit: cover; margin-bottom: 1rem;">
+            <!-- Logo -->
+            <img src="img/fa.jpg" alt="FA Asesoría Global" class="logo-small">
 
-            <!-- Número Gigante 404 -->
+            <!-- Número Gigante 404 (No se traduce) -->
             <div class="error-code">404</div>
             
-            <!-- Título -->
-            <h1 class="error-title">¡Ups! Página no encontrada</h1>
+            <!-- Título Traducible -->
+            <h1 class="error-title" data-lang="error_404_title">¡Ups! Página no encontrada</h1>
             
-            <!-- Mensaje Amable -->
-            <p class="error-message">
+            <!-- Mensaje Traducible -->
+            <p class="error-message" data-lang="error_404_message">
                 Parece que te has perdido en el proceso legal. <br>
                 La página que buscas no existe o ha sido movida. <br>
                 No te preocupes, podemos ayudarte a encontrar el camino de vuelta.
             </p>
             
-            <!-- Botón de Acción -->
-            <a href="index.html" class="btn-home">← Volver al Inicio</a>
+            <!-- Botón Traducible -->
+            <a href="index.html" class="btn-home" data-lang="error_404_btn">← Volver al Inicio</a>
         </div>
     </div>
 
-    <!-- Footer Simple -->
+    <!-- Footer Simple Traducible -->
     <footer class="simple-footer">
-        <p>&copy; 2026 FA Asesoría Global. ¿Necesitas ayuda? <a href="mailto:faasesoriaglobal@gmail.com">Contáctanos</a></p>
+        <p data-lang="error_404_footer">&copy; 2026 FA Asesoría Global. ¿Necesitas ayuda? <a href="mailto:faasesoriaglobal@gmail.com">Contáctanos</a></p>
     </footer>
 
+    <!-- CARGAR SCRIPT DE IDIOMAS (Importante) -->
+    <script src="js/idiomas.js"></script>
 </body>
 </html>
